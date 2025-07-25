@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetHer | Women's Sports Betting Education | WNBA Betting Guide</title>
-    <meta name="description" content="BetHer - Learn sports betting designed for women. WNBA betting guides, professional betting calculators, and educational resources. Bet smart, bet confident, bet with BetHer.">
-    <meta name="keywords" content="women sports betting education, BetHer, WNBA betting guide, women's sports betting learning, female bettors, sports betting calculators, responsible gambling women">
+    <title>BetHer | Free MLB Picks Daily + Women's Sports Betting Education | WNBA Betting Guide</title>
+    <meta name="description" content="BetHer - Get FREE daily MLB analysis powered by data & algorithms + comprehensive sports betting education for women. WNBA betting guides, professional calculators, and educational insights. For entertainment purposes only.">
+    <meta name="keywords" content="free MLB analysis, data informed baseball analysis, algorithm assisted sports betting, women sports betting education, BetHer, WNBA betting guide, educational betting content, women's sports betting learning, female bettors, sports betting calculators, responsible gambling women">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZmF2aWNvbkdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2VkNjQ5NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmODcxNzEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTEiIGZpbGw9InVybCgjZmF2aWNvbkdyYWRpZW50KSIvPgogIDxwYXRoIGQ9Ik0xMS41IDE0IEwxMy41IDE2IEwyMC41IDkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIyMSIgcj0iMi41IiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4K">
@@ -34,6 +34,7 @@
             --accent-purple: #8b5cf6;
             --accent-blue: #3b82f6;
             --success-green: #10b981;
+            --baseball-green: #0d9488;
         }
 
         * {
@@ -54,6 +55,113 @@
             max-width: 1200px;
             margin: 0 auto;
             min-height: 100vh;
+        }
+
+        /* Legal Disclaimer Styles */
+        .legal-disclaimer {
+            background: #fef3cd;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            color: #92400e;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .legal-disclaimer strong {
+            color: #78350f;
+        }
+
+        .disclaimer-banner {
+            background: #1f2937;
+            color: #d1d5db;
+            padding: 0.75rem 2.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #374151;
+        }
+
+        .disclaimer-banner strong {
+            color: #fbbf24;
+        }
+        .mlb-banner {
+            background: linear-gradient(135deg, var(--baseball-green) 0%, var(--success-green) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mlb-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-text {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .banner-icon {
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .banner-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .banner-subtitle {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .banner-cta {
+            background: white;
+            color: var(--baseball-green);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .banner-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
         }
         
         /* Header Styles */
@@ -180,6 +288,33 @@
             border-bottom-color: var(--primary-rose);
             background: var(--soft-rose);
         }
+
+        .nav-btn.mlb-highlight {
+            background: linear-gradient(135deg, var(--baseball-green), var(--success-green));
+            color: white;
+            border-radius: 8px;
+            margin: 0 0.5rem;
+            position: relative;
+        }
+
+        .nav-btn.mlb-highlight:hover {
+            background: linear-gradient(135deg, var(--success-green), var(--baseball-green));
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .nav-btn.mlb-highlight::after {
+            content: 'FREE';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--primary-rose);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
         
         /* Main Content */
         .main-content {
@@ -223,7 +358,7 @@
         }
 
         .primary-cta {
-            background: var(--primary-rose);
+            background: var(--baseball-green);
             color: var(--white);
             padding: 1rem 2rem;
             border-radius: 10px;
@@ -231,11 +366,25 @@
             text-decoration: none;
             font-size: 1.1rem;
             transition: all 0.2s ease;
+            position: relative;
         }
 
         .primary-cta:hover {
-            background: var(--primary-rose-dark);
+            background: var(--success-green);
             transform: translateY(-2px);
+        }
+
+        .primary-cta::before {
+            content: '⚾ FREE';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--primary-rose);
+            color: white;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: 700;
         }
 
         .secondary-cta {
@@ -253,6 +402,96 @@
         .secondary-cta:hover {
             background: var(--primary-rose);
             color: var(--white);
+        }
+
+        /* MLB Picks Feature Section */
+        .mlb-feature-section {
+            padding: 4rem 2.5rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mlb-feature-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+        }
+
+        .mlb-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .mlb-feature-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #10b981, #06d6a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mlb-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #10b981;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #cbd5e1;
+            margin-top: 0.5rem;
+        }
+
+        .mlb-feature-cta {
+            background: linear-gradient(135deg, #10b981, #06d6a0);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .mlb-feature-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
         }
 
         /* Ad Container Styles */
@@ -520,11 +759,40 @@
             height: 3px;
             background: linear-gradient(90deg, var(--primary-rose) 0%, var(--accent-purple) 100%);
         }
+
+        .feature-card.mlb-featured {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            border: 2px solid var(--baseball-green);
+            transform: scale(1.02);
+        }
+
+        .feature-card.mlb-featured::before {
+            background: linear-gradient(90deg, var(--baseball-green) 0%, var(--success-green) 100%);
+            height: 4px;
+        }
+
+        .feature-card.mlb-featured::after {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--baseball-green);
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
         
         .feature-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             border-color: var(--primary-rose);
+        }
+
+        .feature-card.mlb-featured:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--baseball-green);
         }
         
         .feature-icon {
@@ -538,6 +806,10 @@
             margin: 0 auto 1.5rem auto;
             color: var(--white);
             font-size: 1.5rem;
+        }
+
+        .feature-card.mlb-featured .feature-icon {
+            background: linear-gradient(135deg, var(--baseball-green) 0%, var(--success-green) 100%);
         }
         
         .feature-card h3 {
@@ -565,6 +837,17 @@
             text-decoration: none;
             display: inline-block;
             transition: all 0.2s ease;
+        }
+
+        .feature-card.mlb-featured .feature-btn {
+            background: var(--baseball-green);
+            color: white;
+            border-color: var(--baseball-green);
+        }
+
+        .feature-card.mlb-featured .feature-btn:hover {
+            background: var(--success-green);
+            border-color: var(--success-green);
         }
         
         .feature-btn:hover {
@@ -665,6 +948,15 @@
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .mlb-banner {
+                padding: 1rem;
+            }
+
+            .banner-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
             .header {
                 padding: 1.5rem;
             }
@@ -686,6 +978,10 @@
             .nav-section {
                 padding: 0 1.5rem;
             }
+
+            .nav-btn.mlb-highlight::after {
+                display: none;
+            }
             
             .hero-section {
                 padding: 4rem 1.5rem;
@@ -698,6 +994,27 @@
             .hero-cta {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .mlb-feature-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .mlb-feature-section h2 {
+                font-size: 2rem;
+            }
+
+            .mlb-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
             }
 
             /* Mobile Ad Styles */
@@ -743,6 +1060,25 @@
 </head>
 <body>
     <div class="container">
+        <!-- Legal Disclaimer Banner -->
+        <div class="disclaimer-banner">
+            <strong>Disclaimer:</strong> All picks are for entertainment and educational purposes only. Sports betting involves risk. Never bet more than you can afford to lose. BetHer is not responsible for any losses.
+        </div>
+
+        <!-- MLB Picks Banner -->
+        <div class="mlb-banner">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <span class="banner-icon">⚾</span>
+                    <div>
+                        <div class="banner-title">FREE Daily MLB Analysis - Data-Informed</div>
+                        <div class="banner-subtitle">Algorithm-assisted insights women can trust</div>
+                    </div>
+                </div>
+                <a href="/free-mlb-picks.html" class="banner-cta">Get Today's Picks</a>
+            </div>
+        </div>
+
         <!-- Header -->
         <div class="header">
             <div class="header-content">
@@ -784,7 +1120,7 @@
                 <a href="#home" class="nav-btn active">Home</a>
                 <a href="#guides" class="nav-btn">Betting Guides</a>
                 <a href="/calculators.html" class="nav-btn">Calculators</a>
-                <a href="/mlb-picks-today.html" class="nav-btn">Free MLB Picks</a>
+                <a href="/free-mlb-picks.html" class="nav-btn mlb-highlight">Free MLB Analysis</a>
                 <a href="/articles.html" class="nav-btn">Betting News</a>
                 <a href="#responsible" class="nav-btn">Responsible Betting</a>
             </div>
@@ -794,12 +1130,12 @@
         <div class="main-content">
             <!-- Hero Section -->
             <div class="hero-section">
-                <h1>Sports Betting Education Designed for Women</h1>
-                <p>Master sports betting across all major leagues - NFL, NBA, MLB, MLS, and WNBA. Get professional tools, expert insights, and build confidence in your betting decisions with guides tailored for women.</p>
+                <h1>Free MLB Analysis + Sports Betting Education for Women</h1>
+                <p>Get FREE daily MLB analysis powered by data science and algorithms PLUS master sports betting across all major leagues - NFL, NBA, MLB, MLS, and WNBA. Professional tools, educational insights, and confidence-building guides tailored for women.</p>
                 
                 <div class="hero-cta">
-                    <a href="/sports-betting-guide.html" class="primary-cta">Start Learning</a>
-                    <a href="/calculators.html" class="secondary-cta">Try Calculators</a>
+                    <a href="/free-mlb-picks.html" class="primary-cta">Get Free MLB Analysis</a>
+                    <a href="/sports-betting-guide.html" class="secondary-cta">Start Learning</a>
                 </div>
 
                 <!-- GameFly Ad -->
@@ -807,6 +1143,42 @@
                     <a href="https://www.dpbolvw.net/click-101498878-13890619" target="_top" class="gamefly-ad">
                         <img src="https://www.tqlkg.com/image-101498878-13890619" width="1080" height="321" alt="Video Game Rentals Delivered" border="0"/>
                     </a>
+                </div>
+            </div>
+
+            <!-- MLB Picks Feature Section -->
+            <div class="mlb-feature-section">
+                <div class="mlb-content">
+                    <h2>🏆 MLB Analysis Women Can Trust</h2>
+                    <p style="font-size: 1.25rem; color: #cbd5e1; margin-bottom: 3rem; line-height: 1.7;">Join thousands of women getting data-informed baseball analysis powered by algorithms. No hidden agendas, no pushy salesmen - just transparent, educational content designed with women in mind. For entertainment purposes only.</p>
+                    
+                    <div class="mlb-stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">Data</span>
+                            <div class="stat-label">Driven</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">100%</span>
+                            <div class="stat-label">Free</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Daily</span>
+                            <div class="stat-label">Fresh Picks</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">ML</span>
+                            <div class="stat-label">Algorithm</div>
+                        </div>
+                    </div>
+
+                    <a href="/free-mlb-picks.html" class="mlb-feature-cta">⚾ Get Today's Analysis</a>
+                </div>
+            </div>
+
+            <!-- Legal Disclaimer Section -->
+            <div style="padding: 2rem 2.5rem; background: #f8fafc;">
+                <div class="legal-disclaimer" style="max-width: 800px; margin: 0 auto;">
+                    <p><strong>Important Legal Disclaimer:</strong> All content on BetHer, including MLB analysis, picks, and predictions, is provided for entertainment and educational purposes only. Past performance does not guarantee future results. Sports betting involves substantial risk of loss and is not suitable for everyone. You should never bet more than you can afford to lose. BetHer makes no guarantees about the accuracy of any analysis or predictions. We are not responsible for any financial losses incurred from following our content. Please gamble responsibly and seek help if you have a gambling problem. Call 1-800-522-4700 for assistance.</p>
                 </div>
             </div>
 
@@ -860,11 +1232,18 @@
             <!-- Betting Guides & Tools -->
             <div id="guides" class="features-section">
                 <div class="section-header">
-                    <h2 class="section-title">Betting Guides & Tools</h2>
-                    <p class="section-subtitle">Master every major sport with expert betting guides and professional calculators designed for women</p>
+                    <h2 class="section-title">Free Analysis + Betting Guides & Tools</h2>
+                    <p class="section-subtitle">Get data-informed MLB analysis plus master every major sport with expert betting guides and professional calculators designed for women</p>
                 </div>
                 
                 <div class="features-grid">
+                    <div class="feature-card mlb-featured">
+                        <div class="feature-icon">⚾</div>
+                        <h3>Free MLB Analysis Daily</h3>
+                        <p>Data-informed baseball analysis powered by algorithms. Moneyline, totals, and spread insights with transparent methodology. Built for women who want educational content, not sales pitches. For entertainment only.</p>
+                        <a href="/free-mlb-picks.html" class="feature-btn">Get Analysis</a>
+                    </div>
+
                     <div class="feature-card">
                         <div class="feature-icon">📚</div>
                         <h3>Sports Betting Fundamentals</h3>
@@ -884,13 +1263,6 @@
                         <h3>NBA & WNBA Betting</h3>
                         <p>Deep dive into basketball betting strategies for both NBA and WNBA. Understand pace, totals, and player prop opportunities.</p>
                         <a href="/basketball-betting-guide.html" class="feature-btn">Explore Basketball</a>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">⚾</div>
-                        <h3>Free MLB Picks</h3>
-                        <p>Daily baseball predictions with 61% accuracy. Get expert picks for moneyline, totals, and spread bets completely free.</p>
-                        <a href="/free-mlb-picks.html" class="feature-btn">Get Free Picks</a>
                     </div>
                     
                     <div class="feature-card">
@@ -947,8 +1319,9 @@
         <div class="footer">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Betting Guides</h3>
+                    <h3>Free Analysis & Guides</h3>
                     <ul>
+                        <li><a href="/free-mlb-picks.html">Free MLB Analysis</a></li>
                         <li><a href="/sports-betting-guide.html">Betting Fundamentals</a></li>
                         <li><a href="/nfl-betting-guide.html">NFL Betting</a></li>
                         <li><a href="/basketball-betting-guide.html">NBA & WNBA</a></li>
