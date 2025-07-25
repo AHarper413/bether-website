@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLB Model Picks - July 25, 2025 | BetHer</title>
-    <meta name="description" content="Today's MLB betting picks from our advanced machine learning model. 61% accuracy this season.">
+    <title>Free MLB Picks Today - July 25, 2025 | BetHer</title>
+    <meta name="description" content="Free MLB picks today from our advanced XGBoost model. Expert baseball predictions with confidence ratings and detailed team analysis.">
+    <meta name="keywords" content="free mlb picks today, baseball predictions, mlb betting tips, expert mlb picks">
+    
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -15,7 +17,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 12px;
@@ -33,16 +35,16 @@
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
-        .record-banner {
+        .model-info {
             background: linear-gradient(135deg, #e11d48 0%, #8b5cf6 100%);
             color: white;
-            padding: 1rem;
-            border-radius: 8px;
+            padding: 1.5rem;
+            border-radius: 12px;
             text-align: center;
             margin-bottom: 2rem;
         }
-        .record-banner h2 {
-            margin: 0;
+        .model-info h2 {
+            margin: 0 0 0.5rem 0;
             font-size: 1.5rem;
         }
         .summary-stats {
@@ -62,42 +64,174 @@
             font-weight: bold;
             color: #e11d48;
         }
-        .picks-section {
+        
+        /* Game Cards */
+        .games-grid {
+            display: grid;
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        .picks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-        .pick-card {
-            background: #f8fafc;
+        .game-card {
+            background: white;
             border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1rem;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
         }
-        .pick-card.high {
+        .game-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .game-card.high-confidence {
             border-left: 4px solid #10b981;
         }
-        .pick-card.medium {
+        .game-card.medium-confidence {
             border-left: 4px solid #f59e0b;
         }
+        .game-card.low-confidence {
+            border-left: 4px solid #6b7280;
+        }
+        
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .matchup {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
         .confidence-badge {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
             font-size: 0.8rem;
             font-weight: bold;
             text-transform: uppercase;
         }
-        .confidence-high {
-            background: #d1fae5;
-            color: #065f46;
+        .confidence-high { background: #d1fae5; color: #065f46; }
+        .confidence-medium { background: #fef3c7; color: #92400e; }
+        .confidence-low { background: #f3f4f6; color: #4b5563; }
+        
+        .teams-section {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
         }
-        .confidence-medium {
-            background: #fef3c7;
-            color: #92400e;
+        .team {
+            text-align: center;
+            cursor: pointer;
+            padding: 0.75rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
+        .team:hover {
+            background: #f8fafc;
+            transform: scale(1.02);
+        }
+        .team-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e11d48;
+            margin-bottom: 0.25rem;
+        }
+        .team-pitcher {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+        .win-probability {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        .vs-section {
+            text-align: center;
+            padding: 0 1rem;
+        }
+        .predicted-total {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #8b5cf6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .signals {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .signal {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .signal-home { background: #dbeafe; color: #1e40af; }
+        .signal-away { background: #fef3c7; color: #92400e; }
+        .signal-over { background: #dcfce7; color: #166534; }
+        .signal-f5 { background: #e0e7ff; color: #3730a3; }
+        
+        /* Modal for team stats */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #e11d48;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .stat-item {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        
         .back-link {
             text-align: center;
             margin-top: 2rem;
@@ -109,27 +243,26 @@
             text-decoration: none;
             font-weight: 600;
         }
+        
         @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            .header h1 {
-                font-size: 2rem;
-            }
+            .container { padding: 1rem; }
+            .header h1 { font-size: 2rem; }
+            .teams-section { grid-template-columns: 1fr; gap: 0.5rem; }
+            .vs-section { order: -1; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>MLB Model Picks</h1>
-            <h2>July 25, 2025</h2>
-            <p>Last Updated: 2025-07-25 20:22:21 EST</p>
+            <h1>Free MLB Picks - July 25, 2025</h1>
+            <p>Advanced XGBoost predictions with detailed analysis</p>
+            <p><strong>Last Updated:</strong> 2025-07-25 21:26:29 EST</p>
         </div>
 
-        <div class="record-banner">
-            <h2>Season Record: 156-100 (61.0%)</h2>
-            <p>Advanced XGBoost Model with Feature Selection</p>
+        <div class="model-info">
+            <h2>🤖 XGBoost Model with Feature Selection</h2>
+            <p>Advanced machine learning algorithm analyzing 50+ factors including team stats, pitcher matchups, bullpen fatigue, stadium factors, and recent form</p>
         </div>
 
         <div class="summary-stats">
@@ -139,7 +272,7 @@
             </div>
             <div class="stat-card">
                 <div class="stat-number">1</div>
-                <div>ML Signals</div>
+                <div>Strong Picks</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">1</div>
@@ -150,41 +283,1000 @@
                 <div>F5 Signals</div>
             </div>
         </div>
+        <div class="games-grid">
 
-        <div class="picks-section">
-            <h3>🎯 Best Moneyline Bets</h3>
-            <div class="picks-grid">
-
-                <div class="pick-card medium">
-                    <h4>Toronto Blue Jays @ Detroit Tigers</h4>
-                    <p><strong>Detroit Tigers ML</strong></p>
-                    <p>Probability: 58.1%</p>
-                    <span class="confidence-badge confidence-medium">MEDIUM</span>
-                    <p><small>Model favors home team with 58.1% win probability</small></p>
+            <div class="game-card high-confidence">
+                <div class="game-header">
+                    <div class="matchup">Toronto Blue Jays @ Detroit Tigers</div>
+                    <span class="confidence-badge confidence-high">HIGH</span>
                 </div>
-
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777016', 'away')">
+                        <div class="team-name">Toronto Blue Jays</div>
+                        <div class="team-pitcher">José Berríos</div>
+                        <div class="win-probability">41.9%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">6.9 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777016', 'home')">
+                        <div class="team-name">Detroit Tigers</div>
+                        <div class="team-pitcher">Keider Montero</div>
+                        <div class="win-probability">58.1%</div>
+                    </div>
+                </div>
+                
+                <div class="signals"><span class="signal signal-home">HOME FAV</span></div>
             </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Atlanta Braves @ Texas Rangers</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777009', 'away')">
+                        <div class="team-name">Atlanta Braves</div>
+                        <div class="team-pitcher">Joey Wentz</div>
+                        <div class="win-probability">42.8%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">7.0 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777009', 'home')">
+                        <div class="team-name">Texas Rangers</div>
+                        <div class="team-pitcher">Nathan Eovaldi</div>
+                        <div class="win-probability">57.2%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">New York Mets @ San Francisco Giants</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777004', 'away')">
+                        <div class="team-name">New York Mets</div>
+                        <div class="team-pitcher">Clay Holmes</div>
+                        <div class="win-probability">43.5%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">6.6 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777004', 'home')">
+                        <div class="team-name">San Francisco Giants</div>
+                        <div class="team-pitcher">Logan Webb</div>
+                        <div class="win-probability">56.5%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Miami Marlins @ Milwaukee Brewers</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777008', 'away')">
+                        <div class="team-name">Miami Marlins</div>
+                        <div class="team-pitcher">Cal Quantrill</div>
+                        <div class="win-probability">43.8%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">7.0 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777008', 'home')">
+                        <div class="team-name">Milwaukee Brewers</div>
+                        <div class="team-pitcher">Freddy Peralta</div>
+                        <div class="win-probability">56.2%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">San Diego Padres @ St. Louis Cardinals</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777005', 'away')">
+                        <div class="team-name">San Diego Padres</div>
+                        <div class="team-pitcher">Nick Pivetta</div>
+                        <div class="win-probability">44.3%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">6.9 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777005', 'home')">
+                        <div class="team-name">St. Louis Cardinals</div>
+                        <div class="team-pitcher">Miles Mikolas</div>
+                        <div class="win-probability">55.7%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Tampa Bay Rays @ Cincinnati Reds</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777013', 'away')">
+                        <div class="team-name">Tampa Bay Rays</div>
+                        <div class="team-pitcher">Zack Littell</div>
+                        <div class="win-probability">44.3%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">6.6 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777013', 'home')">
+                        <div class="team-name">Cincinnati Reds</div>
+                        <div class="team-pitcher">Nick Martinez</div>
+                        <div class="win-probability">55.7%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Los Angeles Dodgers @ Boston Red Sox</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777012', 'away')">
+                        <div class="team-name">Los Angeles Dodgers</div>
+                        <div class="team-pitcher">Emmet Sheehan</div>
+                        <div class="win-probability">46.3%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">7.5 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 42%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777012', 'home')">
+                        <div class="team-name">Boston Red Sox</div>
+                        <div class="team-pitcher">Brayan Bello</div>
+                        <div class="win-probability">53.7%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Philadelphia Phillies @ New York Yankees</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777015', 'away')">
+                        <div class="team-name">Philadelphia Phillies</div>
+                        <div class="team-pitcher">Taijuan Walker</div>
+                        <div class="win-probability">46.5%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">8.0 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777015', 'home')">
+                        <div class="team-name">New York Yankees</div>
+                        <div class="team-pitcher">Will Warren</div>
+                        <div class="win-probability">53.5%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Arizona Diamondbacks @ Pittsburgh Pirates</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777014', 'away')">
+                        <div class="team-name">Arizona Diamondbacks</div>
+                        <div class="team-pitcher">Ryne Nelson</div>
+                        <div class="win-probability">46.8%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">7.2 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777014', 'home')">
+                        <div class="team-name">Pittsburgh Pirates</div>
+                        <div class="team-pitcher">Mike Burrows</div>
+                        <div class="win-probability">53.2%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Colorado Rockies @ Baltimore Orioles</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777020', 'away')">
+                        <div class="team-name">Colorado Rockies</div>
+                        <div class="team-pitcher">Kyle Freeland</div>
+                        <div class="win-probability">46.8%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">7.2 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777020', 'home')">
+                        <div class="team-name">Baltimore Orioles</div>
+                        <div class="team-pitcher">Dean Kremer</div>
+                        <div class="win-probability">53.2%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Washington Nationals @ Minnesota Twins</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777011', 'away')">
+                        <div class="team-name">Washington Nationals</div>
+                        <div class="team-pitcher">MacKenzie Gore</div>
+                        <div class="win-probability">46.8%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">7.0 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 56%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777011', 'home')">
+                        <div class="team-name">Minnesota Twins</div>
+                        <div class="team-pitcher">Zebby Matthews</div>
+                        <div class="win-probability">53.2%</div>
+                    </div>
+                </div>
+                
+                <div class="signals"><span class="signal signal-over">OVER 8.5</span></div>
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Cleveland Guardians @ Kansas City Royals</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777010', 'away')">
+                        <div class="team-name">Cleveland Guardians</div>
+                        <div class="team-pitcher">Gavin Williams</div>
+                        <div class="win-probability">47.0%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">6.7 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777010', 'home')">
+                        <div class="team-name">Kansas City Royals</div>
+                        <div class="team-pitcher">Michael Wacha</div>
+                        <div class="win-probability">53.0%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card low-confidence">
+                <div class="game-header">
+                    <div class="matchup">Seattle Mariners @ Los Angeles Angels</div>
+                    <span class="confidence-badge confidence-low">LOW</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777006', 'away')">
+                        <div class="team-name">Seattle Mariners</div>
+                        <div class="team-pitcher">Bryan Woo</div>
+                        <div class="win-probability">49.8%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">10.8 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777006', 'home')">
+                        <div class="team-name">Los Angeles Angels</div>
+                        <div class="team-pitcher">José Soriano</div>
+                        <div class="win-probability">50.2%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="game-card medium-confidence">
+                <div class="game-header">
+                    <div class="matchup">Chicago Cubs @ Chicago White Sox</div>
+                    <span class="confidence-badge confidence-medium">MEDIUM</span>
+                </div>
+                
+                <div class="teams-section">
+                    <div class="team" onclick="showTeamStats('777017', 'away')">
+                        <div class="team-name">Chicago Cubs</div>
+                        <div class="team-pitcher">Shota Imanaga</div>
+                        <div class="win-probability">54.4%</div>
+                    </div>
+                    
+                    <div class="vs-section">
+                        <div style="color: #64748b; font-weight: 600;">VS</div>
+                        <div class="predicted-total">8.9 runs</div>
+                        <div style="font-size: 0.9rem; color: #8b5cf6;">O8.5: 41%</div>
+                    </div>
+                    
+                    <div class="team" onclick="showTeamStats('777017', 'home')">
+                        <div class="team-name">Chicago White Sox</div>
+                        <div class="team-pitcher">Adrian Houser</div>
+                        <div class="win-probability">45.6%</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
         </div>
 
-        <div class="picks-section">
-            <h3>📊 Best Total Bets</h3>
-            <div class="picks-grid">
-
-                <div class="pick-card medium">
-                    <h4>Washington Nationals @ Minnesota Twins</h4>
-                    <p><strong>Over 8.5 Runs</strong></p>
-                    <p>Probability: 56.3%</p>
-                    <p>Predicted Total: 7.0</p>
-                    <span class="confidence-badge confidence-medium">MEDIUM</span>
-                </div>
-
+        <!-- Team Stats Modal -->
+        <div id="teamModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalContent"></div>
             </div>
         </div>
 
         <div class="back-link">
             <p><strong>Disclaimer:</strong> These are model predictions for educational purposes. Always bet responsibly.</p>
-            <p><a href="/index.html">← Back to BetHer Home</a></p>
+            <p><a href="/index.html">← Back to BetHer Home</a> | <a href="/free-mlb-picks.html">← SEO Page</a></p>
         </div>
     </div>
+
+    <script>
+        // Games data
+        const gamesData = [
+  {
+    "game_id": "777016",
+    "away_team": "Toronto Blue Jays",
+    "home_team": "Detroit Tigers",
+    "home_pitcher": "Keider Montero",
+    "away_pitcher": "Jos\u00e9 Berr\u00edos",
+    "home_win_probability": 0.581,
+    "away_win_probability": 0.419,
+    "predicted_total_runs": 6.9,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "HIGH",
+    "home_era": 3.83,
+    "away_era": 4.09,
+    "home_ops": 0.736,
+    "away_ops": 0.745,
+    "home_win_pct": 0.5769230769230769,
+    "away_win_pct": 0.5922330097087378,
+    "home_pythagorean": 0.5699249869163227,
+    "away_pythagorean": 0.5418170594346077,
+    "home_recent_form": 0.1013815224175249,
+    "away_recent_form": 0.8032875889800292,
+    "home_fip": 3.83,
+    "away_fip": 4.27,
+    "home_k_rate": 0.2319999999999999,
+    "away_k_rate": 0.173,
+    "pitcher_era_advantage": 0.1099999999999998,
+    "pitcher_k_rate_advantage": -0.0620000000000002,
+    "stadium_factor": "1.04x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.606,
+    "strong_home_favorite": true,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777009",
+    "away_team": "Atlanta Braves",
+    "home_team": "Texas Rangers",
+    "home_pitcher": "Nathan Eovaldi",
+    "away_pitcher": "Joey Wentz",
+    "home_win_probability": 0.572,
+    "away_win_probability": 0.428,
+    "predicted_total_runs": 7.0,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.19,
+    "away_era": 4.05,
+    "home_ops": 0.673,
+    "away_ops": 0.705,
+    "home_win_pct": 0.5145631067961165,
+    "away_win_pct": 0.4356435643564356,
+    "home_pythagorean": 0.5788277918001217,
+    "away_pythagorean": 0.488181320339305,
+    "home_recent_form": 0.8453859011151649,
+    "away_recent_form": 0.2905912433627306,
+    "home_fip": 3.62,
+    "away_fip": 4.04,
+    "home_k_rate": 0.225,
+    "away_k_rate": 0.228,
+    "pitcher_era_advantage": 2.065,
+    "pitcher_k_rate_advantage": 0.158,
+    "stadium_factor": "1.10x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.64,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777004",
+    "away_team": "New York Mets",
+    "home_team": "San Francisco Giants",
+    "home_pitcher": "Logan Webb",
+    "away_pitcher": "Clay Holmes",
+    "home_win_probability": 0.565,
+    "away_win_probability": 0.435,
+    "predicted_total_runs": 6.6,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.62,
+    "away_era": 3.59,
+    "home_ops": 0.687,
+    "away_ops": 0.733,
+    "home_win_pct": 0.5242718446601942,
+    "away_win_pct": 0.5728155339805825,
+    "home_pythagorean": 0.5225271093233569,
+    "away_pythagorean": 0.5523643740308551,
+    "home_recent_form": 0.4555061667696563,
+    "away_recent_form": 0.7463201609873024,
+    "home_fip": 3.63,
+    "away_fip": 3.81,
+    "home_k_rate": 0.2269999999999999,
+    "away_k_rate": 0.21,
+    "pitcher_era_advantage": 0.365,
+    "pitcher_k_rate_advantage": 0.002,
+    "stadium_factor": "1.00x",
+    "bullpen_advantage": "HOME",
+    "home_field_advantage": 0.637,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777008",
+    "away_team": "Miami Marlins",
+    "home_team": "Milwaukee Brewers",
+    "home_pitcher": "Freddy Peralta",
+    "away_pitcher": "Cal Quantrill",
+    "home_win_probability": 0.562,
+    "away_win_probability": 0.438,
+    "predicted_total_runs": 7.0,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.58,
+    "away_era": 4.48,
+    "home_ops": 0.708,
+    "away_ops": 0.707,
+    "home_win_pct": 0.5980392156862745,
+    "away_win_pct": 0.4752475247524752,
+    "home_pythagorean": 0.6099994387783736,
+    "away_pythagorean": 0.4412522031611502,
+    "home_recent_form": 0.8046887011379978,
+    "away_recent_form": 0.6755606981224699,
+    "home_fip": 3.9,
+    "away_fip": 4.1,
+    "home_k_rate": 0.21,
+    "away_k_rate": 0.208,
+    "pitcher_era_advantage": 1.195,
+    "pitcher_k_rate_advantage": 0.1320000000000002,
+    "stadium_factor": "1.05x",
+    "bullpen_advantage": "HOME",
+    "home_field_advantage": 0.663,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777005",
+    "away_team": "San Diego Padres",
+    "home_team": "St. Louis Cardinals",
+    "home_pitcher": "Miles Mikolas",
+    "away_pitcher": "Nick Pivetta",
+    "home_win_probability": 0.557,
+    "away_win_probability": 0.443,
+    "predicted_total_runs": 6.9,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 4.25,
+    "away_era": 3.65,
+    "home_ops": 0.718,
+    "away_ops": 0.69,
+    "home_win_pct": 0.5096153846153846,
+    "away_win_pct": 0.5339805825242718,
+    "home_pythagorean": 0.4978768673199845,
+    "away_pythagorean": 0.5171939311277143,
+    "home_recent_form": 0.3829233723188073,
+    "away_recent_form": 0.3394570669706784,
+    "home_fip": 3.86,
+    "away_fip": 3.9,
+    "home_k_rate": 0.203,
+    "away_k_rate": 0.19,
+    "pitcher_era_advantage": -1.195,
+    "pitcher_k_rate_advantage": -0.2259999999999998,
+    "stadium_factor": "1.06x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.612,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777013",
+    "away_team": "Tampa Bay Rays",
+    "home_team": "Cincinnati Reds",
+    "home_pitcher": "Nick Martinez",
+    "away_pitcher": "Zack Littell",
+    "home_win_probability": 0.557,
+    "away_win_probability": 0.443,
+    "predicted_total_runs": 6.6,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.91,
+    "away_era": 3.85,
+    "home_ops": 0.714,
+    "away_ops": 0.728,
+    "home_win_pct": 0.5145631067961165,
+    "away_win_pct": 0.5145631067961165,
+    "home_pythagorean": 0.5386162755257543,
+    "away_pythagorean": 0.570598018833313,
+    "home_recent_form": 0.5010594949698649,
+    "away_recent_form": 0.3834651086165241,
+    "home_fip": 4.14,
+    "away_fip": 4.22,
+    "home_k_rate": 0.228,
+    "away_k_rate": 0.22,
+    "pitcher_era_advantage": -0.6000000000000003,
+    "pitcher_k_rate_advantage": -0.0020000000000002,
+    "stadium_factor": "1.11x",
+    "bullpen_advantage": "HOME",
+    "home_field_advantage": 0.562,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777012",
+    "away_team": "Los Angeles Dodgers",
+    "home_team": "Boston Red Sox",
+    "home_pitcher": "Brayan Bello",
+    "away_pitcher": "Emmet Sheehan",
+    "home_win_probability": 0.537,
+    "away_win_probability": 0.463,
+    "predicted_total_runs": 7.5,
+    "over_8_5_probability": 0.421,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.79,
+    "away_era": 4.28,
+    "home_ops": 0.75,
+    "away_ops": 0.774,
+    "home_win_pct": 0.5288461538461539,
+    "away_win_pct": 0.5825242718446602,
+    "home_pythagorean": 0.5557264825782632,
+    "away_pythagorean": 0.5640623935699203,
+    "home_recent_form": 0.4320448071111358,
+    "away_recent_form": 0.4571783764416232,
+    "home_fip": 3.91,
+    "away_fip": 4.27,
+    "home_k_rate": 0.237,
+    "away_k_rate": 0.216,
+    "pitcher_era_advantage": 0.5900000000000001,
+    "pitcher_k_rate_advantage": -0.1059999999999998,
+    "stadium_factor": "1.13x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.564,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777015",
+    "away_team": "Philadelphia Phillies",
+    "home_team": "New York Yankees",
+    "home_pitcher": "Will Warren",
+    "away_pitcher": "Taijuan Walker",
+    "home_win_probability": 0.535,
+    "away_win_probability": 0.465,
+    "predicted_total_runs": 8.0,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.89,
+    "away_era": 3.71,
+    "home_ops": 0.787,
+    "away_ops": 0.735,
+    "home_win_pct": 0.5490196078431373,
+    "away_win_pct": 0.5686274509803921,
+    "home_pythagorean": 0.6097560975609756,
+    "away_pythagorean": 0.5716286769387495,
+    "home_recent_form": 0.464549835177838,
+    "away_recent_form": 0.4946925196990356,
+    "home_fip": 3.95,
+    "away_fip": 3.6,
+    "home_k_rate": 0.226,
+    "away_k_rate": 0.208,
+    "pitcher_era_advantage": -0.5800000000000001,
+    "pitcher_k_rate_advantage": 0.1460000000000002,
+    "stadium_factor": "1.06x",
+    "bullpen_advantage": "HOME",
+    "home_field_advantage": 0.604,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777014",
+    "away_team": "Arizona Diamondbacks",
+    "home_team": "Pittsburgh Pirates",
+    "home_pitcher": "Mike Burrows",
+    "away_pitcher": "Ryne Nelson",
+    "home_win_probability": 0.532,
+    "away_win_probability": 0.468,
+    "predicted_total_runs": 7.2,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.84,
+    "away_era": 4.58,
+    "home_ops": 0.643,
+    "away_ops": 0.775,
+    "home_win_pct": 0.4077669902912621,
+    "away_win_pct": 0.4854368932038835,
+    "home_pythagorean": 0.4191702823667894,
+    "away_pythagorean": 0.5135897223248415,
+    "home_recent_form": 0.6260571653528256,
+    "away_recent_form": 0.3519185781957474,
+    "home_fip": 3.9,
+    "away_fip": 4.29,
+    "home_k_rate": 0.238,
+    "away_k_rate": 0.204,
+    "pitcher_era_advantage": -0.5900000000000001,
+    "pitcher_k_rate_advantage": 0.064,
+    "stadium_factor": "1.02x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.581,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777020",
+    "away_team": "Colorado Rockies",
+    "home_team": "Baltimore Orioles",
+    "home_pitcher": "Dean Kremer",
+    "away_pitcher": "Kyle Freeland",
+    "home_win_probability": 0.532,
+    "away_win_probability": 0.468,
+    "predicted_total_runs": 7.2,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 4.99,
+    "away_era": 5.54,
+    "home_ops": 0.698,
+    "away_ops": 0.68,
+    "home_win_pct": 0.4411764705882353,
+    "away_win_pct": 0.2549019607843137,
+    "home_pythagorean": 0.3875096566163216,
+    "away_pythagorean": 0.2640739153286257,
+    "home_recent_form": 0.3556304445168499,
+    "away_recent_form": 0.6504543038438136,
+    "home_fip": 4.56,
+    "away_fip": 4.86,
+    "home_k_rate": 0.235,
+    "away_k_rate": 0.264,
+    "pitcher_era_advantage": 0.5650000000000004,
+    "pitcher_k_rate_advantage": 0.062,
+    "stadium_factor": "1.08x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.595,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777011",
+    "away_team": "Washington Nationals",
+    "home_team": "Minnesota Twins",
+    "home_pitcher": "Zebby Matthews",
+    "away_pitcher": "MacKenzie Gore",
+    "home_win_probability": 0.532,
+    "away_win_probability": 0.468,
+    "predicted_total_runs": 7.0,
+    "over_8_5_probability": 0.563,
+    "confidence_tier": "MEDIUM",
+    "home_era": 4.17,
+    "away_era": 5.2,
+    "home_ops": 0.713,
+    "away_ops": 0.7,
+    "home_win_pct": 0.4803921568627451,
+    "away_win_pct": 0.4019607843137255,
+    "home_pythagorean": 0.4897388229482196,
+    "away_pythagorean": 0.3902439024390244,
+    "home_recent_form": 0.3677894148400573,
+    "away_recent_form": 0.4543573657039385,
+    "home_fip": 3.8,
+    "away_fip": 4.47,
+    "home_k_rate": 0.223,
+    "away_k_rate": 0.205,
+    "pitcher_era_advantage": -1.335,
+    "pitcher_k_rate_advantage": 0.002,
+    "stadium_factor": "1.00x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.616,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": true,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777010",
+    "away_team": "Cleveland Guardians",
+    "home_team": "Kansas City Royals",
+    "home_pitcher": "Michael Wacha",
+    "away_pitcher": "Gavin Williams",
+    "home_win_probability": 0.53,
+    "away_win_probability": 0.47,
+    "predicted_total_runs": 6.7,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 3.5,
+    "away_era": 3.92,
+    "home_ops": 0.679,
+    "away_ops": 0.67,
+    "home_win_pct": 0.4854368932038835,
+    "away_win_pct": 0.5,
+    "home_pythagorean": 0.4706136560069144,
+    "away_pythagorean": 0.4574463989005814,
+    "home_recent_form": 0.5616669453352813,
+    "away_recent_form": 0.6709183496257597,
+    "home_fip": 3.85,
+    "away_fip": 4.09,
+    "home_k_rate": 0.186,
+    "away_k_rate": 0.223,
+    "pitcher_era_advantage": -0.04,
+    "pitcher_k_rate_advantage": -0.1119999999999999,
+    "stadium_factor": "1.06x",
+    "bullpen_advantage": "HOME",
+    "home_field_advantage": 0.574,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777006",
+    "away_team": "Seattle Mariners",
+    "home_team": "Los Angeles Angels",
+    "home_pitcher": "Jos\u00e9 Soriano",
+    "away_pitcher": "Bryan Woo",
+    "home_win_probability": 0.502,
+    "away_win_probability": 0.498,
+    "predicted_total_runs": 10.8,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "LOW",
+    "home_era": 4.67,
+    "away_era": 3.91,
+    "home_ops": 0.716,
+    "away_ops": 0.736,
+    "home_win_pct": 0.4757281553398058,
+    "away_win_pct": 0.5339805825242718,
+    "home_pythagorean": 0.4309030323368037,
+    "away_pythagorean": 0.5204435477332691,
+    "home_recent_form": 0.2037705847907572,
+    "away_recent_form": 0.582075266488538,
+    "home_fip": 4.66,
+    "away_fip": 4.03,
+    "home_k_rate": 0.257,
+    "away_k_rate": 0.23,
+    "pitcher_era_advantage": -0.4599999999999999,
+    "pitcher_k_rate_advantage": -0.0859999999999999,
+    "stadium_factor": "1.01x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.53,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  },
+  {
+    "game_id": "777017",
+    "away_team": "Chicago Cubs",
+    "home_team": "Chicago White Sox",
+    "home_pitcher": "Adrian Houser",
+    "away_pitcher": "Shota Imanaga",
+    "home_win_probability": 0.456,
+    "away_win_probability": 0.544,
+    "predicted_total_runs": 8.9,
+    "over_8_5_probability": 0.407,
+    "confidence_tier": "MEDIUM",
+    "home_era": 4.09,
+    "away_era": 3.87,
+    "home_ops": 0.652,
+    "away_ops": 0.77,
+    "home_win_pct": 0.3592233009708738,
+    "away_win_pct": 0.5882352941176471,
+    "home_pythagorean": 0.414307731826355,
+    "away_pythagorean": 0.6204566139307914,
+    "home_recent_form": 0.7363780047040998,
+    "away_recent_form": 0.4585698760226739,
+    "home_fip": 4.45,
+    "away_fip": 4.25,
+    "home_k_rate": 0.233,
+    "away_k_rate": 0.1989999999999999,
+    "pitcher_era_advantage": 0.255,
+    "pitcher_k_rate_advantage": -0.01,
+    "stadium_factor": "1.05x",
+    "bullpen_advantage": "AWAY",
+    "home_field_advantage": 0.429,
+    "strong_home_favorite": false,
+    "strong_away_favorite": false,
+    "lean_over_8_5": false,
+    "f5_over_signal": false
+  }
+];
+        
+        function showTeamStats(gameId, teamType) {
+            const game = gamesData.find(g => g.game_id === gameId);
+            if (!game) return;
+            
+            const isHome = teamType === 'home';
+            const teamName = isHome ? game.home_team : game.away_team;
+            const pitcher = isHome ? game.home_pitcher : game.away_pitcher;
+            
+            document.getElementById('modalTitle').textContent = `${teamName} - Today's Analysis`;
+            
+            const modalContent = `
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <h3>Starting Pitcher: ${pitcher}</h3>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-label">Win Probability</div>
+                        <div class="stat-value">${isHome ? game.home_win_probability.toFixed(1) : game.away_win_probability.toFixed(1)}%</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Season Win %</div>
+                        <div class="stat-value">${(isHome ? game.home_win_pct : game.away_win_pct).toFixed(3)}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Team ERA</div>
+                        <div class="stat-value">${(isHome ? game.home_era : game.away_era).toFixed(2)}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Team OPS</div>
+                        <div class="stat-value">${(isHome ? game.home_ops : game.away_ops).toFixed(3)}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Pythagorean Win %</div>
+                        <div class="stat-value">${(isHome ? game.home_pythagorean : game.away_pythagorean).toFixed(3)}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Recent Form</div>
+                        <div class="stat-value">${(isHome ? game.home_recent_form : game.away_recent_form).toFixed(3)}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Team FIP</div>
+                        <div class="stat-value">${(isHome ? game.home_fip : game.away_fip).toFixed(2)}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Strikeout Rate</div>
+                        <div class="stat-value">${(isHome ? game.home_k_rate : game.away_k_rate * 100).toFixed(1)}%</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+                    <h4 style="margin: 0 0 0.5rem 0;">Game Context</h4>
+                    <p><strong>Stadium Factor:</strong> ${game.stadium_factor}</p>
+                    <p><strong>Bullpen Advantage:</strong> ${game.bullpen_advantage}</p>
+                    <p><strong>Home Field Advantage:</strong> ${(game.home_field_advantage * 100).toFixed(1)}%</p>
+                    ${isHome ? '' : `<p><strong>Pitcher ERA Advantage:</strong> ${game.pitcher_era_advantage > 0 ? 'Favorable' : 'Unfavorable'} (${game.pitcher_era_advantage.toFixed(2)})</p>`}
+                </div>
+            `;
+            
+            document.getElementById('modalContent').innerHTML = modalContent;
+            document.getElementById('teamModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('teamModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('teamModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
