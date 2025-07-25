@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Women's Sports Stats & Analysis | Smart Bet Calcs</title>
+    <meta name="description" content="Detailed women's sports statistics, player analytics, and betting insights. Premium data for WNBA, Tennis, Soccer with live updates.">
+    
+    <!-- Favicon (same as your main site) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZmF2aWNvbkdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N2VlYSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM3NjRiYTIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTEiIGZpbGw9InVybCgjZmF2aWNvbkdyYWRpZW50KSIvPgogIDxwYXRoIGQ9Ik0xMS41IDE0IEwxMy41IDE2IEwyMC41IDkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIyMSIgcj0iMi41IiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4K">
+    
+    <!-- Include your existing styles plus the sports widget styles -->
+    <link rel="stylesheet" href="/css/sports-widget.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ2MWQF940"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HZ2MWQF940');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+        
+        .premium-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .premium-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .premium-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(-3px);
+        }
+
+        /* Last Updated Indicator */
+        .last-updated {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #81e6d9;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 40px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Quick Links Section */
+        .quick-links-section {
+            padding: 30px 40px;
+            background: linear-gradient(135deg, #e6fffa 0%, #f0fff4 100%);
+            border-bottom: 2px solid #38a169;
+        }
+
+        .quick-links-section h3 {
+            color: #38a169;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .quick-links-section p {
+            color: #2d5016;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .quick-links-grid {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .quick-link-btn {
+            background: linear-gradient(135deg, #38a169 0%, #2f8559 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(56, 161, 105, 0.3);
+        }
+
+        .quick-link-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .quick-link-btn.secondary {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        }
+
+        .quick-link-btn.tertiary {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5aa0 100%);
+        }
+
+        .quick-link-btn.accent {
+            background: linear-gradient(135deg, #805ad5 0%, #553c9a 100%);
+        }
+        
+        .main-content {
+            padding: 40px;
+            position: relative;
+        }
+        
+        .preview-content {
+            filter: blur(2px);
+            opacity: 0.6;
+            pointer-events: none;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .stats-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .stats-tab {
+            padding: 12px 24px;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            background: white;
+        }
+        
+        .stats-tab.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .detailed-stats {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #4a5568;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .player-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .player-table th,
+        .player-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .player-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .sport-section {
+            margin-bottom: 40px;
+        }
+
+        .sport-title {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .loading-indicator {
+            text-align: center;
+            padding: 40px;
+            color: #4a5568;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #fed7d7;
+            color: #c53030;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .paywall-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .upgrade-cta {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            margin: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .upgrade-cta h2 {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .upgrade-cta p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .features-list li::before {
+            content: '✅';
+            font-size: 1.2rem;
+        }
+        
+        .pricing-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .pricing-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .pricing-card.featured {
+            border-color: #48bb78;
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-card.featured .price {
+            color: #38a169;
+        }
+        
+        .upgrade-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .upgrade-btn.featured {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+        }
+        
+        .upgrade-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .close-paywall {
+            background: none;
+            border: 1px solid #e2e8f0;
+            color: #4a5568;
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #4a5568;
+            color: #a0aec0;
+        }
+        
+        @media (max-width: 768px) {
+            .premium-header {
+                padding: 30px 20px;
+            }
+            
+            .premium-header h1 {
+                font-size: 2rem;
+            }
+            
+            .main-content, .breadcrumb, .quick-links-section {
+                padding: 20px;
+            }
+            
+            .upgrade-cta {
+                margin: 10px;
+                padding: 30px 20px;
+            }
+            
+            .stats-tabs {
+                justify-content: center;
+            }
+            
+            .pricing-options {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-links-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="premium-header">
+            <a href="/" class="back-link">
+                ← Back to Homepage
+            </a>
+            <h1>Premium Women's Sports Analytics</h1>
+            <p>Complete statistics, player insights, and betting analysis</p>
+        </div>
+
+        <div class="last-updated" id="lastUpdated">
+            Loading fresh data...
+        </div>
+
+        <div class="breadcrumb">
+            <a href="/">Home</a> › Live Sports Stats & Analysis
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="quick-links-section">
+            <h3>🔗 Complete Sports Betting Resources</h3>
+            <p>While you're here, explore our complete guide to women's sports betting</p>
+            <div class="quick-links-grid">
+                <a href="/women-sports-betting-guide.html" class="quick-link-btn accent">What is Sports Betting?</a>
+                <a href="/wnba-betting-guide.html" class="quick-link-btn secondary">WNBA Betting Guide</a>
+                <a href="/caitlin-clark-betting-guide.html" class="quick-link-btn tertiary">Caitlin Clark Betting</a>
+                <a href="/" class="quick-link-btn primary">Parlay Calculator</a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <!-- Dynamic Content Area -->
+            <div class="content-area" id="mainContent">
+                <div class="loading-indicator">
+                    <div class="loading-spinner"></div>
+                    Loading fresh women's sports data...
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Betting Guides</h3>
+                    <ul>
+                        <li><a href="/women-sports-betting-guide.html">What is Sports Betting?</a></li>
+                        <li><a href="/wnba-betting-guide.html">WNBA Betting Guide</a></li>
+                        <li><a href="/caitlin-clark-betting-guide.html">Caitlin Clark Betting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Calculators</h3>
+                    <ul>
+                        <li><a href="/">Parlay Calculator</a></li>
+                        <li><a href="/live-stats.html">Live Sports Stats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Women's Sports</h3>
+                    <ul>
+                        <li><a href="/wnba-betting-guide.html">WNBA Betting</a></li>
+                        <li><a href="/#womens-sports">Women's Tennis</a></li>
+                        <li><a href="/#womens-sports">Women's Soccer</a></li>
+                        <li><a href="/#womens-sports">Women's College Basketball</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Responsible Gambling</h3>
+                    <ul>
+                        <li><a href="/#responsible">Betting Guidelines</a></li>
+                        <li><a href="tel:1-800-522-4700">Problem Gambling Helpline</a></li>
+                        <li><a href="https://ncpgambling.org" target="_blank">ncpgambling.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Bet Calcs. Educational sports betting tools for women. Bet responsibly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paywall Overlay -->
+    <div class="paywall-overlay" id="paywall">
+        <div class="upgrade-cta">
+            <h2>🔓 Unlock Premium Sports Analytics</h2>
+            <p>Get access to detailed player statistics, betting insights, historical data, and advanced analysis tools.</p>
+            
+            <ul class="features-list">
+                <li>Live player performance tracking</li>
+                <li>Historical trends and analysis</li>
+                <li>Betting value recommendations</li>
+                <li>Advanced calculators & tools</li>
+                <li>Daily betting insights email</li>
+                <li>Season predictions & futures</li>
+            </ul>
+            
+            <div class="pricing-options">
+                <div class="pricing-card">
+                    <h3>Monthly</h3>
+                    <div class="price">$9.99</div>
+                    <button class="upgrade-btn" onclick="startSubscription('monthly')">
+                        Start Monthly
+                    </button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Annual</h3>
+                    <div class="price">$79.99</div>
+                    <p style="color: #38a169; font-weight: 600; margin-bottom: 15px;">Save 33%!</p>
+                    <button class="upgrade-btn featured" onclick="startSubscription('annual')">
+                        Get Annual Plan
+                    </button>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.9rem; color: #718096; margin-top: 20px;">
+                Cancel anytime. All major payment methods accepted.
+            </p>
+            
+            <button class="close-paywall" onclick="closePaywall()">
+                Continue with Free Version
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ✅ FIXED: Correct data paths and actual data integration
+        const DATA_PATHS = {
+            detailed: '/data/sports_detailed.json',
+            summary: '/data/sports_summary.json'
+        };
+
+        // Mock subscription for testing - remove in production
+        let isTestMode = true; // Set to false in production
+
+        // Check subscription status
+        function checkSubscription() {
+            if (isTestMode) return true; // For testing
+            return localStorage.getItem('premium_subscription') === 'active';
+        }
+        
+        function startSubscription(plan) {
+            alert(`Starting ${plan} subscription...`);
+            
+            if (confirm(`Subscribe to ${plan} plan for ${plan === 'monthly' ? '$9.99/month' : '$79.99/year'}?`)) {
+                localStorage.setItem('premium_subscription', 'active');
+                localStorage.setItem('subscription_plan', plan);
+                closePaywall();
+                location.reload();
+            }
+        }
+        
+        function closePaywall() {
+            document.getElementById('paywall').style.display = 'none';
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 3000);
+        }
+
+        // ✅ FIXED: Actually loads and displays the data from your Python script
+        async function loadPremiumContent() {
+            const mainContent = document.getElementById('mainContent');
+            
+            try {
+                console.log('Loading data from:', DATA_PATHS.detailed);
+                
+                // Load both detailed and summary data
+                const [detailedResponse, summaryResponse] = await Promise.all([
+                    fetch(DATA_PATHS.detailed),
+                    fetch(DATA_PATHS.summary)
+                ]);
+
+                if (!detailedResponse.ok || !summaryResponse.ok) {
+                    throw new Error(`HTTP error! Detailed: ${detailedResponse.status}, Summary: ${summaryResponse.status}`);
+                }
+
+                const detailedData = await detailedResponse.json();
+                const summaryData = await summaryResponse.json();
+                
+                console.log('✅ Data loaded successfully:', { detailedData, summaryData });
+                
+                // Update last updated time
+                const lastUpdated = new Date(detailedData.last_updated).toLocaleString();
+                document.getElementById('lastUpdated').innerHTML = `📊 Last updated: ${lastUpdated}`;
+                
+                // Generate HTML content from your actual data
+                const contentHTML = generateContentFromData(detailedData, summaryData);
+                mainContent.innerHTML = contentHTML;
+                
+            } catch (error) {
+                console.error('❌ Error loading data:', error);
+                mainContent.innerHTML = `
+                    <div class="error-message">
+                        <h3>⚠️ Unable to Load Fresh Data</h3>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p><strong>Expected path:</strong> ${DATA_PATHS.detailed}</p>
+                        <p><strong>Make sure:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Your Python script has run successfully</li>
+                            <li>The data files exist at the expected location</li>
+                            <li>Your web server can access the /data/ directory</li>
+                        </ul>
+                        <button onclick="location.reload()" style="margin-top: 15px; padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                            Retry Loading Data
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // ✅ FIXED: Generates HTML from your actual Python script data
+        function generateContentFromData(detailedData, summaryData) {
+            let html = '<div class="stats-tabs">';
+            
+            // Get unique sports from the data
+            const sports = [...new Set(Object.values(detailedData.players).map(p => p.sport))];
+            
+            sports.forEach((sport, index) => {
+                html += `<div class="stats-tab ${index === 0 ? 'active' : ''}" onclick="showSport('${sport}')">${sport}</div>`;
+            });
+            html += '</div>';
+
+            // Generate content for each sport
+            sports.forEach((sport, index) => {
+                const sportPlayers = Object.entries(detailedData.players).filter(([name, data]) => data.sport === sport);
+                const sportTeams = Object.entries(summaryData.teams_and_tournaments).filter(([name, data]) => data.sport === sport);
+                
+                html += `
+                    <div class="sport-section" id="sport-${sport.replace(/\s+/g, '-').replace(/[()]/g, '')}" style="${index === 0 ? '' : 'display: none;'}">
+                        <div class="detailed-stats">
+                            <h3>🏆 ${sport} - Live Stats</h3>
+                            
+                            ${generateStatsGrid(sportPlayers, sport)}
+                            ${generatePlayerTable(sportPlayers, sport)}
+                            ${generateTeamsSection(sportTeams, sport)}
+                        </div>
+                    </div>
+                `;
+            });
+
+            return html;
+        }
+
+        function generateStatsGrid(players, sport) {
+            const topPlayers = players.slice(0, 4);
+            
+            let html = '<div class="stats-grid">';
+            
+            topPlayers.forEach(([name, data]) => {
+                let statValue = 'N/A';
+                let statLabel = 'Stats';
+                
+                // Customize based on sport
+                if (sport.includes('WNBA') || sport.includes('Basketball')) {
+                    statValue = data.points_per_game || data.ppg || 'N/A';
+                    statLabel = `${name.split(' ').pop()} PPG`;
+                } else if (sport.includes('Tennis')) {
+                    statValue = data.current_ranking || 'N/A';
+                    statLabel = `${name.split(' ').pop()} Rank`;
+                } else if (sport.includes('Soccer')) {
+                    statValue = data.position || 'N/A';
+                    statLabel = `${name.split(' ').pop()} Pos`;
+                }
+                
+                html += `
+                    <div class="stat-card">
+                        <div class="stat-number">${statValue}</div>
+                        <div class="stat-label">${statLabel}</div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            return html;
+        }
+
+        function generatePlayerTable(players, sport) {
+            let html = `
+                <table class="player-table">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team/Country</th>
+            `;
+            
+            // Add sport-specific columns
+            if (sport.includes('WNBA') || sport.includes('Basketball')) {
+                html += '<th>PPG</th><th>RPG</th><th>APG</th>';
+            } else if (sport.includes('Tennis')) {
+                html += '<th>Ranking</th><th>Points</th>';
+            } else if (sport.includes('Soccer')) {
+                html += '<th>Position</th><th>Nationality</th>';
+            }
+            
+            html += '<th>League</th></tr></thead><tbody>';
+            
+            players.slice(0, 10).forEach(([name, data]) => {
+                html += `
+                    <tr>
+                        <td><strong>${name}</strong></td>
+                        <td>${data.team || data.country || 'N/A'}</td>
+                `;
+                
+                if (sport.includes('WNBA') || sport.includes('Basketball')) {
+                    html += `
+                        <td>${data.points_per_game || 'N/A'}</td>
+                        <td>${data.rebounds_per_game || 'N/A'}</td>
+                        <td>${data.assists_per_game || 'N/A'}</td>
+                    `;
+                } else if (sport.includes('Tennis')) {
+                    html += `
+                        <td>#${data.current_ranking || 'N/A'}</td>
+                        <td>${data.ranking_points || 'N/A'}</td>
+                    `;
+                } else if (sport.includes('Soccer')) {
+                    html += `
+                        <td>${data.position || 'N/A'}</td>
+                        <td>${data.nationality || data.country || 'N/A'}</td>
+                    `;
+                }
+                
+                html += `<td>${data.league}</td></tr>`;
+            });
+            
+            html += '</tbody></table>';
+            return html;
+        }
+
+        function generateTeamsSection(teams, sport) {
+            if (teams.length === 0) return '';
+            
+            let html = `<h4 style="margin-top: 30px; color: #2d3748;">Teams & Tournaments</h4>`;
+            html += '<div class="stats-grid">';
+            
+            teams.slice(0, 6).forEach(([name, data]) => {
+                html += `
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 1rem;">${name}</div>
+                        <div class="stat-label">${data.city || data.surface || data.conference || ''}</div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            return html;
+        }
+
+        function showSport(sport) {
+            // Hide all sport sections
+            document.querySelectorAll('.sport-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.stats-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected sport and activate tab
+            const sportId = sport.replace(/\s+/g, '-').replace(/[()]/g, '');
+            const selectedSection = document.getElementById(`sport-${sportId}`);
+            const selectedTab = event.target;
+            
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+            selectedTab.classList.add('active');
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            if (checkSubscription()) {
+                // User has subscription, load premium content
+                document.getElementById('paywall').style.display = 'none';
+                loadPremiumContent();
+            } else {
+                // Show paywall for non-subscribers
+                document.getElementById('mainContent').innerHTML = `
+                    <div class="preview-content">
+                        <p style="text-align: center; color: #4a5568; font-size: 1.1rem;">
+                            🔒 Premium content available with subscription
+                        </p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

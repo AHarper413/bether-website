@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://smartbetcalcs.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+  
+  <!-- Calculator Pages - High Priority -->
+  <url>
+    <loc>https://smartbetcalcs.com/all-calculators.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smartbetcalcs.com/round-robin-calculator.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smartbetcalcs.com/teaser-calculator.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+  
+  <!-- Women's Betting Content - HIGH SEO VALUE -->
+  <url>
+    <loc>https://smartbetcalcs.com/women-sports-betting-guide.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smartbetcalcs.com/wnba-betting-guide.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smartbetcalcs.com/caitlin-clark-betting-guide.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+</urlset>

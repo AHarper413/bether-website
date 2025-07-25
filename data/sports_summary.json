@@ -1,0 +1,16 @@
+{
+  "last_updated": "2025-07-22T22:37:37.984797",
+  "data_type": "Women's Sports Team Statistics Summary",
+  "description": "Comprehensive team-level statistics with wins, losses, PPG, defensive stats",
+  "collection_method": "Enhanced ESPN API endpoints",
+  "collection_timestamp": "2025-07-22 22:37:37",
+  "sports_covered": [
+    "WNBA"
+  ],
+  "total_teams": 0,
+  "data_sources": [
+    "ESPN Standings API",
+    "ESPN Teams API"
+  ],
+  "team_statistics": {}
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting News & Analysis | BetHer Sports Betting Education</title>
+    <meta name="description" content="Latest sports betting news, game previews, and analysis from BetHer. Expert insights on NFL, NBA, WNBA, MLB, and MLS betting opportunities for women.">
+    <meta name="keywords" content="sports betting news, betting analysis, game previews, NFL betting, NBA betting, WNBA betting, women sports betting">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZmF2aWNvbkdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2VkNjQ5NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmODcxNzEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTEiIGZpbGw9InVybCgjZmF2aWNvbkdyYWRpZW50KSIvPgogIDxwYXRoIGQ9Ik0xMS41IDE0IEwxMy41IDE2IEwyMC41IDkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIyMSIgcj0iMi41IiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4K">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ2MWQF940"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HZ2MWQF940');
+    </script>
+    
+    <style>
+        :root {
+            --primary-rose: #e11d48;
+            --primary-rose-light: #f43f5e;
+            --primary-rose-dark: #be123c;
+            --soft-rose: #fdf2f8;
+            --warm-gray: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border-light: #e2e8f0;
+            --white: #ffffff;
+            --accent-purple: #8b5cf6;
+            --success-green: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        
+        .brand-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary-rose);
+        }
+        
+        .home-btn {
+            background: var(--primary-rose);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .home-btn:hover {
+            background: var(--primary-rose-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--soft-rose) 0%, var(--warm-gray) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-rose);
+            text-decoration: none;
+        }
+
+        /* Content */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            background: var(--white);
+        }
+
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-rose) 0%, var(--accent-purple) 100%);
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            border-color: var(--primary-rose);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .article-category {
+            background: var(--soft-rose);
+            color: var(--primary-rose);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+
+        .article-date {
+            color: var(--text-muted);
+        }
+
+        .article-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .article-card h2 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .article-card h2 a:hover {
+            color: var(--primary-rose);
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--primary-rose);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .read-more:hover {
+            transform: translateX(4px);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--white);
+        }
+
+        .sidebar-section {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section h3 {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .sidebar-section ul {
+            list-style: none;
+        }
+
+        .sidebar-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .sidebar-section a:hover {
+            color: var(--primary-rose);
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, var(--primary-rose) 0%, var(--accent-purple) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .cta-card h3 {
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .cta-card p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            background: var(--white);
+            color: var(--primary-rose);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2.25rem;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="brand-section">
+                    <a href="/index.html" style="text-decoration: none;">
+                        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e11d48"/>
+                                    <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="white" opacity="0.1"/>
+                            <circle cx="100" cy="100" r="70" fill="url(#logoGradient)"/>
+                            <path d="M70 85 L85 100 L130 55" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="100" cy="130" r="15" fill="white"/>
+                            <circle cx="75" cy="130" r="8" fill="white" opacity="0.8"/>
+                            <circle cx="125" cy="130" r="8" fill="white" opacity="0.8"/>
+                        </svg>
+                    </a>
+                    <div class="brand-text">
+                        <h1>BetHer</h1>
+                    </div>
+                </div>
+                <a href="/index.html" class="home-btn">← Back to Home</a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="breadcrumb">
+                <a href="/index.html">Home</a> → Betting News
+            </div>
+            <h1>Betting News & Analysis</h1>
+            <p>Expert insights, game previews, and analysis to help you make informed betting decisions across all major sports.</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="articles-grid">
+                    
+                    <div class="article-card">
+                        <div class="article-meta">
+                            <span class="article-category">SAFETY GUIDE</span>
+                            <span class="article-date">July 25, 2025</span>
+                        </div>
+                        <h2><a href="/articles/safe-betting-sites-for-women.html">Safe Betting Sites for Women: Your Complete Security & Protection Guide</a></h2>
+                        <p class="article-excerpt">Navigate sports betting safely with our comprehensive security guide designed for women. Learn about essential protection features, data privacy, and red flags to avoid when choosing betting platforms.</p>
+                        <a href="/articles/safe-betting-sites-for-women.html" class="read-more">Read Security Guide →</a>
+                    </div>
+                    
+                    <!-- New College Sports Article -->
+                    <div class="article-card">
+                        <div class="article-meta">
+                            <span class="article-category">COLLEGE SPORTS</span>
+                            <span class="article-date">July 24, 2025</span>
+                        </div>
+                        <h2><a href="/articles/womens-college-sports-betting-guide.html">Women's College Sports Betting Guide: Master March Madness & Beyond</a></h2>
+                        <p class="article-excerpt">Complete guide to betting on women's college sports including NCAA basketball, volleyball, soccer, and softball. Learn March Madness strategies, tournament betting tips, and find value in collegiate athletics.</p>
+                        <a href="/articles/womens-college-sports-betting-guide.html" class="read-more">Read Full Guide →</a>
+                    </div>
+
+                    <!-- Latest Article -->
+                    <div class="article-card">
+                        <div class="article-meta">
+                            <span class="article-category">WNBA</span>
+                            <span class="article-date">July 23, 2025</span>
+                        </div>
+                        <h2><a href="/articles/dream-mercury-betting-preview-july-23.html">Dream vs Mercury Betting Preview: Expert Picks for July 23 WNBA Showdown</a></h2>
+                        <p class="article-excerpt">Phoenix Mercury host Atlanta Dream tonight at 10 PM ET as 7.5-point favorites. Expert analysis covers key player props, injury impacts, and strategic betting opportunities for this Western Conference clash.</p>
+                        <a href="/articles/dream-mercury-betting-preview-july-23.html" class="read-more">Read Full Analysis →</a>
+                    </div>
+                    
+                    
+
+                    <!-- Add more articles here as you create them -->
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#nfl">NFL Betting</a></li>
+                        <li><a href="#nba">NBA Betting</a></li>
+                        <li><a href="#wnba">WNBA Betting</a></li>
+                        <li><a href="#mlb">MLB Betting</a></li>
+                        <li><a href="#mls">MLS Betting</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Popular Guides</h3>
+                    <ul>
+                        <li><a href="/sports-betting-guide.html">Betting Fundamentals</a></li>
+                        <li><a href="/nfl-betting-guide.html">NFL Betting Guide</a></li>
+                        <li><a href="/basketball-betting-guide.html">NBA & WNBA Guide</a></li>
+                        <li><a href="/calculators.html">Betting Calculators</a></li>
+                    </ul>
+                </div>
+
+                <div class="cta-card">
+                    <h3>New to Sports Betting?</h3>
+                    <p>Start with our comprehensive fundamentals guide designed specifically for women.</p>
+                    <a href="/sports-betting-guide.html" class="cta-btn">Start Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

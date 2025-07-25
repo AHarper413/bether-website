@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Betting Calculators | BetHer Professional Betting Tools</title>
+    <meta name="description" content="Professional sports betting calculators designed for women. Calculate parlays, teasers, and round robins with BetHer's easy-to-use betting tools.">
+    <meta name="keywords" content="sports betting calculators women, parlay calculator, teaser calculator, round robin calculator, betting tools">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZmF2aWNvbkdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2VkNjQ5NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmODcxNzEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTEiIGZpbGw9InVybCgjZmF2aWNvbkdyYWRpZW50KSIvPgogIDxwYXRoIGQ9Ik0xMS41IDE0IEwxMy41IDE2IEwyMC41IDkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIyMSIgcj0iMi41IiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4K">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ2MWQF940"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HZ2MWQF940');
+    </script>
+    
+    <style>
+        :root {
+            --primary-rose: #e11d48;
+            --primary-rose-light: #f43f5e;
+            --primary-rose-dark: #be123c;
+            --soft-rose: #fdf2f8;
+            --warm-gray: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border-light: #e2e8f0;
+            --white: #ffffff;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --success-green: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: var(--white);
+            padding: 2rem 2.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .logo {
+            width: 48px;
+            height: 48px;
+        }
+        
+        .brand-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-rose);
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .brand-text p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .header-stats {
+            text-align: right;
+        }
+        
+        .header-stats h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-stats p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-button {
+            background: var(--primary-rose);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-rose-dark);
+            transform: translateY(-1px);
+        }
+        
+        /* Navigation */
+        .nav-section {
+            background: var(--white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 0 2.5rem;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            min-height: 60px;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background: none;
+            border: none;
+            padding: 1.25rem 1.75rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-btn:hover {
+            color: var(--primary-rose);
+            background: var(--soft-rose);
+        }
+        
+        .nav-btn.active {
+            color: var(--primary-rose);
+            border-bottom-color: var(--primary-rose);
+            background: var(--soft-rose);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 5rem 2.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--soft-rose) 0%, var(--warm-gray) 100%);
+        }
+        
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-section p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-rose);
+            text-decoration: none;
+        }
+
+        /* Calculators Section */
+        .calculators-section {
+            padding: 6rem 2.5rem;
+            background: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .calculators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .calculator-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-rose) 0%, var(--accent-purple) 100%);
+        }
+        
+        .calculator-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--primary-rose);
+        }
+        
+        .calculator-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-rose) 0%, var(--accent-purple) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem auto;
+            color: var(--white);
+            font-size: 2rem;
+        }
+        
+        .calculator-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .calculator-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .feature-list {
+            text-align: left;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+        }
+
+        .feature-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--success-green);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .calculator-btn {
+            background: var(--primary-rose);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        .calculator-btn:hover {
+            background: var(--primary-rose-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Why Use Calculators Section */
+        .why-calculators-section {
+            padding: 6rem 2.5rem;
+            background: var(--warm-gray);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--soft-rose);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            font-size: 1.5rem;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .header-cta {
+                justify-content: center;
+            }
+            
+            .brand-text h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-section {
+                padding: 0 1.5rem;
+            }
+            
+            .hero-section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .calculators-section,
+            .why-calculators-section {
+                padding: 4rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .calculators-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="brand-section">
+                    <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#e11d48"/>
+                                <stop offset="100%" style="stop-color:#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="90" fill="white" opacity="0.1"/>
+                        <circle cx="100" cy="100" r="70" fill="url(#logoGradient)"/>
+                        <path d="M70 85 L85 100 L130 55" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="100" cy="130" r="15" fill="white"/>
+                        <circle cx="75" cy="130" r="8" fill="white" opacity="0.8"/>
+                        <circle cx="125" cy="130" r="8" fill="white" opacity="0.8"/>
+                    </svg>
+                    <div class="brand-text">
+                        <h1>BetHer</h1>
+                        <p>Empowering women in sports betting</p>
+                    </div>
+                </div>
+                <div class="header-cta">
+                    <div class="header-stats">
+                        <h3>Professional Tools</h3>
+                        <p>Calculate smarter bets</p>
+                    </div>
+                    <a href="/sports-betting-guide.html" class="cta-button">Learn First</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-buttons">
+                <a href="/index.html" class="nav-btn">Home</a>
+                <a href="#calculators" class="nav-btn active">Calculators</a>
+                <a href="/sports-betting-guide.html" class="nav-btn">Betting Guides</a>
+                <a href="/index.html#responsible" class="nav-btn">Responsible Betting</a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="breadcrumb">
+                <a href="/index.html">Home</a> → Betting Calculators
+            </div>
+            <h1>Professional Betting Calculators</h1>
+            <p>Make informed betting decisions with our suite of professional calculators. Designed specifically for women who want to understand the math behind their bets and maximize their potential returns.</p>
+        </div>
+
+        <!-- Calculators Section -->
+        <div id="calculators" class="calculators-section">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Calculator</h2>
+                <p class="section-subtitle">Professional-grade tools to calculate payouts, optimize bets, and make smarter wagering decisions</p>
+            </div>
+            
+            <div class="calculators-grid">
+                <div class="calculator-card">
+                    <div class="calculator-icon">📊</div>
+                    <h3>Parlay Calculator</h3>
+                    <p>Calculate potential payouts for multi-game parlays across different sports. Perfect for combining your favorite teams and maximizing returns.</p>
+                    
+                    <ul class="feature-list">
+                        <li>Support for 2-15 leg parlays</li>
+                        <li>American, decimal, and fractional odds</li>
+                        <li>Instant payout calculations</li>
+                        <li>Risk assessment display</li>
+                    </ul>
+                    
+                    <a href="/parlay-calculator.html" class="calculator-btn">Use Parlay Calculator</a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="calculator-icon">🎯</div>
+                    <h3>Teaser Calculator</h3>
+                    <p>Adjust point spreads in your favor and see how it affects your potential winnings. Great for reducing risk on close games.</p>
+                    
+                    <ul class="feature-list">
+                        <li>6, 6.5, 7, and 10-point teasers</li>
+                        <li>NFL and NBA teaser support</li>
+                        <li>Compare teaser vs straight bet returns</li>
+                        <li>Multi-team teaser calculations</li>
+                    </ul>
+                    
+                    <a href="/teaser-calculator.html" class="calculator-btn">Use Teaser Calculator</a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="calculator-icon">⚡</div>
+                    <h3>Round Robin Calculator</h3>
+                    <p>Create multiple smaller parlays from your picks to reduce risk while maintaining upside potential. Perfect for spreading your bets strategically.</p>
+                    
+                    <ul class="feature-list">
+                        <li>Generate all possible combinations</li>
+                        <li>Flexible bet sizing options</li>
+                        <li>Compare to single parlay returns</li>
+                        <li>Risk diversification analysis</li>
+                    </ul>
+                    
+                    <a href="/round-robin-calculator.html" class="calculator-btn">Use Round Robin Calculator</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Use Calculators Section -->
+        <div class="why-calculators-section">
+            <div class="section-header">
+                <h2 class="section-title">Why Use Betting Calculators?</h2>
+                <p class="section-subtitle">Understanding the math behind your bets is crucial for long-term success and responsible gambling</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧮</div>
+                    <h4>Know Your Payouts</h4>
+                    <p>Calculate exact returns before placing bets. No surprises, no guessing - just clear numbers to make informed decisions.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h4>Compare Strategies</h4>
+                    <p>See how different betting approaches affect your potential returns. Compare parlays vs straight bets vs round robins.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h4>Manage Risk</h4>
+                    <p>Understand the risk-reward relationship of complex bets. Make strategic decisions based on actual probabilities.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h4>Learn by Doing</h4>
+                    <p>Interactive calculators help you understand betting concepts through hands-on experimentation with different scenarios.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏱️</div>
+                    <h4>Save Time</h4>
+                    <p>Instant calculations mean more time for research and less time doing math. Focus on picking winners, not crunching numbers.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h4>Bet Responsibly</h4>
+                    <p>Clear visibility into potential losses helps you stay within your budget and bet only what you can afford.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

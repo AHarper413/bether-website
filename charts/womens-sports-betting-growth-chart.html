@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Sports Betting Growth Chart</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            max-width: 800px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .chart-header {
+            background: linear-gradient(135deg, #e11d48 0%, #8b5cf6 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .chart-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #8b5cf6;
+        }
+        
+        .chart-title {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .chart-subtitle {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        
+        .chart-content {
+            padding: 50px 40px 40px 40px;
+        }
+        
+        .growth-chart {
+            height: 300px;
+            position: relative;
+            background: linear-gradient(to top, #fdf2f8 0%, transparent 100%);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .growth-bars {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            padding: 20px;
+            gap: 15px;
+        }
+        
+        .growth-bar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .bar {
+            width: 100%;
+            background: linear-gradient(to top, #e11d48, #f43f5e);
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            transition: all 0.8s ease;
+            box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+        }
+        
+        .bar-2022 { height: 40px; }
+        .bar-2023 { height: 80px; }
+        .bar-2024 { height: 140px; }
+        .bar-2025 { height: 200px; }
+        
+        .bar-value {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .bar-value::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #1e293b;
+        }
+        
+        .bar-label {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 1rem;
+        }
+        
+        .watermark {
+            text-align: center;
+            padding: 25px;
+            background: #f8fafc;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        @media (max-width: 768px) {
+            .chart-content {
+                padding: 30px 20px;
+            }
+            
+            .growth-bars {
+                padding: 15px;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div class="chart-header">
+            <h2 class="chart-title">Women's Sports Betting Growth</h2>
+            <p class="chart-subtitle">Annual betting handle increase</p>
+        </div>
+        <div class="chart-content">
+            <div class="growth-chart">
+                <div class="growth-bars">
+                    <div class="growth-bar">
+                        <div class="bar bar-2022">
+                            <div class="bar-value">$2.1B</div>
+                        </div>
+                        <div class="bar-label">2022</div>
+                    </div>
+                    <div class="growth-bar">
+                        <div class="bar bar-2023">
+                            <div class="bar-value">$4.8B</div>
+                        </div>
+                        <div class="bar-label">2023</div>
+                    </div>
+                    <div class="growth-bar">
+                        <div class="bar bar-2024">
+                            <div class="bar-value">$8.2B</div>
+                        </div>
+                        <div class="bar-label">2024</div>
+                    </div>
+                    <div class="growth-bar">
+                        <div class="bar bar-2025">
+                            <div class="bar-value">$12.5B</div>
+                        </div>
+                        <div class="bar-label">2025*</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watermark">SmartBetCalcs.com - *Projected | Source: Industry Reports</div>
+    </div>
+</body>
+</html>
