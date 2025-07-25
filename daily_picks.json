@@ -1,0 +1,34 @@
+{
+  "date": "July 25, 2025",
+  "last_updated": "2025-07-25 20:22:21 EST",
+  "model_version": "v5.0_XGBoost",
+  "summary": {
+    "total_games": 14,
+    "moneyline_signals": 1,
+    "over_8_5_signals": 1,
+    "f5_signals": 0
+  },
+  "best_moneyline_bets": [
+    {
+      "game": "Toronto Blue Jays @ Detroit Tigers",
+      "pick": "Detroit Tigers ML",
+      "probability": "58.1%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 58.1% win probability"
+    }
+  ],
+  "best_total_bets": [
+    {
+      "game": "Washington Nationals @ Minnesota Twins",
+      "pick": "Over 8.5 Runs",
+      "probability": "56.3%",
+      "confidence": "MEDIUM",
+      "predicted_total": 7.0
+    }
+  ],
+  "season_record": {
+    "wins": 156,
+    "losses": 100,
+    "percentage": 61.0
+  }
+}
