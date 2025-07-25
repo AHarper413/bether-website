@@ -1,10 +1,12 @@
 [build]
   command = ""
   publish = "."
-  ignore = "exit 0"
 
 [build.environment]
   PYTHON_VERSION = ""
-
-[[plugins]]
-  package = "@netlify/plugin-local-install-core"
+  
+[context.production]
+  command = ""
+  
+[context.deploy-preview]
+  command = ""
