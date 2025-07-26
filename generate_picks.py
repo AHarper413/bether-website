@@ -1300,10 +1300,10 @@ def create_picks_html(picks_data, predictions_df):
             </div>
             
             {"<div class='ev-bets'>" + "".join([
-                f"""<div class='ev-bet-card {"high-ev" if bet.get("ev") and float(bet["ev"].rstrip("%")) > 5 else ""}'>
+                f"""<div class='ev-bet-card {("high-ev" if bet.get("ev") and float(bet["ev"].rstrip("%")) > 5 else "")}'>
                     <div style='font-weight: 600;'>{bet['game']}</div>
                     <div style='font-size: 1.1rem; margin: 0.5rem 0;'>{bet['bet']}</div>
-                    <div class='ev-value {"high" if bet.get("ev") and float(bet["ev"].rstrip("%")) > 5 else ""}'>{bet['ev']} EV</div>
+                    <div class='ev-value {("high" if bet.get("ev") and float(bet["ev"].rstrip("%")) > 5 else "")}'>{bet['ev']} EV</div>
                     <div style='font-size: 0.9rem; opacity: 0.9;'>{bet['confidence']}</div>
                 </div>"""
                 for bet in picks_data.get('best_ev_bets', [])
