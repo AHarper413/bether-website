@@ -1,45 +1,45 @@
 {
   "date": "July 26, 2025",
-  "last_updated": "2025-07-26 03:45:51 EST",
+  "last_updated": "2025-07-26 14:15:46 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 15,
     "moneyline_signals": 0,
     "over_8_5_signals": 0,
     "f5_signals": 0,
-    "ev_opportunities": 12
+    "ev_opportunities": 11
   },
   "best_moneyline_bets": [],
   "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "New York Mets @ San Francisco Giants",
-      "bet": "Home ML",
-      "ev": "456.2%",
-      "confidence": "POSITIVE EV"
-    },
-    {
       "game": "Colorado Rockies @ Baltimore Orioles",
       "bet": "Away ML",
-      "ev": "36.7%",
+      "ev": "37.1%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Arizona Diamondbacks @ Pittsburgh Pirates",
       "bet": "Under 8.5",
-      "ev": "35.9%",
+      "ev": "35.2%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Miami Marlins @ Milwaukee Brewers",
-      "bet": "Under 8.5",
-      "ev": "32.7%",
+      "game": "Washington Nationals @ Minnesota Twins",
+      "bet": "Away ML",
+      "ev": "32.1%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Chicago Cubs @ Chicago White Sox",
       "bet": "Home ML",
-      "ev": "30.5%",
+      "ev": "30.0%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Miami Marlins @ Milwaukee Brewers",
+      "bet": "Under 8.5",
+      "ev": "29.4%",
       "confidence": "POSITIVE EV"
     }
   ],
