@@ -446,6 +446,28 @@ def create_picks_html(picks_data, predictions_df):
     # Count EV opportunities for display
     ev_opportunities = len([g for g in games_data if g.get('best_ev_value') and g['best_ev_value'] > 2])
     
+    # Build EV bets HTML safely OUTSIDE the main f-string
+    ev_bets_html = ""
+    if picks_data.get('best_ev_bets'):
+        ev_cards = []
+        for bet in picks_data.get('best_ev_bets', []):
+            # Calculate classes outside f-string to avoid syntax issues
+            ev_value = float(bet["ev"].rstrip("%")) if bet.get("ev") else 0
+            card_class = "high-ev" if ev_value > 5 else ""
+            value_class = "high" if ev_value > 5 else ""
+            
+            card_html = f'<div class="ev-bet-card {card_class}">'
+            card_html += f'<div style="font-weight: 600;">{bet["game"]}</div>'
+            card_html += f'<div style="font-size: 1.1rem; margin: 0.5rem 0;">{bet["bet"]}</div>'
+            card_html += f'<div class="ev-value {value_class}">{bet["ev"]} EV</div>'
+            card_html += f'<div style="font-size: 0.9rem; opacity: 0.9;">{bet["confidence"]}</div>'
+            card_html += '</div>'
+            ev_cards.append(card_html)
+        
+        ev_bets_html = f'<div class="ev-bets">{"".join(ev_cards)}</div>'
+    else:
+        ev_bets_html = '<p style="text-align: center; font-style: italic;">No positive EV opportunities found with current odds. Check back as lines move throughout the day.</p>'
+    
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -457,6 +479,18 @@ def create_picks_html(picks_data, predictions_df):
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZmF2aWNvbkdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2VkNjQ5NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmODcxNzEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTEiIGZpbGw9InVybCgjZmF2aWNvbkdyYWRpZW50KSIvPgogIDxwYXRoIGQ9Ik0xMS41IDE0IEwxMy41IDE2IEwyMC41IDkiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIyMSIgcj0iMi41IiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjEiIHI9IjEuNSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4K">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ2MWQF940"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-HZ2MWQF940');
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
+     crossorigin="anonymous"></script>
     
     <style>
         body {{
@@ -979,360 +1013,45 @@ def create_picks_html(picks_data, predictions_df):
                     </div>
                 </div>
             </div>
-        
-        /* NEW: EV Section Styles */
-        .ev-section {{
-            background: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-        }}
-        .ev-section h2 {{
-            margin: 0 0 1rem 0;
-            font-size: 1.8rem;
-        }}
-        .ev-explanation {{
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }}
-        .ev-bets {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }}
-        .ev-bet-card {{
-            background: rgba(255,255,255,0.15);
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #fbbf24;
-        }}
-        .ev-bet-card.high-ev {{
-            border-left-color: #10b981;
-        }}
-        .ev-value {{
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #fbbf24;
-        }}
-        .ev-value.high {{
-            color: #86efac;
-        }}
-        
-        .model-info {{
-            background: linear-gradient(135deg, #e11d48 0%, #8b5cf6 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 2rem;
-        }}
-        .model-info h2 {{
-            margin: 0 0 0.5rem 0;
-            font-size: 1.5rem;
-        }}
-        .summary-stats {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }}
-        .stat-card {{
-            background: #f1f5f9;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-        }}
-        .stat-card.ev-highlight {{
-            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
-            border: 2px solid #10b981;
-        }}
-        .stat-number {{
-            font-size: 2rem;
-            font-weight: bold;
-            color: #e11d48;
-        }}
-        .stat-number.ev {{
-            color: #059669;
-        }}
-        
-        /* Game Cards */
-        .games-grid {{
-            display: grid;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }}
-        .game-card {{
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
-        }}
-        .game-card:hover {{
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }}
-        .game-card.high-confidence {{
-            border-left: 4px solid #10b981;
-        }}
-        .game-card.medium-confidence {{
-            border-left: 4px solid #f59e0b;
-        }}
-        .game-card.low-confidence {{
-            border-left: 4px solid #6b7280;
-        }}
-        .game-card.positive-ev {{
-            border: 2px solid #059669;
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        }}
-        
-        .game-header {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }}
-        .matchup {{
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1e293b;
-        }}
-        .confidence-badge {{
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }}
-        .confidence-high {{ background: #d1fae5; color: #065f46; }}
-        .confidence-medium {{ background: #fef3c7; color: #92400e; }}
-        .confidence-low {{ background: #f3f4f6; color: #4b5563; }}
-        
-        /* NEW: EV display in game cards */
-        .ev-display {{
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }}
-        .ev-bet {{
-            background: #f1f5f9;
-            padding: 0.5rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            border: 1px solid #e2e8f0;
-        }}
-        .ev-bet.positive {{
-            background: #d1fae5;
-            border-color: #10b981;
-            color: #065f46;
-            font-weight: 600;
-        }}
-        .ev-bet.negative {{
-            background: #fee2e2;
-            border-color: #ef4444;
-            color: #991b1b;
-        }}
-        
-        .teams-section {{
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: 1rem;
-        }}
-        .team {{
-            text-align: center;
-            cursor: pointer;
-            padding: 0.75rem;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }}
-        .team:hover {{
-            background: #f8fafc;
-            transform: scale(1.02);
-        }}
-        .team-name {{
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #e11d48;
-            margin-bottom: 0.25rem;
-        }}
-        .team-pitcher {{
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 0.5rem;
-        }}
-        .win-probability {{
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #1e293b;
-        }}
-        .vs-section {{
-            text-align: center;
-            padding: 0 1rem;
-        }}
-        .predicted-total {{
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #8b5cf6;
-            margin-bottom: 0.5rem;
-        }}
-        
-        .signals {{
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }}
-        .signal {{
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }}
-        .signal-home {{ background: #dbeafe; color: #1e40af; }}
-        .signal-away {{ background: #fef3c7; color: #92400e; }}
-        .signal-over {{ background: #dcfce7; color: #166534; }}
-        .signal-f5 {{ background: #e0e7ff; color: #3730a3; }}
-        .signal-ev {{ background: #fbbf24; color: #92400e; font-weight: 700; }}
-        
-        /* Modal for team stats */
-        .modal {{
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }}
-        .modal-content {{
-            background-color: white;
-            margin: 5% auto;
-            padding: 2rem;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-        }}
-        .close {{
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }}
-        .close:hover {{
-            color: #e11d48;
-        }}
-        .stats-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }}
-        .stat-item {{
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-        }}
-        .stat-label {{
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 0.5rem;
-        }}
-        .stat-value {{
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #1e293b;
-        }}
-        
-        .back-link {{
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #e2e8f0;
-        }}
-        .back-link a {{
-            color: #e11d48;
-            text-decoration: none;
-            font-weight: 600;
-        }}
-        
-        @media (max-width: 768px) {{
-            .container {{ padding: 1rem; }}
-            .header h1 {{ font-size: 2rem; }}
-            .teams-section {{ grid-template-columns: 1fr; gap: 0.5rem; }}
-            .vs-section {{ order: -1; }}
-            .ev-bets {{ grid-template-columns: 1fr; }}
-        }}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Free MLB Picks - {picks_data['date']}</h1>
-            <p>Advanced XGBoost predictions with Expected Value analysis</p>
-            <p><strong>Last Updated:</strong> {picks_data['last_updated']}</p>
-        </div>
 
-        <!-- NEW: Expected Value Section -->
-        <div class="ev-section">
-            <h2>💰 Expected Value (EV) Betting Today</h2>
-            <p>Expected Value betting is a mathematical approach that identifies bets where the odds offer better payouts than the true probability suggests. A positive EV bet means you have a long-term advantage over the sportsbook.</p>
-            
-            <div class="ev-explanation">
-                <h3>🎯 How EV Works:</h3>
-                <p><strong>Positive EV (+2% or higher):</strong> Our model believes the true probability is higher than what the odds suggest. These are mathematically profitable bets over time.</p>
-                <p><strong>Negative EV:</strong> The sportsbook has the advantage on this bet. Avoid these.</p>
-                <p><strong>Example:</strong> If our model gives a team a 60% chance to win, but the odds imply only 55% chance, that's a +EV opportunity.</p>
+            <!-- NEW: Expected Value Section -->
+            <div class="ev-section">
+                <h2>💰 Expected Value (EV) Betting Today</h2>
+                <p>Expected Value betting is a mathematical approach that identifies bets where the odds offer better payouts than the true probability suggests. A positive EV bet means you have a long-term advantage over the sportsbook.</p>
+                
+                <div class="ev-explanation">
+                    <h3>🎯 How EV Works:</h3>
+                    <p><strong>Positive EV (+2% or higher):</strong> Our model believes the true probability is higher than what the odds suggest. These are mathematically profitable bets over time.</p>
+                    <p><strong>Negative EV:</strong> The sportsbook has the advantage on this bet. Avoid these.</p>
+                    <p><strong>Example:</strong> If our model gives a team a 60% chance to win, but the odds imply only 55% chance, that's a +EV opportunity.</p>
+                </div>
+                
+                {ev_bets_html}
             </div>
-            
-            {"<div class='ev-bets'>" + "".join([
-                f"""<div class='ev-bet-card {("high-ev" if bet.get("ev") and float(bet["ev"].rstrip("%")) > 5 else "")}'>
-                    <div style='font-weight: 600;'>{bet['game']}</div>
-                    <div style='font-size: 1.1rem; margin: 0.5rem 0;'>{bet['bet']}</div>
-                    <div class='ev-value {("high" if bet.get("ev") and float(bet["ev"].rstrip("%")) > 5 else "")}'>{bet['ev']} EV</div>
-                    <div style='font-size: 0.9rem; opacity: 0.9;'>{bet['confidence']}</div>
-                </div>"""
-                for bet in picks_data.get('best_ev_bets', [])
-            ]) + "</div>" if picks_data.get('best_ev_bets') else "<p style='text-align: center; font-style: italic;'>No positive EV opportunities found with current odds. Check back as lines move throughout the day.</p>"}
-        </div>
 
-        <div class="model-info">
-            <h2>🤖 XGBoost Model with Expected Value Analysis</h2>
-            <p>Advanced machine learning algorithm analyzing 50+ factors plus real-time DraftKings odds to identify profitable betting opportunities</p>
-        </div>
+            <div class="model-info">
+                <h2>🤖 XGBoost Model with Expected Value Analysis</h2>
+                <p>Advanced machine learning algorithm analyzing 50+ factors plus real-time DraftKings odds to identify profitable betting opportunities</p>
+            </div>
 
-        <div class="summary-stats">
-            <div class="stat-card">
-                <div class="stat-number">{picks_data['summary']['total_games']}</div>
-                <div>Games Today</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">{picks_data['summary']['moneyline_signals']}</div>
-                <div>Strong Picks</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">{picks_data['summary']['over_8_5_signals']}</div>
-                <div>Over 8.5 Signals</div>
-            </div>
-            <div class="stat-card ev-highlight">
-                <div class="stat-number ev">{ev_opportunities}</div>
-                <div>+EV Opportunities</div>
-            </div>
-        </div>"""
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-number">{picks_data['summary']['total_games']}</div>
+                    <div>Games Today</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{picks_data['summary']['moneyline_signals']}</div>
+                    <div>Strong Picks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{picks_data['summary']['over_8_5_signals']}</div>
+                    <div>Over 8.5 Signals</div>
+                </div>
+                <div class="stat-card ev-highlight">
+                    <div class="stat-number ev">{ev_opportunities}</div>
+                    <div>+EV Opportunities</div>
+                </div>
+            </div>"""
 
     # Add games grid (modified to include EV data)
     html_content += """
