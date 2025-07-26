@@ -3,93 +3,526 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free MLB Picks Today | 61% Accuracy | Expert Baseball Predictions</title>
-    <meta name="description" content="Get free MLB picks today from our advanced machine learning AI model. Daily baseball betting predictions, expert analysis, and winning strategies.">
-    <meta name="keywords" content="free mlb picks, mlb picks today, baseball picks, free baseball predictions, mlb betting tips, expert mlb picks, daily mlb picks">
+    <title>Free MLB Picks and Stats | Data-Driven Baseball Analysis | BetHer</title>
+    <meta name="description" content="Get free MLB picks and stats from BetHer's data-driven analysis. Daily baseball predictions powered by algorithms, designed for women who want trustworthy insights. For entertainment purposes only.">
+    <meta name="keywords" content="free mlb picks, baseball analysis women, data driven baseball predictions, mlb stats, female sports betting, algorithm baseball picks, women's betting education">
     
     <!-- Schema markup for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SportsTeam",
-        "name": "BetHer MLB Picks",
-        "description": "Free MLB betting picks with 61% accuracy using advanced machine learning",
+        "name": "BetHer MLB Analysis",
+        "description": "Free MLB analysis and picks using data-driven algorithms designed for women",
         "sport": "Baseball"
     }
     </script>
     
     <style>
-        /* Use your existing CSS styles */
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; background: #f8fafc; }
-        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; }
-        .hero { text-align: center; padding: 2rem 0; background: linear-gradient(135deg, #e11d48 0%, #8b5cf6 100%); color: white; border-radius: 12px; margin-bottom: 2rem; }
-        .cta-button { background: #e11d48; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin: 1rem; }
-        .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0; }
-        .benefit { padding: 1rem; background: #f1f5f9; border-radius: 8px; }
-        .keywords { background: #fdf2f8; padding: 1rem; border-radius: 8px; margin: 2rem 0; }
+        :root {
+            --primary-rose: #e11d48;
+            --primary-rose-light: #f43f5e;
+            --primary-rose-dark: #be123c;
+            --soft-rose: #fdf2f8;
+            --warm-gray: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border-light: #e2e8f0;
+            --white: #ffffff;
+            --accent-purple: #8b5cf6;
+            --success-green: #10b981;
+            --baseball-green: #0d9488;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--warm-gray);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 2rem 2.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+        }
+
+        .brand-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-rose);
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-text p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .back-link {
+            color: var(--primary-rose);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-rose-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--baseball-green) 0%, var(--success-green) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--baseball-green);
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+
+        .secondary-cta {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+
+        .secondary-cta:hover {
+            background: white;
+            color: var(--baseball-green);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 2.5rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Benefits Grid */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--baseball-green);
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--baseball-green), var(--success-green));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            font-size: 0.75rem;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .benefit h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .benefit p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Features List */
+        .features-list {
+            background: var(--soft-rose);
+            padding: 3rem 2.5rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .features-list h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--baseball-green);
+        }
+
+        .feature-item strong {
+            color: var(--primary-rose);
+            font-weight: 600;
+        }
+
+        /* Methodology Section */
+        .methodology {
+            background: var(--warm-gray);
+            padding: 4rem 2.5rem;
+        }
+
+        .methodology-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .methodology ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .methodology li {
+            background: white;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.75rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--baseball-green);
+            font-size: 1.05rem;
+        }
+
+        /* Legal Disclaimer */
+        .legal-disclaimer {
+            background: #fef3cd;
+            border: 1px solid #fcd34d;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            color: #92400e;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .legal-disclaimer strong {
+            color: #78350f;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2.5rem;
+            background: linear-gradient(135deg, var(--soft-rose) 0%, var(--warm-gray) 100%);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 1rem auto;
+            }
+
+            .secondary-cta {
+                margin-left: 0;
+            }
+
+            .header {
+                padding: 1.5rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .brand-text h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="brand-section">
+                    <a href="/index.html" style="text-decoration: none;">
+                        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e11d48"/>
+                                    <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="white" opacity="0.1"/>
+                            <circle cx="100" cy="100" r="70" fill="url(#logoGradient)"/>
+                            <path d="M70 85 L85 100 L130 55" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="100" cy="130" r="15" fill="white"/>
+                            <circle cx="75" cy="130" r="8" fill="white" opacity="0.8"/>
+                            <circle cx="125" cy="130" r="8" fill="white" opacity="0.8"/>
+                        </svg>
+                    </a>
+                    <div class="brand-text">
+                        <h1>BetHer</h1>
+                        <p>Free MLB picks and stats</p>
+                    </div>
+                </div>
+                <a href="/index.html" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
         <div class="hero">
-            <h1>Free MLB Picks Today - 61% Accuracy</h1>
-            <p>Get expert baseball predictions powered by advanced AI and machine learning</p>
-            <a href="/mlb-picks-today.html" class="cta-button">View Today's Free MLB Picks</a>
-        </div>
-
-        <h2>Why Our Free MLB Picks Are the Best</h2>
-        <div class="benefits">
-            <div class="benefit">
-                <h3>🎯 61% Accuracy</h3>
-                <p>Our MLB model has consistently delivered 61% accuracy this season, beating Vegas odds.</p>
-            </div>
-            <div class="benefit">
-                <h3>🤖 AI-Powered</h3>
-                <p>Advanced XGBoost machine learning analyzes 50+ factors for each game.</p>
-            </div>
-            <div class="benefit">
-                <h3>📊 Daily Updates</h3>
-                <p>Fresh picks every morning with detailed analysis and confidence ratings.</p>
-            </div>
-            <div class="benefit">
-                <h3>💯 Completely Free</h3>
-                <p>No hidden fees, no registration required. Professional picks at no cost.</p>
+            <div class="hero-content">
+                <h1>Free MLB Picks & Stats</h1>
+                <p>Data-informed baseball analysis powered by algorithms. Get daily insights on moneyline bets, totals, and spread analysis designed specifically for women who want trustworthy predictions without the noise.</p>
+                <a href="#todays-picks" class="cta-button">View Today's Analysis</a>
+                <a href="/calculators.html" class="cta-button secondary-cta">Free Calculators</a>
             </div>
         </div>
 
-        <h2>What You Get With Our Free MLB Picks</h2>
-        <ul style="font-size: 1.1rem; line-height: 1.8;">
-            <li><strong>Daily MLB Moneyline Picks</strong> - Best bets for straight wins</li>
-            <li><strong>Over/Under Totals</strong> - Run total predictions with confidence ratings</li>
-            <li><strong>First 5 Innings Picks</strong> - Lower variance betting options</li>
-            <li><strong>Advanced Analytics</strong> - Bullpen fatigue, pitcher matchups, stadium factors</li>
-            <li><strong>Confidence Tiers</strong> - Know which picks our model likes most</li>
-        </ul>
-
-        <div class="keywords">
-            <h3>🔍 Popular Searches:</h3>
-            <p><strong>Free MLB picks today</strong> • <strong>Baseball predictions</strong> • <strong>MLB betting tips</strong> • <strong>Free baseball picks</strong> • <strong>MLB picks against the spread</strong> • <strong>Today's baseball games picks</strong> • <strong>Expert MLB predictions</strong> • <strong>Free sports picks baseball</strong></p>
+        <!-- Why Choose BetHer -->
+        <div class="content-section">
+            <h2 class="section-title">Why Women Trust BetHer's MLB Analysis</h2>
+            <p class="section-subtitle">Our data-driven approach eliminates the typical sports betting noise, providing transparent insights designed with women in mind.</p>
+            
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">DATA</div>
+                    <h3>Data-Driven Analysis</h3>
+                    <p>Advanced algorithms analyze dozens of factors to provide objective insights without emotional bias or marketing hype.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">WOMEN</div>
+                    <h3>Women-Focused Approach</h3>
+                    <p>Educational content that builds understanding, not pressure tactics. Learn the reasoning behind every recommendation.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">DAILY</div>
+                    <h3>Daily Fresh Insights</h3>
+                    <p>Updated every morning with detailed analysis of matchups, trends, and key factors affecting each game.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">FREE</div>
+                    <h3>Completely Free</h3>
+                    <p>No hidden fees, no registration required, no pressure. Professional-grade analysis at no cost to you.</p>
+                </div>
+            </div>
         </div>
 
-        <h2>How Our MLB Prediction Model Works</h2>
-        <p>Our free MLB picks are generated using a sophisticated machine learning model that analyzes:</p>
-        <ul>
-            <li>Team statistics (ERA, OPS, FIP, advanced metrics)</li>
-            <li>Recent form and momentum</li>
-            <li>Pitcher matchups and advanced sabermetrics</li>
-            <li>Bullpen fatigue and usage patterns</li>
-            <li>Stadium factors and weather conditions</li>
-            <li>Historical head-to-head performance</li>
-            <li>Rest days and travel factors</li>
-        </ul>
-
-        <div style="text-align: center; margin: 2rem 0;">
-            <a href="/mlb-picks-today.html" class="cta-button">Get Today's Free MLB Picks</a>
-            <a href="/calculators.html" class="cta-button" style="background: transparent; color: #e11d48; border: 2px solid #e11d48;">Free Betting Calculators</a>
+        <!-- What You Get -->
+        <div class="features-list">
+            <h3>What's Included in Our Daily MLB Analysis</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <strong>Moneyline Picks</strong> - Straight win predictions with confidence levels
+                </div>
+                <div class="feature-item">
+                    <strong>Over/Under Totals</strong> - Run total predictions based on offensive and pitching matchups
+                </div>
+                <div class="feature-item">
+                    <strong>First 5 Innings Analysis</strong> - Lower variance options focusing on starting pitchers
+                </div>
+                <div class="feature-item">
+                    <strong>Key Factors Breakdown</strong> - Weather, bullpen usage, recent form analysis
+                </div>
+                <div class="feature-item">
+                    <strong>Educational Insights</strong> - Learn why certain matchups favor specific outcomes
+                </div>
+                <div class="feature-item">
+                    <strong>Confidence Ratings</strong> - Understand which games offer the best opportunities
+                </div>
+            </div>
         </div>
 
-        <div style="text-align: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
-            <p><a href="/index.html" style="color: #e11d48;">← Back to BetHer Home</a></p>
+        <!-- Methodology -->
+        <div class="methodology">
+            <div class="methodology-content">
+                <h2 class="section-title">Our Data-Driven Methodology</h2>
+                <p class="section-subtitle">Transparency in every prediction. Here's exactly how our algorithm-assisted analysis works:</p>
+                
+                <ul>
+                    <li>Advanced team statistics (ERA, OPS, FIP, wOBA, and 20+ sabermetrics)</li>
+                    <li>Recent form analysis and momentum indicators</li>
+                    <li>Detailed pitcher matchup evaluation and historical performance</li>
+                    <li>Bullpen fatigue tracking and usage pattern analysis</li>
+                    <li>Stadium factors, weather conditions, and environmental impacts</li>
+                    <li>Head-to-head historical data and situational trends</li>
+                    <li>Travel schedule analysis and rest day considerations</li>
+                    <li>Line movement tracking and market inefficiency identification</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Today's Picks Section -->
+        <div id="todays-picks" class="content-section">
+            <h2 class="section-title">Today's MLB Analysis</h2>
+            <p class="section-subtitle">Updated daily with fresh insights and recommendations. Check back each morning for the latest analysis.</p>
+            
+            <div style="background: var(--soft-rose); padding: 3rem; border-radius: 16px; text-align: center;">
+                <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.5rem;">Analysis Updates Daily at 9:00 AM EST</h3>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">Get the latest picks, stats, and insights delivered fresh every morning. Our algorithm processes overnight data to provide you with the most current analysis.</p>
+                <a href="/mlb-picks-today.html" class="cta-button" style="background: var(--primary-rose); color: white;">View Today's Picks & Stats</a>
+            </div>
+        </div>
+
+        <!-- Legal Disclaimer -->
+        <div class="legal-disclaimer">
+            <p><strong>Important Disclaimer:</strong> All MLB analysis, picks, and predictions on BetHer are provided for entertainment and educational purposes only. Sports betting involves substantial risk and is not suitable for everyone. Past performance does not guarantee future results. You should never bet more than you can afford to lose. BetHer makes no guarantees about the accuracy of any analysis or predictions and is not responsible for any financial losses incurred from following our content. Please gamble responsibly and seek help if you have a gambling problem. National Problem Gambling Helpline: 1-800-522-4700.</p>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="cta-section">
+            <h2 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 2rem;">Ready to Get Started?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">Join thousands of women getting trusted baseball analysis designed with your success in mind.</p>
+            <a href="/mlb-picks-today.html" class="cta-button" style="background: var(--primary-rose); color: white; margin-right: 1rem;">Get Today's Analysis</a>
+            <a href="/index.html" class="cta-button secondary-cta" style="background: transparent; color: var(--primary-rose); border: 2px solid var(--primary-rose);">Explore All Guides</a>
         </div>
     </div>
 </body>
