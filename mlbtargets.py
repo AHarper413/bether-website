@@ -45,9 +45,7 @@ CURRENT_YEAR = datetime.now().year
 TODAY = datetime.now().strftime("%Y-%m-%d")
 TOMORROW = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
 
-import os
-script_dir = os.path.dirname(os.path.abspath(__file__))
-output_dir = os.path.join(script_dir, f"mlb_improved_data_{CURRENT_YEAR}")
+output_dir = f"mlb_improved_data_{CURRENT_YEAR}"
 os.makedirs(output_dir, exist_ok=True)
 models_dir = os.path.join(output_dir, "models")
 os.makedirs(models_dir, exist_ok=True)
@@ -275,12 +273,23 @@ def fetch_enhanced_schedule_data():
             print(f"✅ Created initial schedule cache with {len(schedule_df)} games")
     
     # Clean up and return final dataset
+    # Clean up and return final dataset
     if not schedule_df.empty:
         schedule_df.dropna(subset=['home_name', 'away_name'], inplace=True)
+        
+        # NEW: Filter out games with 0-0 scores (likely unplayed games)
+        before_filter = len(schedule_df)
+        schedule_df = schedule_df[
+            ~((schedule_df['home_score'] == 0) & (schedule_df['away_score'] == 0))
+        ]
+        after_filter = len(schedule_df)
+        
         completed_games = len(schedule_df.dropna(subset=['home_score', 'away_score']))
         total_games = len(schedule_df)
+        
         print(f"📊 Final dataset: {total_games} total games, {completed_games} completed")
-    
+        print(f"📊 Filtered out {before_filter - after_filter} games with 0-0 scores (likely unplayed)")
+
     return schedule_df
 
 # -------------------------
@@ -935,24 +944,72 @@ def calculate_enhanced_pitcher_features(home_pitcher, away_pitcher, pitcher_cont
 def create_improved_targets(features_df):
     print("🎯 Creating improved target variables...")
     
-    completed = features_df.dropna(subset=['home_score', 'away_score']).copy()
+    print(f"📊 Input data: {len(features_df)} total games")
     
-    if completed.empty:
-        print("⚠️ No completed games found")
-        return completed
+    # Check initial data
+    initial_completed = features_df.dropna(subset=['home_score', 'away_score'])
+    print(f"📊 Games with non-null scores: {len(initial_completed)}")
     
-    # Fix data types - convert scores to numeric
+    if initial_completed.empty:
+        print("⚠️ No games with scores found!")
+        return features_df
+    
+    completed = initial_completed.copy()
+    
+    # ENHANCED: Check data types and values BEFORE conversion
+    print(f"\n🔍 PRE-CONVERSION ANALYSIS:")
+    print(f"   home_score dtype: {completed['home_score'].dtype}")
+    print(f"   away_score dtype: {completed['away_score'].dtype}")
+    print(f"   Sample home_scores: {completed['home_score'].head().tolist()}")
+    print(f"   Sample away_scores: {completed['away_score'].head().tolist()}")
+    print(f"   Unique home_score values: {completed['home_score'].nunique()}")
+    print(f"   Unique away_score values: {completed['away_score'].nunique()}")
+    
+    # Check for non-numeric values
+    def check_non_numeric(series, name):
+        non_numeric = []
+        for val in series.dropna().unique():
+            try:
+                float(val)
+            except (ValueError, TypeError):
+                non_numeric.append(val)
+        if non_numeric:
+            print(f"   🚨 Non-numeric {name} values: {non_numeric[:10]}")  # Show first 10
+        return len(non_numeric)
+    
+    home_non_numeric = check_non_numeric(completed['home_score'], 'home_score')
+    away_non_numeric = check_non_numeric(completed['away_score'], 'away_score')
+    
+    # Convert to numeric with detailed tracking
+    print(f"\n🔧 CONVERTING TO NUMERIC:")
+    original_home_count = completed['home_score'].notna().sum()
+    original_away_count = completed['away_score'].notna().sum()
+    
     completed['home_score'] = pd.to_numeric(completed['home_score'], errors='coerce')
     completed['away_score'] = pd.to_numeric(completed['away_score'], errors='coerce')
     
-    # Remove any rows where conversion failed
+    converted_home_count = completed['home_score'].notna().sum()
+    converted_away_count = completed['away_score'].notna().sum()
+    
+    print(f"   Home scores: {original_home_count} → {converted_home_count} (lost {original_home_count - converted_home_count})")
+    print(f"   Away scores: {original_away_count} → {converted_away_count} (lost {original_away_count - converted_away_count})")
+    
+    # Remove rows where conversion failed
+    before_final_filter = len(completed)
     completed = completed.dropna(subset=['home_score', 'away_score'])
+    after_final_filter = len(completed)
+    
+    print(f"   Final games after dropna: {before_final_filter} → {after_final_filter} (lost {before_final_filter - after_final_filter})")
     
     if completed.empty:
         print("⚠️ No valid completed games found after cleaning")
         return completed
     
-    # Original targets
+    # ENHANCED: Check date range and distribution
+    print(f"\n📅 DATE RANGE ANALYSIS:")
+    print(f"   Date range: {completed['game_date'].min().strftime('%Y-%m-%d')} to {completed['game_date'].max().strftime('%Y-%m-%d')}")
+    
+    # Create targets FIRST
     completed['total_runs'] = completed['home_score'] + completed['away_score']
     completed['home_wins'] = (completed['home_score'] > completed['away_score']).astype(int)
     completed['over_8_5'] = (completed['total_runs'] > 8.5).astype(int)
@@ -983,13 +1040,41 @@ def create_improved_targets(features_df):
     completed['close_game'] = (completed['margin'] <= 3).astype(int)
     completed['blowout'] = (completed['margin'] >= 6).astype(int)
     
-    print(f"✅ Created improved targets for {len(completed)} completed games")
+    # ENHANCED: Target distribution analysis
+    print(f"\n🎯 TARGET DISTRIBUTIONS:")
+    print(f"   Total games: {len(completed)}")
     print(f"   Average total runs: {completed['total_runs'].mean():.1f}")
     print(f"   Home team win rate: {completed['home_wins'].mean():.1%}")
     print(f"   Over 8.5 rate: {completed['over_8_5'].mean():.1%}")
     print(f"   Over 7.5 rate: {completed['over_7_5'].mean():.1%}")
     print(f"   F5 Over 4.5 rate: {completed['f5_over_4_5'].mean():.1%}")
     print(f"   Close game rate: {completed['close_game'].mean():.1%}")
+    
+    # NOW check recent games AFTER targets are created
+    recent_cutoff = pd.to_datetime('2025-07-15')
+    recent_games = completed[completed['game_date'] >= recent_cutoff]
+    print(f"   Games since July 15: {len(recent_games)}")
+    
+    if len(recent_games) > 0:
+        print(f"   Recent score ranges:")
+        print(f"     Home: {recent_games['home_score'].min():.0f}-{recent_games['home_score'].max():.0f}")
+        print(f"     Away: {recent_games['away_score'].min():.0f}-{recent_games['away_score'].max():.0f}")
+        print(f"     Total: {(recent_games['home_score'] + recent_games['away_score']).min():.0f}-{(recent_games['home_score'] + recent_games['away_score']).max():.0f}")
+        
+        # CRITICAL: Check recent targets - NOW THIS WILL WORK
+        print(f"\n🎯 RECENT TARGET DISTRIBUTIONS (July 15+):")
+        print(f"   Recent games: {len(recent_games)}")
+        print(f"   Recent home win rate: {recent_games['home_wins'].mean():.1%}")
+        print(f"   Recent over 8.5 rate: {recent_games['over_8_5'].mean():.1%}")
+        print(f"   Recent F5 over 4.5 rate: {recent_games['f5_over_4_5'].mean():.1%}")
+        
+        # Show actual recent games
+        print(f"\n📋 SAMPLE RECENT GAMES:")
+        sample_cols = ['game_date', 'home_team', 'away_team', 'home_score', 'away_score', 'total_runs', 'home_wins']
+        if len(recent_games) <= 10:
+            print(recent_games[sample_cols].to_string(index=False))
+        else:
+            print(recent_games[sample_cols].tail(10).to_string(index=False))
     
     return completed
 
@@ -1275,8 +1360,8 @@ def create_enhanced_signal_features(schedule_df, team_stats_df):
 # NEW: Enhanced Model Training with XGBoost and Ensemble
 # -------------------------
 def train_enhanced_models_with_validation(df):
-    """Enhanced models with XGBoost, feature selection, and validation"""
-    print("🤖 Training ENHANCED models v5.0 (XGBoost + Feature Selection)...")
+    """Enhanced models with XGBoost, feature selection, and EXPANDING WINDOW validation"""
+    print("🤖 Training ENHANCED models v5.0 (XGBoost + EXPANDING WINDOW)...")
     
     # Get all possible features
     feature_cols = [col for col in df.columns if col not in [
@@ -1288,15 +1373,26 @@ def train_enhanced_models_with_validation(df):
     
     X = df[feature_cols].fillna(df[feature_cols].median())
     
-    # Create chronological split
+    # Create chronological split with EXPANDING WINDOW
     df_sorted = df.sort_values('game_date')
     n = len(df_sorted)
     
-    train_end = int(0.7 * n)
+    # NEW: Use expanding window - train on MORE recent data, smaller holdout
+    # Instead of fixed 70%, use 92% for training (expanding window)
+    # This way model learns from almost all available data including recent patterns
+    min_training_games = max(200, int(0.85 * n))  # At least 85% or 200 games
+    
+    # Keep slightly larger holdout to avoid single-class issues (last 8% of games)
+    holdout_size = min(max(50, int(0.08 * n)), 100)  # 8% of data, 50-100 games
+    
+    train_end = n - holdout_size
     holdout_idx = df_sorted.index[train_end:]
     train_idx = df_sorted.index[:train_end]
     
-    print(f"📊 Data split: Train={len(train_idx)}, Holdout={len(holdout_idx)}")
+    print(f"📊 EXPANDING WINDOW - Train={len(train_idx)} ({len(train_idx)/n:.1%}), Holdout={len(holdout_idx)} ({len(holdout_idx)/n:.1%})")
+    print(f"📊 Training includes games up to: {df_sorted.iloc[train_end-1]['game_date'].strftime('%Y-%m-%d')}")
+    print(f"📊 Holdout includes games from: {df_sorted.iloc[train_end]['game_date'].strftime('%Y-%m-%d')} onward")
+    print(f"📊 Holdout size increased to {len(holdout_idx)} games to ensure class diversity")
     print(f"📊 Starting with {len(feature_cols)} features")
     
     models = {}
@@ -1315,7 +1411,7 @@ def train_enhanced_models_with_validation(df):
     }
     
     for model_name, config in targets_config.items():
-        print(f"\n📊 Training {model_name} model...")
+        print(f"\n📊 Training {model_name} model with expanding window...")
         
         target_col = config['target']
         if target_col not in df.columns:
@@ -1351,7 +1447,7 @@ def train_enhanced_models_with_validation(df):
         # Step 3: Apply selector transform
         X_holdout_selected = selector.transform(X_holdout_reduced)
         
-        # Train model
+        # Train model with MORE CONSERVATIVE parameters to avoid overfitting to larger training set
         if config['type'] == 'regression':
             # Try a different approach for total runs - use classification instead
             if model_name == 'total_runs':
@@ -1369,22 +1465,26 @@ def train_enhanced_models_with_validation(df):
                 y_holdout_class = y_holdout_class.fillna(1).astype(int)
                 
                 if XGBOOST_AVAILABLE:
+                    # MORE CONSERVATIVE parameters with larger training set
                     model = XGBClassifier(
-                        n_estimators=400,
-                        max_depth=8,
-                        learning_rate=0.1,
-                        subsample=0.8,
-                        colsample_bytree=0.8,
+                        n_estimators=300,  # Reduced from 400
+                        max_depth=6,       # Reduced from 8  
+                        learning_rate=0.08, # Reduced from 0.1
+                        subsample=0.7,     # Reduced from 0.8
+                        colsample_bytree=0.7, # Reduced from 0.8
+                        reg_alpha=0.1,     # NEW: L1 regularization
+                        reg_lambda=0.1,    # NEW: L2 regularization
                         random_state=42,
                         n_jobs=-1,
                         eval_metric='mlogloss'
                     )
                 else:
                     model = RandomForestClassifier(
-                        n_estimators=300,
-                        max_depth=12,
-                        min_samples_split=5,
-                        max_features=0.8,
+                        n_estimators=200,    # Reduced from 300
+                        max_depth=10,        # Reduced from 12
+                        min_samples_split=8, # Increased from 5
+                        min_samples_leaf=3,  # NEW: minimum samples per leaf
+                        max_features=0.7,    # Reduced from 0.8
                         random_state=42,
                         n_jobs=-1
                     )
@@ -1407,26 +1507,30 @@ def train_enhanced_models_with_validation(df):
                     'holdout_r2': holdout_r2,
                     'mean_actual': y_holdout.mean(),
                     'features_used': len(best_features),
-                    'method': 'classification_converted'
+                    'method': 'classification_converted',
+                    'training_window': 'expanding'
                 }
             else:
                 # Regular regression for other targets
                 if XGBOOST_AVAILABLE:
                     model = XGBRegressor(
-                        n_estimators=400,
-                        max_depth=8,
-                        learning_rate=0.1,
-                        subsample=0.8,
-                        colsample_bytree=0.8,
+                        n_estimators=300,    # Reduced from 400
+                        max_depth=6,         # Reduced from 8
+                        learning_rate=0.08,  # Reduced from 0.1
+                        subsample=0.7,       # Reduced from 0.8
+                        colsample_bytree=0.7, # Reduced from 0.8
+                        reg_alpha=0.1,       # NEW: L1 regularization
+                        reg_lambda=0.1,      # NEW: L2 regularization
                         random_state=42,
                         n_jobs=-1
                     )
                 else:
                     model = RandomForestRegressor(
-                        n_estimators=300,
-                        max_depth=12,
-                        min_samples_split=5,
-                        max_features=0.8,
+                        n_estimators=200,     # Reduced from 300
+                        max_depth=10,         # Reduced from 12
+                        min_samples_split=8,  # Increased from 5
+                        min_samples_leaf=3,   # NEW: minimum samples per leaf
+                        max_features=0.7,     # Reduced from 0.8
                         random_state=42,
                         n_jobs=-1
                     )
@@ -1441,27 +1545,31 @@ def train_enhanced_models_with_validation(df):
                     'holdout_mse': holdout_mse,
                     'holdout_r2': holdout_r2,
                     'mean_actual': y_holdout.mean(),
-                    'features_used': len(best_features)
+                    'features_used': len(best_features),
+                    'training_window': 'expanding'
                 }
             
         else:  # Classification
             if XGBOOST_AVAILABLE:
                 base_model = XGBClassifier(
-                    n_estimators=400,
-                    max_depth=8,
-                    learning_rate=0.1,
-                    subsample=0.8,
-                    colsample_bytree=0.8,
+                    n_estimators=300,     # Reduced from 400
+                    max_depth=6,          # Reduced from 8
+                    learning_rate=0.08,   # Reduced from 0.1
+                    subsample=0.7,        # Reduced from 0.8
+                    colsample_bytree=0.7, # Reduced from 0.8
+                    reg_alpha=0.1,        # NEW: L1 regularization
+                    reg_lambda=0.1,       # NEW: L2 regularization
                     random_state=42,
                     n_jobs=-1,
                     eval_metric='logloss'
                 )
             else:
                 base_model = RandomForestClassifier(
-                    n_estimators=300,
-                    max_depth=12,
-                    min_samples_split=5,
-                    max_features=0.8,
+                    n_estimators=200,     # Reduced from 300
+                    max_depth=10,         # Reduced from 12
+                    min_samples_split=8,  # Increased from 5
+                    min_samples_leaf=3,   # NEW: minimum samples per leaf
+                    max_features=0.7,     # Reduced from 0.8
                     random_state=42,
                     n_jobs=-1
                 )
@@ -1474,7 +1582,15 @@ def train_enhanced_models_with_validation(df):
             holdout_proba = model.predict_proba(X_holdout_selected)[:, 1]
             
             holdout_acc = accuracy_score(y_holdout, holdout_pred)
-            holdout_logloss = log_loss(y_holdout, holdout_proba)
+            
+            # FIXED: Handle case where holdout has only one class
+            unique_labels = len(set(y_holdout))
+            if unique_labels > 1:
+                holdout_logloss = log_loss(y_holdout, holdout_proba)
+            else:
+                # If only one class in holdout, use a penalty score
+                holdout_logloss = 1.0  # High penalty for poor generalization
+                print(f"   ⚠️ Warning: Holdout set for {model_name} contains only one class")
             
             # Check probability spread
             prob_range = holdout_proba.max() - holdout_proba.min()
@@ -1483,6 +1599,7 @@ def train_enhanced_models_with_validation(df):
             very_high_conf = sum((holdout_proba > 0.70) | (holdout_proba < 0.30))
             
             print(f"   Accuracy: {holdout_acc:.3f}")
+            print(f"   Unique labels in holdout: {unique_labels}")
             print(f"   Probability range: {prob_range:.3f}")
             print(f"   High confidence games: {high_conf_games}/{len(holdout_proba)}")
             
@@ -1495,14 +1612,20 @@ def train_enhanced_models_with_validation(df):
                 'high_conf_games': high_conf_games,
                 'very_high_conf': very_high_conf,
                 'features_used': len(best_features),
-                'calibrated': True
+                'calibrated': True,
+                'training_window': 'expanding',
+                'holdout_classes': unique_labels  # Track this for debugging
             }
         
         models[model_name] = model
         
-        # Run walk-forward validation for key models
+        # Run walk-forward validation for key models (optional)
         if model_name in ['home_wins', 'over_8_5']:
+            print(f"   Running additional walk-forward validation for {model_name}...")
             walk_forward_validation(df, config, best_features, target_col)
+    
+    print(f"\n✅ EXPANDING WINDOW training completed!")
+    print(f"📈 Model now trained on {len(train_idx)} games including recent patterns")
     
     return models, results, selected_features, feature_selectors, feature_transforms
 
@@ -1839,6 +1962,166 @@ def predict_and_save_enhanced_predictions(models, selected_features, feature_sel
         print(f"⚠️ Could not make today's predictions: {e}")
         return None
 
+def debug_schedule_data(schedule_df):
+    """Debug schedule data quality issues"""
+    print("\n🔍 SCHEDULE DATA QUALITY CHECK:")
+    print("="*50)
+    
+    # Basic info
+    print(f"📊 Total games in schedule: {len(schedule_df)}")
+    print(f"📅 Date range: {schedule_df['game_date'].min()} to {schedule_df['game_date'].max()}")
+    
+    # Check score availability
+    has_home_score = schedule_df['home_score'].notna().sum()
+    has_away_score = schedule_df['away_score'].notna().sum()
+    has_both_scores = schedule_df[['home_score', 'away_score']].notna().all(axis=1).sum()
+    
+    print(f"📊 Score availability:")
+    print(f"   Games with home_score: {has_home_score}")
+    print(f"   Games with away_score: {has_away_score}")
+    print(f"   Games with both scores: {has_both_scores}")
+    
+    # Check recent games specifically
+    recent_schedule = schedule_df[schedule_df['game_date'] >= pd.to_datetime('2025-07-15')].copy()
+    print(f"\n📅 Recent games (July 15+): {len(recent_schedule)}")
+    
+    if len(recent_schedule) > 0:
+        recent_completed = recent_schedule[['home_score', 'away_score']].notna().all(axis=1).sum()
+        print(f"   Recent completed games: {recent_completed}")
+        
+        # Check score types in recent games
+        recent_with_scores = recent_schedule.dropna(subset=['home_score', 'away_score'])
+        if len(recent_with_scores) > 0:
+            print(f"   Recent score samples:")
+            print(f"     Home scores: {recent_with_scores['home_score'].head().tolist()}")
+            print(f"     Away scores: {recent_with_scores['away_score'].head().tolist()}")
+            print(f"     Score types: home={recent_with_scores['home_score'].dtype}, away={recent_with_scores['away_score'].dtype}")
+        else:
+            print("   ⚠️ NO recent games with scores!")
+            
+            # Show what recent games look like
+            print(f"   Sample recent games without scores:")
+            sample_cols = ['game_date', 'home_name', 'away_name', 'status', 'home_score', 'away_score']
+            available_cols = [col for col in sample_cols if col in recent_schedule.columns]
+            print(recent_schedule[available_cols].head().to_string(index=False))
+    
+    # Check for games that might be completed but missing scores
+    print(f"\n🔍 GAME STATUS ANALYSIS:")
+    if 'status' in schedule_df.columns:
+        status_counts = schedule_df['status'].value_counts()
+        print(f"   Game statuses: {dict(status_counts)}")
+        
+        # Look for completed games without scores
+        completed_status_games = schedule_df[
+            (schedule_df['status'].str.contains('Final|Completed', case=False, na=False)) |
+            (schedule_df['status'] == 'F')
+        ]
+        completed_without_scores = completed_status_games[
+            completed_status_games[['home_score', 'away_score']].isna().any(axis=1)
+        ]
+        
+        print(f"   Games marked complete: {len(completed_status_games)}")
+        print(f"   Complete games missing scores: {len(completed_without_scores)}")
+        
+        if len(completed_without_scores) > 0:
+            print(f"   🚨 ISSUE: {len(completed_without_scores)} completed games missing scores!")
+    
+    print("="*50)
+    
+# Add this function to debug the data issue
+def debug_data_processing(schedule_df, features_df, completed_df):
+    """Debug why holdout games all have same outcome"""
+    
+    print("\n🔍 DEBUGGING DATA PROCESSING ISSUE:")
+    print("="*60)
+    
+    # 1. Check raw schedule data
+    print("📊 RAW SCHEDULE DATA:")
+    recent_schedule = schedule_df[schedule_df['game_date'] >= pd.to_datetime('2025-07-15')].copy()
+    print(f"   Games from July 15+: {len(recent_schedule)}")
+    print(f"   Completed games from July 15+: {len(recent_schedule.dropna(subset=['home_score', 'away_score']))}")
+    
+    # Check score types
+    print(f"\n📋 SCORE DATA TYPES:")
+    print(f"   home_score type: {recent_schedule['home_score'].dtype}")
+    print(f"   away_score type: {recent_schedule['away_score'].dtype}")
+    print(f"   Sample home_scores: {recent_schedule['home_score'].dropna().head().tolist()}")
+    print(f"   Sample away_scores: {recent_schedule['away_score'].dropna().head().tolist()}")
+    
+    # 2. Check features data
+    print(f"\n📊 FEATURES DATA:")
+    recent_features = features_df[features_df['game_date'] >= pd.to_datetime('2025-07-15')].copy()
+    print(f"   Feature games from July 15+: {len(recent_features)}")
+    print(f"   Completed feature games: {len(recent_features.dropna(subset=['home_score', 'away_score']))}")
+    
+    # 3. Check completed data (after target creation)
+    print(f"\n📊 COMPLETED DATA (after target creation):")
+    recent_completed = completed_df[completed_df['game_date'] >= pd.to_datetime('2025-07-15')].copy()
+    print(f"   Completed games from July 15+: {len(recent_completed)}")
+    
+    if len(recent_completed) > 0:
+        print(f"\n🎯 TARGET DISTRIBUTIONS (July 15+):")
+        print(f"   Home wins: {recent_completed['home_wins'].value_counts().to_dict()}")
+        print(f"   Over 8.5: {recent_completed['over_8_5'].value_counts().to_dict()}")
+        if 'f5_over_4_5' in recent_completed.columns:
+            print(f"   F5 Over 4.5: {recent_completed['f5_over_4_5'].value_counts().to_dict()}")
+        
+        print(f"\n📋 RECENT GAMES SAMPLE:")
+        sample_cols = ['game_date', 'home_team', 'away_team', 'home_score', 'away_score', 'home_wins', 'over_8_5']
+        sample_cols = [col for col in sample_cols if col in recent_completed.columns]
+        print(recent_completed[sample_cols].head(10).to_string(index=False))
+        
+        print(f"\n📊 SCORE STATISTICS (July 15+):")
+        print(f"   Home score range: {recent_completed['home_score'].min():.1f} to {recent_completed['home_score'].max():.1f}")
+        print(f"   Away score range: {recent_completed['away_score'].min():.1f} to {recent_completed['away_score'].max():.1f}")
+        print(f"   Total runs range: {(recent_completed['home_score'] + recent_completed['away_score']).min():.1f} to {(recent_completed['home_score'] + recent_completed['away_score']).max():.1f}")
+        
+        # Check for suspicious patterns
+        total_runs = recent_completed['home_score'] + recent_completed['away_score']
+        print(f"\n🚨 SUSPICIOUS PATTERNS CHECK:")
+        print(f"   All home scores same? {recent_completed['home_score'].nunique() == 1}")
+        print(f"   All away scores same? {recent_completed['away_score'].nunique() == 1}")
+        print(f"   All total runs same? {total_runs.nunique() == 1}")
+        print(f"   All home wins same? {recent_completed['home_wins'].nunique() == 1}")
+        
+        # Show unique combinations
+        print(f"\n📈 UNIQUE SCORE COMBINATIONS:")
+        score_combos = recent_completed[['home_score', 'away_score']].drop_duplicates()
+        print(score_combos.head(10).to_string(index=False))
+        
+    else:
+        print("   ⚠️ NO completed games found in recent period!")
+    
+    # 4. Check data conversion issues
+    print(f"\n🔧 DATA CONVERSION CHECK:")
+    test_conversion = recent_schedule[['home_score', 'away_score']].copy()
+    
+    # Before conversion
+    print(f"   Before pd.to_numeric:")
+    print(f"     Non-null home_scores: {test_conversion['home_score'].notna().sum()}")
+    print(f"     Non-null away_scores: {test_conversion['away_score'].notna().sum()}")
+    
+    # After conversion
+    test_conversion['home_score_numeric'] = pd.to_numeric(test_conversion['home_score'], errors='coerce')
+    test_conversion['away_score_numeric'] = pd.to_numeric(test_conversion['away_score'], errors='coerce')
+    
+    print(f"   After pd.to_numeric:")
+    print(f"     Non-null home_scores: {test_conversion['home_score_numeric'].notna().sum()}")
+    print(f"     Non-null away_scores: {test_conversion['away_score_numeric'].notna().sum()}")
+    
+    # Show conversion failures
+    conversion_failures = test_conversion[
+        (test_conversion['home_score'].notna()) & 
+        (test_conversion['home_score_numeric'].isna())
+    ]
+    
+    if len(conversion_failures) > 0:
+        print(f"   🚨 CONVERSION FAILURES ({len(conversion_failures)} games):")
+        print(f"     Sample failed home_scores: {conversion_failures['home_score'].head().tolist()}")
+    
+    print("="*60)
+    return recent_completed
+
 # -------------------------
 # Main Function
 # -------------------------
@@ -1856,11 +2139,13 @@ def main():
     
     # Fetch data
     schedule_df = fetch_enhanced_schedule_data()
+    debug_schedule_data(schedule_df)
     team_stats_df = get_enhanced_team_season_stats()
     
     # Create enhanced features
     features_df = create_enhanced_signal_features(schedule_df, team_stats_df)
     completed_df = create_improved_targets(features_df)
+    debug_data = debug_data_processing(schedule_df, features_df, completed_df)
     
     if len(completed_df) < 50:
         print(f"⚠️ Only {len(completed_df)} completed games found. Need more data for reliable training.")
