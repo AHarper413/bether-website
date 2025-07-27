@@ -1,13 +1,13 @@
 {
   "date": "July 27, 2025",
-  "last_updated": "2025-07-27 13:48:01 EST",
+  "last_updated": "2025-07-27 14:15:20 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 14,
     "moneyline_signals": 0,
     "over_8_5_signals": 1,
     "f5_signals": 3,
-    "ev_opportunities": 10
+    "ev_opportunities": 9
   },
   "best_moneyline_bets": [],
   "best_total_bets": [
@@ -31,7 +31,7 @@
     {
       "game": "Cleveland Guardians @ Kansas City Royals",
       "bet": "Under 8.5",
-      "ev": "33.1%",
+      "ev": "30.8%",
       "confidence": "POSITIVE EV"
     },
     {
@@ -43,7 +43,7 @@
     {
       "game": "Colorado Rockies @ Baltimore Orioles",
       "bet": "Away ML",
-      "ev": "24.4%",
+      "ev": "27.6%",
       "confidence": "POSITIVE EV"
     },
     {
