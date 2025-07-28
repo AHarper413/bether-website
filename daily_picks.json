@@ -1,55 +1,65 @@
 {
-  "date": "July 27, 2025",
-  "last_updated": "2025-07-27 14:15:20 EST",
+  "date": "July 28, 2025",
+  "last_updated": "2025-07-28 14:20:30 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 14,
-    "moneyline_signals": 0,
+    "moneyline_signals": 1,
     "over_8_5_signals": 1,
-    "f5_signals": 3,
-    "ev_opportunities": 9
+    "f5_signals": 10,
+    "ev_opportunities": 10
   },
-  "best_moneyline_bets": [],
+  "best_moneyline_bets": [
+    {
+      "game": "New York Mets @ San Diego Padres",
+      "pick": "San Diego Padres ML (EV: 4.4%)",
+      "probability": "58.2%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 58.2% win probability",
+      "odds": -126,
+      "ev": 4.390476190476167
+    }
+  ],
   "best_total_bets": [
     {
-      "game": "Chicago Cubs @ Chicago White Sox",
-      "pick": "Over 8.5 Runs (EV: 5.8%)",
+      "game": "Toronto Blue Jays @ Baltimore Orioles",
+      "pick": "Over 8.5 Runs",
       "probability": "55.2%",
       "confidence": "MEDIUM",
-      "predicted_total": 8.5,
-      "odds": -109,
-      "ev": 5.842201834862393
+      "predicted_total": 9.7,
+      "odds": -105,
+      "ev": null
     }
   ],
   "best_ev_bets": [
     {
-      "game": "Seattle Mariners @ Los Angeles Angels",
-      "bet": "Home ML",
-      "ev": "33.9%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Cleveland Guardians @ Kansas City Royals",
-      "bet": "Under 8.5",
-      "ev": "30.8%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Chicago Cubs @ Chicago White Sox",
-      "bet": "Home ML",
-      "ev": "27.8%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Colorado Rockies @ Baltimore Orioles",
+      "game": "Washington Nationals @ Houston Astros",
       "bet": "Away ML",
-      "ev": "27.6%",
+      "ev": "57.7%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Toronto Blue Jays @ Detroit Tigers",
-      "bet": "Under 8.5",
-      "ev": "15.6%",
+      "game": "Philadelphia Phillies @ Chicago White Sox",
+      "bet": "Home ML",
+      "ev": "38.5%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Texas Rangers @ Los Angeles Angels",
+      "bet": "Home ML",
+      "ev": "38.1%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Atlanta Braves @ Kansas City Royals",
+      "bet": "Home ML",
+      "ev": "35.8%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Colorado Rockies @ Cleveland Guardians",
+      "bet": "Away ML",
+      "ev": "32.3%",
       "confidence": "POSITIVE EV"
     }
   ],
