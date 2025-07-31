@@ -1,120 +1,41 @@
 {
-  "date": "July 30, 2025",
-  "last_updated": "2025-07-30 14:18:24 EST",
+  "date": "July 31, 2025",
+  "last_updated": "2025-07-31 14:19:42 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 14,
-    "moneyline_signals": 5,
-    "over_8_5_signals": 3,
-    "f5_signals": 10,
-    "ev_opportunities": 9
+    "total_games": 3,
+    "moneyline_signals": 2,
+    "over_8_5_signals": 0,
+    "f5_signals": 2,
+    "ev_opportunities": 1
   },
   "best_moneyline_bets": [
     {
-      "game": "Pittsburgh Pirates @ San Francisco Giants",
-      "pick": "San Francisco Giants ML (EV: -3.0%)",
-      "probability": "66.5%",
+      "game": "Texas Rangers @ Seattle Mariners",
+      "pick": "Seattle Mariners ML (EV: -1.7%)",
+      "probability": "62.7%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 66.5% win probability",
-      "odds": -218,
-      "ev": -2.9954128440366934
+      "reasoning": "Model favors home team with 62.7% win probability",
+      "odds": -176,
+      "ev": -1.6749999999999932
     },
     {
-      "game": "Atlanta Braves @ Kansas City Royals",
-      "pick": "Kansas City Royals ML (EV: 14.4%)",
-      "probability": "64.9%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors home team with 64.9% win probability",
-      "odds": -131,
-      "ev": 14.44198473282443
-    },
-    {
-      "game": "Arizona Diamondbacks @ Detroit Tigers",
-      "pick": "Detroit Tigers ML (EV: 7.9%)",
-      "probability": "61.4%",
+      "game": "Atlanta Braves @ Cincinnati Reds",
+      "pick": "Cincinnati Reds ML (EV: -8.8%)",
+      "probability": "58.6%",
       "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 61.4% win probability",
-      "odds": -132,
-      "ev": 7.9151515151515195
-    },
-    {
-      "game": "Colorado Rockies @ Cleveland Guardians",
-      "pick": "Cleveland Guardians ML (EV: -9.4%)",
-      "probability": "59.6%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 59.6% win probability",
-      "odds": -192,
-      "ev": -9.358333333333324
-    },
-    {
-      "game": "Toronto Blue Jays @ Baltimore Orioles",
-      "pick": "Baltimore Orioles ML (EV: 11.5%)",
-      "probability": "58.9%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 58.9% win probability",
-      "odds": -112,
-      "ev": 11.489285714285714
+      "reasoning": "Model favors home team with 58.6% win probability",
+      "odds": -180,
+      "ev": -8.844444444444443
     }
   ],
-  "best_total_bets": [
-    {
-      "game": "Los Angeles Dodgers @ Cincinnati Reds",
-      "pick": "Over 8.5 Runs",
-      "probability": "55.0%",
-      "confidence": "MEDIUM",
-      "predicted_total": 9.5,
-      "odds": -108,
-      "ev": null
-    },
-    {
-      "game": "New York Mets @ San Diego Padres",
-      "pick": "Over 8.5 Runs (EV: 6.4%)",
-      "probability": "55.0%",
-      "confidence": "MEDIUM",
-      "predicted_total": 9.7,
-      "odds": -107,
-      "ev": 6.401869158878526
-    },
-    {
-      "game": "Boston Red Sox @ Minnesota Twins",
-      "pick": "Over 8.5 Runs",
-      "probability": "55.0%",
-      "confidence": "MEDIUM",
-      "predicted_total": 11.0,
-      "odds": -119,
-      "ev": null
-    }
-  ],
+  "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Los Angeles Dodgers @ Cincinnati Reds",
-      "bet": "Home ML",
-      "ev": "26.0%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Washington Nationals @ Houston Astros",
+      "game": "Atlanta Braves @ Cincinnati Reds",
       "bet": "Away ML",
-      "ev": "14.8%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Atlanta Braves @ Kansas City Royals",
-      "bet": "Home ML",
-      "ev": "14.4%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Toronto Blue Jays @ Baltimore Orioles",
-      "bet": "Home ML",
-      "ev": "11.5%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Philadelphia Phillies @ Chicago White Sox",
-      "bet": "Home ML",
-      "ev": "8.5%",
-      "confidence": "POSITIVE EV"
+      "ev": "2.3%",
+      "confidence": "SLIGHT EDGE"
     }
   ],
   "season_record": {
