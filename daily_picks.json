@@ -1,41 +1,56 @@
 {
-  "date": "July 31, 2025",
-  "last_updated": "2025-07-31 14:19:42 EST",
+  "date": "August 01, 2025",
+  "last_updated": "2025-08-01 14:19:22 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 3,
-    "moneyline_signals": 2,
+    "total_games": 11,
+    "moneyline_signals": 1,
     "over_8_5_signals": 0,
-    "f5_signals": 2,
-    "ev_opportunities": 1
+    "f5_signals": 6,
+    "ev_opportunities": 6
   },
   "best_moneyline_bets": [
     {
-      "game": "Texas Rangers @ Seattle Mariners",
-      "pick": "Seattle Mariners ML (EV: -1.7%)",
-      "probability": "62.7%",
+      "game": "St. Louis Cardinals @ San Diego Padres",
+      "pick": "San Diego Padres ML (EV: -3.1%)",
+      "probability": "63.4%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 62.7% win probability",
-      "odds": -176,
-      "ev": -1.6749999999999932
-    },
-    {
-      "game": "Atlanta Braves @ Cincinnati Reds",
-      "pick": "Cincinnati Reds ML (EV: -8.8%)",
-      "probability": "58.6%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 58.6% win probability",
-      "odds": -180,
-      "ev": -8.844444444444443
+      "reasoning": "Model favors home team with 63.4% win probability",
+      "odds": -189,
+      "ev": -3.055026455026455
     }
   ],
   "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Atlanta Braves @ Cincinnati Reds",
+      "game": "Milwaukee Brewers @ Washington Nationals",
+      "bet": "Home ML",
+      "ev": "21.2%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "New York Yankees @ Miami Marlins",
+      "bet": "Home ML",
+      "ev": "18.8%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Los Angeles Dodgers @ Tampa Bay Rays",
+      "bet": "Home ML",
+      "ev": "16.7%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Texas Rangers @ Seattle Mariners",
       "bet": "Away ML",
-      "ev": "2.3%",
-      "confidence": "SLIGHT EDGE"
+      "ev": "16.7%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Pittsburgh Pirates @ Colorado Rockies",
+      "bet": "Home ML",
+      "ev": "5.1%",
+      "confidence": "POSITIVE EV"
     }
   ],
   "season_record": {
