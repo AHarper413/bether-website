@@ -1,56 +1,34 @@
 {
-  "date": "August 06, 2025",
-  "last_updated": "2025-08-06 14:21:34 EST",
+  "date": "August 07, 2025",
+  "last_updated": "2025-08-07 14:21:46 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 14,
-    "moneyline_signals": 1,
+    "total_games": 3,
+    "moneyline_signals": 0,
     "over_8_5_signals": 0,
-    "f5_signals": 9,
-    "ev_opportunities": 11
+    "f5_signals": 1,
+    "ev_opportunities": 3
   },
-  "best_moneyline_bets": [
-    {
-      "game": "Kansas City Royals @ Boston Red Sox",
-      "pick": "Boston Red Sox ML (EV: 1.2%)",
-      "probability": "59.7%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 59.7% win probability",
-      "odds": -144,
-      "ev": 1.1583333333333279
-    }
-  ],
+  "best_moneyline_bets": [],
   "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Toronto Blue Jays @ Colorado Rockies",
-      "bet": "Home ML",
-      "ev": "53.4%",
-      "confidence": "POSITIVE EV"
-    },
-    {
       "game": "Chicago White Sox @ Seattle Mariners",
       "bet": "Away ML",
-      "ev": "35.2%",
+      "ev": "41.8%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "San Francisco Giants @ Pittsburgh Pirates",
+      "game": "Miami Marlins @ Atlanta Braves",
       "bet": "Home ML",
-      "ev": "27.3%",
+      "ev": "7.2%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "St. Louis Cardinals @ Los Angeles Dodgers",
+      "game": "Cincinnati Reds @ Pittsburgh Pirates",
       "bet": "Away ML",
-      "ev": "25.2%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "San Diego Padres @ Arizona Diamondbacks",
-      "bet": "Home ML",
-      "ev": "23.3%",
-      "confidence": "POSITIVE EV"
+      "ev": "4.2%",
+      "confidence": "SLIGHT EDGE"
     }
   ],
   "season_record": {
