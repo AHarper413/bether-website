@@ -1,34 +1,65 @@
 {
-  "date": "August 07, 2025",
-  "last_updated": "2025-08-07 14:21:46 EST",
+  "date": "August 08, 2025",
+  "last_updated": "2025-08-08 14:20:29 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 3,
-    "moneyline_signals": 0,
+    "total_games": 13,
+    "moneyline_signals": 2,
     "over_8_5_signals": 0,
-    "f5_signals": 1,
-    "ev_opportunities": 3
+    "f5_signals": 9,
+    "ev_opportunities": 10
   },
-  "best_moneyline_bets": [],
+  "best_moneyline_bets": [
+    {
+      "game": "Cincinnati Reds @ Pittsburgh Pirates",
+      "pick": "Pittsburgh Pirates ML (EV: 13.9%)",
+      "probability": "58.6%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 58.6% win probability",
+      "odds": -106,
+      "ev": 13.883018867924513
+    },
+    {
+      "game": "New York Mets @ Milwaukee Brewers",
+      "pick": "Milwaukee Brewers ML (EV: -0.7%)",
+      "probability": "58.6%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 58.6% win probability",
+      "odds": -144,
+      "ev": -0.7055555555555593
+    }
+  ],
   "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Chicago White Sox @ Seattle Mariners",
+      "game": "Los Angeles Angels @ Detroit Tigers",
       "bet": "Away ML",
-      "ev": "41.8%",
+      "ev": "53.7%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Colorado Rockies @ Arizona Diamondbacks",
+      "bet": "Away ML",
+      "ev": "35.0%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Miami Marlins @ Atlanta Braves",
       "bet": "Home ML",
-      "ev": "7.2%",
+      "ev": "17.7%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Cincinnati Reds @ Pittsburgh Pirates",
-      "bet": "Away ML",
-      "ev": "4.2%",
-      "confidence": "SLIGHT EDGE"
+      "bet": "Home ML",
+      "ev": "13.9%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Chicago Cubs @ St. Louis Cardinals",
+      "bet": "Home ML",
+      "ev": "11.5%",
+      "confidence": "POSITIVE EV"
     }
   ],
   "season_record": {
