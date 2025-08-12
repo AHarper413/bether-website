@@ -1,64 +1,110 @@
 {
-  "date": "August 11, 2025",
-  "last_updated": "2025-08-11 14:19:26 EST",
+  "date": "August 12, 2025",
+  "last_updated": "2025-08-12 14:17:19 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 9,
-    "moneyline_signals": 2,
-    "over_8_5_signals": 0,
-    "f5_signals": 6,
-    "ev_opportunities": 6
+    "total_games": 12,
+    "moneyline_signals": 4,
+    "over_8_5_signals": 3,
+    "f5_signals": 8,
+    "ev_opportunities": 9
   },
   "best_moneyline_bets": [
     {
       "game": "Pittsburgh Pirates @ Milwaukee Brewers",
-      "pick": "Milwaukee Brewers ML (EV: 8.3%)",
-      "probability": "73.0%",
+      "pick": "Milwaukee Brewers ML (EV: 10.9%)",
+      "probability": "62.9%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 73.0% win probability",
-      "odds": -207,
-      "ev": 8.265700483091788
+      "reasoning": "Model favors home team with 62.9% win probability",
+      "odds": -131,
+      "ev": 10.915267175572518
     },
     {
-      "game": "Arizona Diamondbacks @ Texas Rangers",
-      "pick": "Texas Rangers ML (EV: 7.4%)",
-      "probability": "66.7%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors home team with 66.7% win probability",
-      "odds": -164,
-      "ev": 7.37073170731708
+      "game": "Colorado Rockies @ St. Louis Cardinals",
+      "pick": "St. Louis Cardinals ML (EV: -9.2%)",
+      "probability": "59.6%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 59.6% win probability",
+      "odds": -191,
+      "ev": -9.195811518324614
+    },
+    {
+      "game": "Washington Nationals @ Kansas City Royals",
+      "pick": "Kansas City Royals ML (EV: -10.5%)",
+      "probability": "59.6%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 59.6% win probability",
+      "odds": -199,
+      "ev": -10.450251256281417
+    },
+    {
+      "game": "San Diego Padres @ San Francisco Giants",
+      "pick": "San Francisco Giants ML (EV: 6.5%)",
+      "probability": "58.1%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 58.1% win probability",
+      "odds": -120,
+      "ev": 6.5166666666666595
     }
   ],
-  "best_total_bets": [],
+  "best_total_bets": [
+    {
+      "game": "Colorado Rockies @ St. Louis Cardinals",
+      "pick": "Over 8.5 Runs (EV: 7.8%)",
+      "probability": "55.2%",
+      "confidence": "MEDIUM",
+      "predicted_total": 10.2,
+      "odds": -105,
+      "ev": 7.771428571428585
+    },
+    {
+      "game": "Chicago Cubs @ Toronto Blue Jays",
+      "pick": "Over 8.5 Runs",
+      "probability": "62.8%",
+      "confidence": "HIGH",
+      "predicted_total": 11.2,
+      "odds": -111,
+      "ev": null
+    },
+    {
+      "game": "Los Angeles Dodgers @ Los Angeles Angels",
+      "pick": "Over 8.5 Runs",
+      "probability": "55.2%",
+      "confidence": "MEDIUM",
+      "predicted_total": 10.8,
+      "odds": -106,
+      "ev": null
+    }
+  ],
   "best_ev_bets": [
     {
       "game": "Los Angeles Dodgers @ Los Angeles Angels",
       "bet": "Home ML",
-      "ev": "32.7%",
+      "ev": "21.9%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Boston Red Sox @ Houston Astros",
+      "game": "Seattle Mariners @ Baltimore Orioles",
       "bet": "Home ML",
-      "ev": "20.3%",
+      "ev": "21.7%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Minnesota Twins @ New York Yankees",
+      "game": "Philadelphia Phillies @ Cincinnati Reds",
+      "bet": "Home ML",
+      "ev": "14.6%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Miami Marlins @ Cleveland Guardians",
       "bet": "Away ML",
-      "ev": "19.5%",
+      "ev": "11.1%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Pittsburgh Pirates @ Milwaukee Brewers",
       "bet": "Home ML",
-      "ev": "8.3%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Arizona Diamondbacks @ Texas Rangers",
-      "bet": "Home ML",
-      "ev": "7.4%",
+      "ev": "10.9%",
       "confidence": "POSITIVE EV"
     }
   ],
