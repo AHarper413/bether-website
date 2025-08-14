@@ -1,101 +1,92 @@
 {
-  "date": "August 13, 2025",
-  "last_updated": "2025-08-13 14:18:01 EST",
+  "date": "August 14, 2025",
+  "last_updated": "2025-08-14 14:17:17 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 13,
-    "moneyline_signals": 5,
-    "over_8_5_signals": 1,
+    "total_games": 7,
+    "moneyline_signals": 2,
+    "over_8_5_signals": 3,
     "f5_signals": 6,
-    "ev_opportunities": 8
+    "ev_opportunities": 6
   },
   "best_moneyline_bets": [
     {
-      "game": "Pittsburgh Pirates @ Milwaukee Brewers",
-      "pick": "Milwaukee Brewers ML (EV: -3.7%)",
-      "probability": "68.5%",
+      "game": "Miami Marlins @ Cleveland Guardians",
+      "pick": "Cleveland Guardians ML (EV: 13.7%)",
+      "probability": "62.7%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 68.5% win probability",
-      "odds": -246,
-      "ev": -3.654471544715443
+      "reasoning": "Model favors home team with 62.7% win probability",
+      "odds": -123,
+      "ev": 13.675609756097561
     },
     {
       "game": "Atlanta Braves @ New York Mets",
-      "pick": "New York Mets ML (EV: -2.0%)",
-      "probability": "66.0%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors home team with 66.0% win probability",
-      "odds": -206,
-      "ev": -1.9611650485436893
-    },
-    {
-      "game": "Colorado Rockies @ St. Louis Cardinals",
-      "pick": "St. Louis Cardinals ML (EV: -6.6%)",
-      "probability": "64.2%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors home team with 64.2% win probability",
-      "odds": -220,
-      "ev": -6.618181818181812
-    },
-    {
-      "game": "Arizona Diamondbacks @ Texas Rangers",
-      "pick": "Texas Rangers ML (EV: 6.3%)",
-      "probability": "63.8%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors home team with 63.8% win probability",
-      "odds": -150,
-      "ev": 6.333333333333324
-    },
-    {
-      "game": "Chicago Cubs @ Toronto Blue Jays",
-      "pick": "Toronto Blue Jays ML (EV: 4.3%)",
-      "probability": "60.1%",
+      "pick": "New York Mets ML (EV: -10.3%)",
+      "probability": "59.7%",
       "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 60.1% win probability",
-      "odds": -136,
-      "ev": 4.291176470588232
+      "reasoning": "Model favors home team with 59.7% win probability",
+      "odds": -199,
+      "ev": -10.30000000000001
     }
   ],
   "best_total_bets": [
     {
+      "game": "Seattle Mariners @ Baltimore Orioles",
+      "pick": "Over 8.5 Runs",
+      "probability": "56.7%",
+      "confidence": "MEDIUM",
+      "predicted_total": 11.1,
+      "odds": -118,
+      "ev": null
+    },
+    {
+      "game": "Arizona Diamondbacks @ Colorado Rockies",
+      "pick": "Over 8.5 Runs",
+      "probability": "57.2%",
+      "confidence": "MEDIUM",
+      "predicted_total": 11.4,
+      "odds": -115,
+      "ev": null
+    },
+    {
       "game": "Chicago Cubs @ Toronto Blue Jays",
-      "pick": "Over 8.5 Runs (EV: 25.7%)",
-      "probability": "67.5%",
-      "confidence": "HIGH",
-      "predicted_total": 10.2,
-      "odds": -116,
-      "ev": 25.689655172413794
+      "pick": "Over 8.5 Runs",
+      "probability": "57.3%",
+      "confidence": "MEDIUM",
+      "predicted_total": 11.5,
+      "odds": -108,
+      "ev": null
     }
   ],
   "best_ev_bets": [
     {
-      "game": "Los Angeles Dodgers @ Los Angeles Angels",
+      "game": "Philadelphia Phillies @ Washington Nationals",
       "bet": "Home ML",
-      "ev": "31.9%",
+      "ev": "51.4%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "San Diego Padres @ San Francisco Giants",
+      "game": "Detroit Tigers @ Minnesota Twins",
       "bet": "Home ML",
-      "ev": "28.0%",
+      "ev": "33.7%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Chicago Cubs @ Toronto Blue Jays",
-      "bet": "Over 8.5",
-      "ev": "25.7%",
+      "game": "Arizona Diamondbacks @ Colorado Rockies",
+      "bet": "Home ML",
+      "ev": "21.5%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Seattle Mariners @ Baltimore Orioles",
       "bet": "Home ML",
-      "ev": "17.9%",
+      "ev": "15.4%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Minnesota Twins @ New York Yankees",
-      "bet": "Away ML",
-      "ev": "15.4%",
+      "game": "Miami Marlins @ Cleveland Guardians",
+      "bet": "Home ML",
+      "ev": "13.7%",
       "confidence": "POSITIVE EV"
     }
   ],
