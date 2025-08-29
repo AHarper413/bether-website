@@ -1,51 +1,60 @@
 {
-  "date": "August 28, 2025",
-  "last_updated": "2025-08-28 14:16:35 EST",
+  "date": "August 29, 2025",
+  "last_updated": "2025-08-29 14:15:34 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 7,
-    "moneyline_signals": 3,
-    "over_8_5_signals": 1,
-    "f5_signals": 7,
-    "ev_opportunities": 4
+    "total_games": 13,
+    "moneyline_signals": 2,
+    "over_8_5_signals": 4,
+    "f5_signals": 11,
+    "ev_opportunities": 10
   },
   "best_moneyline_bets": [
     {
+      "game": "St. Louis Cardinals @ Cincinnati Reds",
+      "pick": "Cincinnati Reds ML (EV: 10.7%)",
+      "probability": "63.6%",
+      "confidence": "HIGH",
+      "reasoning": "Model favors home team with 63.6% win probability",
+      "odds": -135,
+      "ev": 10.711111111111116
+    },
+    {
       "game": "Atlanta Braves @ Philadelphia Phillies",
-      "pick": "Philadelphia Phillies ML (EV: -1.9%)",
-      "probability": "63.9%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors home team with 63.9% win probability",
-      "odds": -187,
-      "ev": -1.9288770053475957
-    },
-    {
-      "game": "Colorado Rockies @ Houston Astros",
-      "pick": "Houston Astros ML (EV: -15.2%)",
-      "probability": "60.6%",
+      "pick": "Philadelphia Phillies ML (EV: -9.6%)",
+      "probability": "59.0%",
       "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 60.6% win probability",
-      "odds": -250,
-      "ev": -15.160000000000007
-    },
-    {
-      "game": "Boston Red Sox @ Baltimore Orioles",
-      "pick": "Boston Red Sox ML (EV: 4.3%)",
-      "probability": "70.0%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors away team with 70.0% win probability",
-      "odds": -204,
-      "ev": 4.313725490196085
+      "reasoning": "Model favors home team with 59.0% win probability",
+      "odds": -188,
+      "ev": -9.61702127659575
     }
   ],
   "best_total_bets": [
     {
+      "game": "Atlanta Braves @ Philadelphia Phillies",
+      "pick": "Over 8.5 Runs",
+      "probability": "58.9%",
+      "confidence": "MEDIUM",
+      "predicted_total": 11.1,
+      "odds": -116,
+      "ev": null
+    },
+    {
+      "game": "Arizona Diamondbacks @ Los Angeles Dodgers",
+      "pick": "Over 8.5 Runs (EV: 16.0%)",
+      "probability": "60.5%",
+      "confidence": "HIGH",
+      "predicted_total": 11.0,
+      "odds": -109,
+      "ev": 16.004587155963314
+    },
+    {
       "game": "New York Yankees @ Chicago White Sox",
       "pick": "Over 8.5 Runs",
-      "probability": "70.4%",
+      "probability": "70.2%",
       "confidence": "HIGH",
-      "predicted_total": 10.8,
-      "odds": -107,
+      "predicted_total": 10.6,
+      "odds": -108,
       "ev": null
     }
   ],
@@ -53,26 +62,32 @@
     {
       "game": "New York Yankees @ Chicago White Sox",
       "bet": "Home ML",
-      "ev": "40.7%",
+      "ev": "41.1%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Colorado Rockies @ Houston Astros",
-      "bet": "Away ML",
-      "ev": "18.2%",
+      "game": "Chicago Cubs @ Colorado Rockies",
+      "bet": "Home ML",
+      "ev": "30.1%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Arizona Diamondbacks @ Milwaukee Brewers",
-      "bet": "Away ML",
-      "ev": "7.4%",
+      "game": "San Diego Padres @ Minnesota Twins",
+      "bet": "Home ML",
+      "ev": "22.3%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Boston Red Sox @ Baltimore Orioles",
+      "game": "Seattle Mariners @ Cleveland Guardians",
+      "bet": "Home ML",
+      "ev": "19.6%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Miami Marlins @ New York Mets",
       "bet": "Away ML",
-      "ev": "4.3%",
-      "confidence": "SLIGHT EDGE"
+      "ev": "16.9%",
+      "confidence": "POSITIVE EV"
     }
   ],
   "season_record": {
