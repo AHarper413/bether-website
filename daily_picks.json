@@ -1,93 +1,93 @@
 {
-  "date": "September 11, 2025",
-  "last_updated": "2025-09-11 14:15:59 EST",
+  "date": "September 12, 2025",
+  "last_updated": "2025-09-12 14:15:06 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 9,
-    "moneyline_signals": 3,
-    "over_8_5_signals": 2,
-    "f5_signals": 8,
-    "ev_opportunities": 6
+    "total_games": 13,
+    "moneyline_signals": 4,
+    "over_8_5_signals": 1,
+    "f5_signals": 12,
+    "ev_opportunities": 8
   },
   "best_moneyline_bets": [
     {
-      "game": "Detroit Tigers @ New York Yankees",
-      "pick": "New York Yankees ML (EV: 4.0%)",
-      "probability": "62.4%",
+      "game": "New York Yankees @ Boston Red Sox",
+      "pick": "Boston Red Sox ML (EV: 31.6%)",
+      "probability": "64.5%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 62.4% win probability",
-      "odds": -150,
-      "ev": 3.9999999999999813
+      "reasoning": "Model favors home team with 64.5% win probability",
+      "odds": 104,
+      "ev": 31.58000000000001
     },
     {
-      "game": "Houston Astros @ Toronto Blue Jays",
-      "pick": "Toronto Blue Jays ML (EV: 0.7%)",
-      "probability": "62.4%",
+      "game": "Chicago White Sox @ Cleveland Guardians",
+      "pick": "Cleveland Guardians ML (EV: 3.6%)",
+      "probability": "62.3%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 62.4% win probability",
-      "odds": -163,
-      "ev": 0.6822085889570451
+      "reasoning": "Model favors home team with 62.3% win probability",
+      "odds": -151,
+      "ev": 3.5582781456953594
     },
     {
-      "game": "Kansas City Royals @ Cleveland Guardians",
-      "pick": "Cleveland Guardians ML (EV: 3.0%)",
-      "probability": "60.8%",
+      "game": "St. Louis Cardinals @ Milwaukee Brewers",
+      "pick": "Milwaukee Brewers ML (EV: -5.2%)",
+      "probability": "62.0%",
       "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 60.8% win probability",
-      "odds": -144,
-      "ev": 3.022222222222215
+      "reasoning": "Model favors home team with 62.0% win probability",
+      "odds": -189,
+      "ev": -5.195767195767198
+    },
+    {
+      "game": "Tampa Bay Rays @ Chicago Cubs",
+      "pick": "Chicago Cubs ML (EV: -2.3%)",
+      "probability": "61.4%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 61.4% win probability",
+      "odds": -169,
+      "ev": -2.26863905325444
     }
   ],
   "best_total_bets": [
     {
-      "game": "Pittsburgh Pirates @ Baltimore Orioles",
-      "pick": "Over 8.5 Runs (EV: 24.6%)",
-      "probability": "66.9%",
-      "confidence": "HIGH",
-      "predicted_total": 11.7,
-      "odds": -116,
-      "ev": 24.572413793103443
-    },
-    {
-      "game": "Washington Nationals @ Miami Marlins",
+      "game": "Detroit Tigers @ Miami Marlins",
       "pick": "Over 8.5 Runs",
-      "probability": "68.2%",
+      "probability": "67.5%",
       "confidence": "HIGH",
-      "predicted_total": 11.5,
-      "odds": -105,
+      "predicted_total": 9.2,
+      "odds": -101,
       "ev": null
     }
   ],
   "best_ev_bets": [
     {
-      "game": "Colorado Rockies @ San Diego Padres",
-      "bet": "Away ML",
-      "ev": "36.9%",
+      "game": "Detroit Tigers @ Miami Marlins",
+      "bet": "Home ML",
+      "ev": "38.3%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Pittsburgh Pirates @ Baltimore Orioles",
-      "bet": "Over 8.5",
-      "ev": "24.6%",
+      "game": "New York Yankees @ Boston Red Sox",
+      "bet": "Home ML",
+      "ev": "31.6%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Los Angeles Dodgers @ San Francisco Giants",
+      "bet": "Home ML",
+      "ev": "12.5%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Houston Astros @ Atlanta Braves",
+      "bet": "Home ML",
+      "ev": "9.8%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Los Angeles Angels @ Seattle Mariners",
       "bet": "Away ML",
-      "ev": "7.4%",
+      "ev": "9.7%",
       "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Tampa Bay Rays @ Chicago White Sox",
-      "bet": "Home ML",
-      "ev": "5.3%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Detroit Tigers @ New York Yankees",
-      "bet": "Home ML",
-      "ev": "4.0%",
-      "confidence": "SLIGHT EDGE"
     }
   ],
   "season_record": {
