@@ -1,83 +1,92 @@
 {
-  "date": "September 18, 2025",
-  "last_updated": "2025-09-18 14:16:46 EST",
+  "date": "September 19, 2025",
+  "last_updated": "2025-09-19 14:15:48 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 8,
+    "total_games": 13,
     "moneyline_signals": 2,
-    "over_8_5_signals": 2,
-    "f5_signals": 7,
-    "ev_opportunities": 7
+    "over_8_5_signals": 4,
+    "f5_signals": 12,
+    "ev_opportunities": 13
   },
   "best_moneyline_bets": [
     {
-      "game": "San Diego Padres @ New York Mets",
-      "pick": "New York Mets ML (EV: 4.7%)",
-      "probability": "61.8%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 61.8% win probability",
-      "odds": -144,
-      "ev": 4.716666666666658
+      "game": "Miami Marlins @ Texas Rangers",
+      "pick": "Texas Rangers ML (EV: 3.0%)",
+      "probability": "63.1%",
+      "confidence": "HIGH",
+      "reasoning": "Model favors home team with 63.1% win probability",
+      "odds": -158,
+      "ev": 3.036708860759507
     },
     {
-      "game": "San Francisco Giants @ Los Angeles Dodgers",
-      "pick": "Los Angeles Dodgers ML (EV: -7.2%)",
-      "probability": "58.7%",
+      "game": "Los Angeles Angels @ Colorado Rockies",
+      "pick": "Colorado Rockies ML (EV: 21.8%)",
+      "probability": "61.5%",
       "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 58.7% win probability",
-      "odds": -172,
-      "ev": -7.17209302325581
+      "reasoning": "Model favors home team with 61.5% win probability",
+      "odds": -102,
+      "ev": 21.79411764705883
     }
   ],
   "best_total_bets": [
     {
-      "game": "Miami Marlins @ Colorado Rockies",
+      "game": "Los Angeles Angels @ Colorado Rockies",
       "pick": "Over 8.5 Runs",
-      "probability": "63.1%",
+      "probability": "63.9%",
       "confidence": "HIGH",
-      "predicted_total": 11.0,
-      "odds": -119,
+      "predicted_total": 10.9,
+      "odds": -107,
       "ev": null
     },
     {
-      "game": "New York Yankees @ Baltimore Orioles",
+      "game": "Atlanta Braves @ Detroit Tigers",
       "pick": "Over 8.5 Runs",
-      "probability": "55.5%",
+      "probability": "56.0%",
       "confidence": "MEDIUM",
-      "predicted_total": 11.4,
-      "odds": -103,
+      "predicted_total": 10.2,
+      "odds": -108,
       "ev": null
+    },
+    {
+      "game": "San Francisco Giants @ Los Angeles Dodgers",
+      "pick": "Over 8.5 Runs (EV: 7.7%)",
+      "probability": "58.5%",
+      "confidence": "MEDIUM",
+      "predicted_total": 9.9,
+      "odds": -119,
+      "ev": 7.659663865546218
     }
   ],
   "best_ev_bets": [
     {
+      "game": "San Diego Padres @ Chicago White Sox",
+      "bet": "Home ML",
+      "ev": "41.0%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Los Angeles Angels @ Colorado Rockies",
+      "bet": "Home ML",
+      "ev": "21.8%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Boston Red Sox @ Tampa Bay Rays",
+      "bet": "Home ML",
+      "ev": "14.9%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Philadelphia Phillies @ Arizona Diamondbacks",
+      "bet": "Away ML",
+      "ev": "12.2%",
+      "confidence": "POSITIVE EV"
+    },
+    {
       "game": "New York Yankees @ Baltimore Orioles",
       "bet": "Home ML",
-      "ev": "29.6%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Miami Marlins @ Colorado Rockies",
-      "bet": "Home ML",
-      "ev": "21.3%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Cleveland Guardians @ Detroit Tigers",
-      "bet": "Away ML",
-      "ev": "20.8%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Los Angeles Angels @ Milwaukee Brewers",
-      "bet": "Away ML",
-      "ev": "19.2%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Toronto Blue Jays @ Tampa Bay Rays",
-      "bet": "Home ML",
-      "ev": "16.3%",
+      "ev": "10.7%",
       "confidence": "POSITIVE EV"
     }
   ],
