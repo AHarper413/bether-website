@@ -1,83 +1,46 @@
 {
-  "date": "September 21, 2025",
-  "last_updated": "2025-09-21 14:13:40 EST",
+  "date": "September 22, 2025",
+  "last_updated": "2025-09-22 14:17:06 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 13,
-    "moneyline_signals": 1,
-    "over_8_5_signals": 4,
-    "f5_signals": 13,
-    "ev_opportunities": 9
+    "total_games": 3,
+    "moneyline_signals": 2,
+    "over_8_5_signals": 0,
+    "f5_signals": 2,
+    "ev_opportunities": 2
   },
   "best_moneyline_bets": [
     {
-      "game": "Cleveland Guardians @ Minnesota Twins",
-      "pick": "Minnesota Twins ML (EV: 42.7%)",
-      "probability": "66.7%",
+      "game": "Milwaukee Brewers @ San Diego Padres",
+      "pick": "San Diego Padres ML (EV: 13.4%)",
+      "probability": "62.3%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 66.7% win probability",
-      "odds": 114,
-      "ev": 42.737999999999985
-    }
-  ],
-  "best_total_bets": [
-    {
-      "game": "Boston Red Sox @ Tampa Bay Rays",
-      "pick": "Over 8.5 Runs",
-      "probability": "68.1%",
-      "confidence": "HIGH",
-      "predicted_total": 11.6,
-      "odds": -102,
-      "ev": null
+      "reasoning": "Model favors home team with 62.3% win probability",
+      "odds": -122,
+      "ev": 13.365573770491812
     },
     {
-      "game": "Chicago Cubs @ Cincinnati Reds",
-      "pick": "Over 8.5 Runs",
-      "probability": "68.1%",
-      "confidence": "HIGH",
-      "predicted_total": 10.6,
-      "odds": -102,
-      "ev": null
-    },
-    {
-      "game": "San Francisco Giants @ Los Angeles Dodgers",
-      "pick": "Over 8.5 Runs",
-      "probability": "58.9%",
+      "game": "St. Louis Cardinals @ San Francisco Giants",
+      "pick": "San Francisco Giants ML (EV: -0.4%)",
+      "probability": "59.6%",
       "confidence": "MEDIUM",
-      "predicted_total": 10.2,
-      "odds": -117,
-      "ev": null
+      "reasoning": "Model favors home team with 59.6% win probability",
+      "odds": -149,
+      "ev": -0.40000000000001146
     }
   ],
+  "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Washington Nationals @ New York Mets",
+      "game": "Washington Nationals @ Atlanta Braves",
       "bet": "Away ML",
-      "ev": "44.4%",
+      "ev": "33.0%",
       "confidence": "POSITIVE EV"
     },
     {
-      "game": "Cleveland Guardians @ Minnesota Twins",
+      "game": "Milwaukee Brewers @ San Diego Padres",
       "bet": "Home ML",
-      "ev": "42.7%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "San Francisco Giants @ Los Angeles Dodgers",
-      "bet": "Away ML",
-      "ev": "32.3%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "New York Yankees @ Baltimore Orioles",
-      "bet": "Over 8.5",
-      "ev": "31.2%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Seattle Mariners @ Houston Astros",
-      "bet": "Home ML",
-      "ev": "20.0%",
+      "ev": "13.4%",
       "confidence": "POSITIVE EV"
     }
   ],
