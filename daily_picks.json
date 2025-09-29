@@ -1,85 +1,54 @@
 {
-  "date": "September 28, 2025",
-  "last_updated": "2025-09-28 14:13:10 EST",
+  "date": "September 29, 2025",
+  "last_updated": "2025-09-29 14:16:58 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 12,
     "moneyline_signals": 4,
     "over_8_5_signals": 0,
     "f5_signals": 12,
-    "ev_opportunities": 7
+    "ev_opportunities": 0
   },
   "best_moneyline_bets": [
     {
       "game": "Pittsburgh Pirates @ Atlanta Braves",
-      "pick": "Atlanta Braves ML (EV: -0.0%)",
+      "pick": "Atlanta Braves ML",
       "probability": "67.4%",
       "confidence": "HIGH",
       "reasoning": "Model favors home team with 67.4% win probability",
-      "odds": -207,
-      "ev": -0.03961352657004813
+      "odds": null,
+      "ev": null
     },
     {
       "game": "Minnesota Twins @ Philadelphia Phillies",
-      "pick": "Philadelphia Phillies ML (EV: -11.1%)",
+      "pick": "Philadelphia Phillies ML",
       "probability": "61.1%",
       "confidence": "MEDIUM",
       "reasoning": "Model favors home team with 61.1% win probability",
-      "odds": -220,
-      "ev": -11.12727272727273
+      "odds": null,
+      "ev": null
     },
     {
       "game": "Cincinnati Reds @ Milwaukee Brewers",
-      "pick": "Milwaukee Brewers ML (EV: -0.1%)",
+      "pick": "Milwaukee Brewers ML",
       "probability": "58.1%",
       "confidence": "MEDIUM",
       "reasoning": "Model favors home team with 58.1% win probability",
-      "odds": -139,
-      "ev": -0.10143884892087618
+      "odds": null,
+      "ev": null
     },
     {
       "game": "Chicago White Sox @ Washington Nationals",
-      "pick": "Washington Nationals ML (EV: 8.6%)",
+      "pick": "Washington Nationals ML",
       "probability": "58.1%",
       "confidence": "MEDIUM",
       "reasoning": "Model favors home team with 58.1% win probability",
-      "odds": -115,
-      "ev": 8.621739130434758
+      "odds": null,
+      "ev": null
     }
   ],
   "best_total_bets": [],
-  "best_ev_bets": [
-    {
-      "game": "Colorado Rockies @ San Francisco Giants",
-      "bet": "Away ML",
-      "ev": "54.7%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Baltimore Orioles @ New York Yankees",
-      "bet": "Away ML",
-      "ev": "14.1%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Tampa Bay Rays @ Toronto Blue Jays",
-      "bet": "Away ML",
-      "ev": "13.7%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "New York Mets @ Miami Marlins",
-      "bet": "Home ML",
-      "ev": "13.6%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Chicago White Sox @ Washington Nationals",
-      "bet": "Home ML",
-      "ev": "8.6%",
-      "confidence": "POSITIVE EV"
-    }
-  ],
+  "best_ev_bets": [],
   "season_record": {
     "wins": 156,
     "losses": 100,
