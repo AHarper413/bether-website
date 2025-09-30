@@ -1,54 +1,40 @@
 {
-  "date": "September 29, 2025",
-  "last_updated": "2025-09-29 14:16:58 EST",
+  "date": "September 30, 2025",
+  "last_updated": "2025-09-30 14:17:10 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 12,
-    "moneyline_signals": 4,
+    "total_games": 4,
+    "moneyline_signals": 1,
     "over_8_5_signals": 0,
-    "f5_signals": 12,
-    "ev_opportunities": 0
+    "f5_signals": 4,
+    "ev_opportunities": 2
   },
   "best_moneyline_bets": [
     {
-      "game": "Pittsburgh Pirates @ Atlanta Braves",
-      "pick": "Atlanta Braves ML",
-      "probability": "67.4%",
+      "game": "Cincinnati Reds @ Los Angeles Dodgers",
+      "pick": "Los Angeles Dodgers ML (EV: 2.0%)",
+      "probability": "68.7%",
       "confidence": "HIGH",
-      "reasoning": "Model favors home team with 67.4% win probability",
-      "odds": null,
-      "ev": null
-    },
-    {
-      "game": "Minnesota Twins @ Philadelphia Phillies",
-      "pick": "Philadelphia Phillies ML",
-      "probability": "61.1%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 61.1% win probability",
-      "odds": null,
-      "ev": null
-    },
-    {
-      "game": "Cincinnati Reds @ Milwaukee Brewers",
-      "pick": "Milwaukee Brewers ML",
-      "probability": "58.1%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 58.1% win probability",
-      "odds": null,
-      "ev": null
-    },
-    {
-      "game": "Chicago White Sox @ Washington Nationals",
-      "pick": "Washington Nationals ML",
-      "probability": "58.1%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 58.1% win probability",
-      "odds": null,
-      "ev": null
+      "reasoning": "Model favors home team with 68.7% win probability",
+      "odds": -206,
+      "ev": 2.0495145631068024
     }
   ],
   "best_total_bets": [],
-  "best_ev_bets": [],
+  "best_ev_bets": [
+    {
+      "game": "Detroit Tigers @ Cleveland Guardians",
+      "bet": "Home ML",
+      "ev": "16.1%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Cincinnati Reds @ Los Angeles Dodgers",
+      "bet": "Home ML",
+      "ev": "2.0%",
+      "confidence": "SLIGHT EDGE"
+    }
+  ],
   "season_record": {
     "wins": 156,
     "losses": 100,
