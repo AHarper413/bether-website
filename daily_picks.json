@@ -1,50 +1,38 @@
 {
-  "date": "October 01, 2025",
-  "last_updated": "2025-10-01 14:16:39 EST",
+  "date": "October 02, 2025",
+  "last_updated": "2025-10-02 14:16:18 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 4,
+    "total_games": 3,
     "moneyline_signals": 1,
     "over_8_5_signals": 0,
-    "f5_signals": 4,
-    "ev_opportunities": 4
+    "f5_signals": 3,
+    "ev_opportunities": 2
   },
   "best_moneyline_bets": [
     {
-      "game": "Cincinnati Reds @ Los Angeles Dodgers",
-      "pick": "Los Angeles Dodgers ML (EV: -21.0%)",
+      "game": "San Diego Padres @ Chicago Cubs",
+      "pick": "Chicago Cubs ML (EV: 9.0%)",
       "probability": "58.3%",
       "confidence": "MEDIUM",
       "reasoning": "Model favors home team with 58.3% win probability",
-      "odds": -281,
-      "ev": -20.95266903914591
+      "odds": -115,
+      "ev": 8.995652173913026
     }
   ],
   "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Cincinnati Reds @ Los Angeles Dodgers",
-      "bet": "Away ML",
-      "ev": "34.7%",
+      "game": "San Diego Padres @ Chicago Cubs",
+      "bet": "Home ML",
+      "ev": "9.0%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Boston Red Sox @ New York Yankees",
       "bet": "Away ML",
-      "ev": "7.9%",
+      "ev": "6.7%",
       "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Detroit Tigers @ Cleveland Guardians",
-      "bet": "Away ML",
-      "ev": "5.7%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "San Diego Padres @ Chicago Cubs",
-      "bet": "Home ML",
-      "ev": "4.9%",
-      "confidence": "SLIGHT EDGE"
     }
   ],
   "season_record": {
