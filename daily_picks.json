@@ -1,40 +1,27 @@
 {
-  "date": "October 02, 2025",
-  "last_updated": "2025-10-02 14:16:18 EST",
+  "date": "October 03, 2025",
+  "last_updated": "2025-10-03 14:16:01 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 3,
+    "total_games": 4,
     "moneyline_signals": 1,
     "over_8_5_signals": 0,
-    "f5_signals": 3,
-    "ev_opportunities": 2
+    "f5_signals": 4,
+    "ev_opportunities": 0
   },
   "best_moneyline_bets": [
     {
-      "game": "San Diego Padres @ Chicago Cubs",
-      "pick": "Chicago Cubs ML (EV: 9.0%)",
+      "game": "Cincinnati Reds @ Los Angeles Dodgers",
+      "pick": "Los Angeles Dodgers ML",
       "probability": "58.3%",
       "confidence": "MEDIUM",
       "reasoning": "Model favors home team with 58.3% win probability",
-      "odds": -115,
-      "ev": 8.995652173913026
+      "odds": null,
+      "ev": null
     }
   ],
   "best_total_bets": [],
-  "best_ev_bets": [
-    {
-      "game": "San Diego Padres @ Chicago Cubs",
-      "bet": "Home ML",
-      "ev": "9.0%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Boston Red Sox @ New York Yankees",
-      "bet": "Away ML",
-      "ev": "6.7%",
-      "confidence": "POSITIVE EV"
-    }
-  ],
+  "best_ev_bets": [],
   "season_record": {
     "wins": 156,
     "losses": 100,
