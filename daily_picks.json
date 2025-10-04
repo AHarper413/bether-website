@@ -1,27 +1,62 @@
 {
-  "date": "October 03, 2025",
-  "last_updated": "2025-10-03 14:16:01 EST",
+  "date": "October 04, 2025",
+  "last_updated": "2025-10-04 14:13:28 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 4,
     "moneyline_signals": 1,
-    "over_8_5_signals": 0,
-    "f5_signals": 4,
-    "ev_opportunities": 0
+    "over_8_5_signals": 1,
+    "f5_signals": 2,
+    "ev_opportunities": 4
   },
   "best_moneyline_bets": [
     {
-      "game": "Cincinnati Reds @ Los Angeles Dodgers",
-      "pick": "Los Angeles Dodgers ML",
-      "probability": "58.3%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 58.3% win probability",
-      "odds": null,
-      "ev": null
+      "game": "New York Yankees @ Toronto Blue Jays",
+      "pick": "Toronto Blue Jays ML (EV: 32.1%)",
+      "probability": "73.4%",
+      "confidence": "HIGH",
+      "reasoning": "Model favors home team with 73.4% win probability",
+      "odds": -125,
+      "ev": 32.11999999999999
     }
   ],
-  "best_total_bets": [],
-  "best_ev_bets": [],
+  "best_total_bets": [
+    {
+      "game": "New York Yankees @ Toronto Blue Jays",
+      "pick": "Over 8.5 Runs (EV: 9.5%)",
+      "probability": "55.3%",
+      "confidence": "MEDIUM",
+      "predicted_total": 10.4,
+      "odds": -102,
+      "ev": 9.515686274509827
+    }
+  ],
+  "best_ev_bets": [
+    {
+      "game": "New York Yankees @ Toronto Blue Jays",
+      "bet": "Home ML",
+      "ev": "32.1%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Detroit Tigers @ Seattle Mariners",
+      "bet": "Away ML",
+      "ev": "18.0%",
+      "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Chicago Cubs @ Milwaukee Brewers",
+      "bet": "Away ML",
+      "ev": "4.2%",
+      "confidence": "SLIGHT EDGE"
+    },
+    {
+      "game": "Los Angeles Dodgers @ Philadelphia Phillies",
+      "bet": "Home ML",
+      "ev": "3.5%",
+      "confidence": "SLIGHT EDGE"
+    }
+  ],
   "season_record": {
     "wins": 156,
     "losses": 100,
