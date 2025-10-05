@@ -1,60 +1,38 @@
 {
-  "date": "October 04, 2025",
-  "last_updated": "2025-10-04 14:13:28 EST",
+  "date": "October 05, 2025",
+  "last_updated": "2025-10-05 14:13:33 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
-    "total_games": 4,
-    "moneyline_signals": 1,
+    "total_games": 2,
+    "moneyline_signals": 0,
     "over_8_5_signals": 1,
     "f5_signals": 2,
-    "ev_opportunities": 4
+    "ev_opportunities": 2
   },
-  "best_moneyline_bets": [
-    {
-      "game": "New York Yankees @ Toronto Blue Jays",
-      "pick": "Toronto Blue Jays ML (EV: 32.1%)",
-      "probability": "73.4%",
-      "confidence": "HIGH",
-      "reasoning": "Model favors home team with 73.4% win probability",
-      "odds": -125,
-      "ev": 32.11999999999999
-    }
-  ],
+  "best_moneyline_bets": [],
   "best_total_bets": [
     {
       "game": "New York Yankees @ Toronto Blue Jays",
-      "pick": "Over 8.5 Runs (EV: 9.5%)",
-      "probability": "55.3%",
+      "pick": "Over 8.5 Runs (EV: 13.7%)",
+      "probability": "57.4%",
       "confidence": "MEDIUM",
-      "predicted_total": 10.4,
+      "predicted_total": 10.2,
       "odds": -102,
-      "ev": 9.515686274509827
+      "ev": 13.674509803921552
     }
   ],
   "best_ev_bets": [
     {
       "game": "New York Yankees @ Toronto Blue Jays",
       "bet": "Home ML",
-      "ev": "32.1%",
+      "ev": "25.7%",
       "confidence": "POSITIVE EV"
     },
     {
       "game": "Detroit Tigers @ Seattle Mariners",
-      "bet": "Away ML",
-      "ev": "18.0%",
-      "confidence": "POSITIVE EV"
-    },
-    {
-      "game": "Chicago Cubs @ Milwaukee Brewers",
-      "bet": "Away ML",
-      "ev": "4.2%",
-      "confidence": "SLIGHT EDGE"
-    },
-    {
-      "game": "Los Angeles Dodgers @ Philadelphia Phillies",
       "bet": "Home ML",
-      "ev": "3.5%",
-      "confidence": "SLIGHT EDGE"
+      "ev": "16.7%",
+      "confidence": "POSITIVE EV"
     }
   ],
   "season_record": {
