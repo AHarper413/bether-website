@@ -1,32 +1,38 @@
 {
-  "date": "October 06, 2025",
-  "last_updated": "2025-10-06 14:16:29 EST",
+  "date": "October 07, 2025",
+  "last_updated": "2025-10-07 14:17:18 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 2,
-    "moneyline_signals": 0,
-    "over_8_5_signals": 1,
+    "moneyline_signals": 1,
+    "over_8_5_signals": 0,
     "f5_signals": 2,
-    "ev_opportunities": 1
+    "ev_opportunities": 2
   },
-  "best_moneyline_bets": [],
-  "best_total_bets": [
+  "best_moneyline_bets": [
     {
-      "game": "Los Angeles Dodgers @ Philadelphia Phillies",
-      "pick": "Over 8.5 Runs",
-      "probability": "60.0%",
-      "confidence": "MEDIUM",
-      "predicted_total": 10.2,
-      "odds": -115,
-      "ev": null
+      "game": "Toronto Blue Jays @ New York Yankees",
+      "pick": "New York Yankees ML (EV: 2.4%)",
+      "probability": "62.7%",
+      "confidence": "HIGH",
+      "reasoning": "Model favors home team with 62.7% win probability",
+      "odds": -158,
+      "ev": 2.38354430379748
     }
   ],
+  "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Los Angeles Dodgers @ Philadelphia Phillies",
+      "game": "Seattle Mariners @ Detroit Tigers",
       "bet": "Home ML",
-      "ev": "20.4%",
+      "ev": "5.0%",
       "confidence": "POSITIVE EV"
+    },
+    {
+      "game": "Toronto Blue Jays @ New York Yankees",
+      "bet": "Home ML",
+      "ev": "2.4%",
+      "confidence": "SLIGHT EDGE"
     }
   ],
   "season_record": {
