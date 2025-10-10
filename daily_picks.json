@@ -1,31 +1,21 @@
 {
-  "date": "October 09, 2025",
-  "last_updated": "2025-10-09 14:16:42 EST",
+  "date": "October 10, 2025",
+  "last_updated": "2025-10-10 14:16:18 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 1,
-    "moneyline_signals": 1,
+    "moneyline_signals": 0,
     "over_8_5_signals": 0,
     "f5_signals": 1,
     "ev_opportunities": 1
   },
-  "best_moneyline_bets": [
-    {
-      "game": "Philadelphia Phillies @ Los Angeles Dodgers",
-      "pick": "Los Angeles Dodgers ML (EV: 8.4%)",
-      "probability": "61.7%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 61.7% win probability",
-      "odds": -132,
-      "ev": 8.442424242424252
-    }
-  ],
+  "best_moneyline_bets": [],
   "best_total_bets": [],
   "best_ev_bets": [
     {
-      "game": "Philadelphia Phillies @ Los Angeles Dodgers",
+      "game": "Detroit Tigers @ Seattle Mariners",
       "bet": "Home ML",
-      "ev": "8.4%",
+      "ev": "17.8%",
       "confidence": "POSITIVE EV"
     }
   ],
