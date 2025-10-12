@@ -1,6 +1,6 @@
 {
-  "date": "October 11, 2025",
-  "last_updated": "2025-10-11 14:12:54 EST",
+  "date": "October 12, 2025",
+  "last_updated": "2025-10-12 14:14:24 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 1,
@@ -11,13 +11,13 @@
   },
   "best_moneyline_bets": [
     {
-      "game": "Philadelphia Phillies @ Los Angeles Dodgers",
-      "pick": "Los Angeles Dodgers ML",
-      "probability": "61.7%",
+      "game": "Seattle Mariners @ Toronto Blue Jays",
+      "pick": "Toronto Blue Jays ML (EV: -3.9%)",
+      "probability": "60.4%",
       "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 61.7% win probability",
-      "odds": null,
-      "ev": null
+      "reasoning": "Model favors home team with 60.4% win probability",
+      "odds": -169,
+      "ev": -3.8603550295858047
     }
   ],
   "best_total_bets": [],
