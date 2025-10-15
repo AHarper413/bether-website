@@ -1,34 +1,17 @@
 {
-  "date": "October 14, 2025",
-  "last_updated": "2025-10-14 14:17:34 EST",
+  "date": "October 15, 2025",
+  "last_updated": "2025-10-15 14:17:44 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 1,
-    "moneyline_signals": 1,
+    "moneyline_signals": 0,
     "over_8_5_signals": 0,
     "f5_signals": 1,
-    "ev_opportunities": 1
+    "ev_opportunities": 0
   },
-  "best_moneyline_bets": [
-    {
-      "game": "Los Angeles Dodgers @ Milwaukee Brewers",
-      "pick": "Milwaukee Brewers ML (EV: 19.5%)",
-      "probability": "58.6%",
-      "confidence": "MEDIUM",
-      "reasoning": "Model favors home team with 58.6% win probability",
-      "odds": 104,
-      "ev": 19.544000000000004
-    }
-  ],
+  "best_moneyline_bets": [],
   "best_total_bets": [],
-  "best_ev_bets": [
-    {
-      "game": "Los Angeles Dodgers @ Milwaukee Brewers",
-      "bet": "Home ML",
-      "ev": "19.5%",
-      "confidence": "POSITIVE EV"
-    }
-  ],
+  "best_ev_bets": [],
   "season_record": {
     "wins": 156,
     "losses": 100,
