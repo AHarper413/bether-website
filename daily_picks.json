@@ -1,26 +1,26 @@
 {
-  "date": "October 19, 2025",
-  "last_updated": "2025-10-19 14:13:53 EST",
+  "date": "October 20, 2025",
+  "last_updated": "2025-10-20 14:16:12 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 1,
-    "moneyline_signals": 0,
-    "over_8_5_signals": 1,
+    "moneyline_signals": 1,
+    "over_8_5_signals": 0,
     "f5_signals": 1,
     "ev_opportunities": 0
   },
-  "best_moneyline_bets": [],
-  "best_total_bets": [
+  "best_moneyline_bets": [
     {
       "game": "Seattle Mariners @ Toronto Blue Jays",
-      "pick": "Over 8.5 Runs",
-      "probability": "57.1%",
-      "confidence": "MEDIUM",
-      "predicted_total": 10.4,
-      "odds": -102,
+      "pick": "Toronto Blue Jays ML",
+      "probability": "66.7%",
+      "confidence": "HIGH",
+      "reasoning": "Model favors home team with 66.7% win probability",
+      "odds": null,
       "ev": null
     }
   ],
+  "best_total_bets": [],
   "best_ev_bets": [],
   "season_record": {
     "wins": 156,
