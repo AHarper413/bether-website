@@ -1,6 +1,6 @@
 {
-  "date": "October 31, 2025",
-  "last_updated": "2025-10-31 14:16:52 EST",
+  "date": "November 01, 2025",
+  "last_updated": "2025-11-01 14:13:51 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 1,
@@ -12,12 +12,12 @@
   "best_moneyline_bets": [
     {
       "game": "Los Angeles Dodgers @ Toronto Blue Jays",
-      "pick": "Toronto Blue Jays ML (EV: 35.1%)",
+      "pick": "Toronto Blue Jays ML (EV: 33.9%)",
       "probability": "60.3%",
       "confidence": "MEDIUM",
       "reasoning": "Model favors home team with 60.3% win probability",
-      "odds": 124,
-      "ev": 35.07200000000002
+      "odds": 122,
+      "ev": 33.86599999999997
     }
   ],
   "best_total_bets": [],
@@ -25,7 +25,7 @@
     {
       "game": "Los Angeles Dodgers @ Toronto Blue Jays",
       "bet": "Home ML",
-      "ev": "35.1%",
+      "ev": "33.9%",
       "confidence": "POSITIVE EV"
     }
   ],
