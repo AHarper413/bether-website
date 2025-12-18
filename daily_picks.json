@@ -1,26 +1,26 @@
 {
-  "date": "December 17, 2025",
-  "last_updated": "2025-12-17 14:19:08 EST",
+  "date": "December 18, 2025",
+  "last_updated": "2025-12-18 14:19:55 EST",
   "model_version": "v5.0_XGBoost",
   "summary": {
     "total_games": 1,
-    "moneyline_signals": 0,
-    "over_8_5_signals": 1,
+    "moneyline_signals": 1,
+    "over_8_5_signals": 0,
     "f5_signals": 1,
     "ev_opportunities": 0
   },
-  "best_moneyline_bets": [],
-  "best_total_bets": [
+  "best_moneyline_bets": [
     {
-      "game": "Toronto Blue Jays @ Seattle Mariners",
-      "pick": "Over 8.5 Runs",
-      "probability": "67.3%",
-      "confidence": "HIGH",
-      "predicted_total": 9.5,
-      "odds": NaN,
-      "ev": NaN
+      "game": "Los Angeles Dodgers @ Toronto Blue Jays",
+      "pick": "Toronto Blue Jays ML",
+      "probability": "60.3%",
+      "confidence": "MEDIUM",
+      "reasoning": "Model favors home team with 60.3% win probability",
+      "odds": null,
+      "ev": null
     }
   ],
+  "best_total_bets": [],
   "best_ev_bets": [],
   "season_record": {
     "wins": 156,
