@@ -42,6 +42,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add cbb-picks-today.html cbb_daily_picks.json
+          git add cbb-picks-today.html || true
+          git add cbb_daily_picks.json || true
           git diff --staged --quiet || git commit -m "Update CBB picks for $(date +'%Y-%m-%d %H:%M')"
-          git push
+          git push || true
