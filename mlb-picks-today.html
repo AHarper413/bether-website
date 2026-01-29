@@ -284,7 +284,7 @@
             margin-bottom: 2rem;
         }
         .game-card {
-            background: white;
+            background: var(--bg-secondary);
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 1.5rem;
@@ -318,7 +318,7 @@
         .matchup {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #1e293b;
+            color: var(--text-primary);
         }
         .confidence-badge {
             padding: 0.25rem 0.75rem;
@@ -374,7 +374,7 @@
             border: 2px solid transparent;
         }
         .team:hover {
-            background: #f8fafc;
+            background: var(--bg-primary);
             transform: scale(1.02);
             border-color: #e11d48;
         }
@@ -392,7 +392,7 @@
         .win-probability {
             font-size: 1.3rem;
             font-weight: bold;
-            color: #1e293b;
+            color: var(--text-primary);
         }
         .vs-section {
             text-align: center;
@@ -436,7 +436,7 @@
             background-color: rgba(0,0,0,0.5);
         }
         .modal-content {
-            background-color: white;
+            background: var(--bg-secondary);
             margin: 5% auto;
             padding: 2rem;
             border-radius: 12px;
@@ -462,7 +462,7 @@
             margin-top: 1rem;
         }
         .stat-item {
-            background: #f8fafc;
+            background: var(--bg-primary);
             padding: 1rem;
             border-radius: 8px;
             text-align: center;
@@ -475,7 +475,7 @@
         .stat-value {
             font-size: 1.2rem;
             font-weight: bold;
-            color: #1e293b;
+            color: var(--text-primary);
         }
         
         .back-link {
@@ -1725,7 +1725,7 @@
             }
             
             const modalContent = `
-                <div style="text-align: center; margin-bottom: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+                <div style="text-align: center; margin-bottom: 1.5rem; padding: 1rem; background: var(--bg-primary); border-radius: 8px;">
                     <h3 style="color: #e11d48; margin-bottom: 0.5rem;">Starting Pitcher: ${pitcher}</h3>
                     ${evInfo}
                     <p style="font-size: 0.9rem; color: #64748b; margin: 0;">📊 Current season statistics</p>
@@ -1762,7 +1762,7 @@
                     </div>
                 </div>
                 
-                <div style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+                <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-primary); border-radius: 8px;">
                     <h4 style="margin: 0 0 0.5rem 0; color: #e11d48;">Today's Game Context</h4>
                     <p><strong>Stadium Factor:</strong> ${game.stadium_factor} (run environment)</p>
                     <p><strong>Bullpen Advantage:</strong> ${game.bullpen_advantage}</p>
