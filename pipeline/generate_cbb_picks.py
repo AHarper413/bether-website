@@ -59,16 +59,76 @@ def generate_json(df):
 
     picks = []
     for _, row in df.iterrows():
+        # Get the win probability for the predicted winner
+        predicted_winner = row.get("predicted_winner", "")
+        home_team = row.get("home_team", "")
+        away_team = row.get("away_team", "")
+
+        # Determine win probability based on who was predicted to win
+        if predicted_winner == home_team:
+            win_prob = row.get("home_win_probability", row.get("confidence", 0.5))
+        else:
+            win_prob = row.get("away_win_probability", row.get("confidence", 0.5))
+
+        # Ensure win_prob is a float between 0 and 1
+        if isinstance(win_prob, (int, float)):
+            win_prob = float(win_prob)
+        else:
+            win_prob = 0.5
+
+        # Calculate confidence tier from probability
+        if win_prob >= 0.65:
+            confidence_tier = "High"
+        elif win_prob >= 0.55:
+            confidence_tier = "Medium"
+        else:
+            confidence_tier = "Low"
+
+        # Determine EV rating from value_bet flag
+        is_value_bet = row.get("value_bet", False)
+        if is_value_bet:
+            ev_rating = "Positive EV"
+        else:
+            ev_rating = "Neutral"
+
+        # Get moneylines - convert decimal odds to American
+        team_1_odds = row.get("team_1_odds", 2.0)
+        team_2_odds = row.get("team_2_odds", 2.0)
+        team_1 = row.get("team_1", "")
+        team_2 = row.get("team_2", "")
+
+        # Map team_1/team_2 odds to home/away
+        if team_1 == home_team:
+            home_decimal = team_1_odds
+            away_decimal = team_2_odds
+        else:
+            home_decimal = team_2_odds
+            away_decimal = team_1_odds
+
+        # Convert decimal to American odds
+        def decimal_to_american(decimal_odds):
+            if decimal_odds >= 2.0:
+                return int((decimal_odds - 1) * 100)
+            else:
+                return int(-100 / (decimal_odds - 1))
+
+        try:
+            moneyline_home = decimal_to_american(float(home_decimal))
+            moneyline_away = decimal_to_american(float(away_decimal))
+        except (ValueError, ZeroDivisionError):
+            moneyline_home = -110
+            moneyline_away = -110
+
         pick = {
-            "away_team": row.get("away_team", ""),
-            "home_team": row.get("home_team", ""),
-            "predicted_winner": row.get("predicted_winner", ""),
-            "win_probability": round(row.get("win_probability", 0) * 100, 1),
-            "confidence": row.get("confidence_tier", "Medium"),
-            "ev_rating": row.get("ev_rating", "Neutral"),
+            "away_team": away_team,
+            "home_team": home_team,
+            "predicted_winner": predicted_winner,
+            "win_probability": round(win_prob * 100, 1),
+            "confidence": confidence_tier,
+            "ev_rating": ev_rating,
             "spread": row.get("spread", 0),
-            "moneyline_away": row.get("away_odds", 0),
-            "moneyline_home": row.get("home_odds", 0),
+            "moneyline_away": moneyline_away,
+            "moneyline_home": moneyline_home,
         }
         picks.append(pick)
 
