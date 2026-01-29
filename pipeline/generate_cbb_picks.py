@@ -2,11 +2,12 @@
 """
 Generate CBB Picks for SmartBetCalcs.com
 ========================================
-Runs the V12 pipeline and generates the daily picks HTML page.
+Runs the ML pipeline and generates the daily picks HTML page.
 
 Usage:
-    python generate_cbb_picks.py
-    python generate_cbb_picks.py --retrain  # Force model retraining
+    python generate_cbb_picks.py              # Full pipeline
+    python generate_cbb_picks.py --quick-odds # Quick mode (API only, no scraping)
+    python generate_cbb_picks.py --retrain    # Force model retraining
 """
 
 import subprocess
@@ -23,17 +24,20 @@ PREDICTIONS_CSV = "today_predictions.csv"
 OUTPUT_JSON = "../cbb_daily_picks.json"
 OUTPUT_HTML = "../cbb-picks-today.html"
 
-def run_pipeline(retrain=False):
-    """Run the V12 unified pipeline."""
+def run_pipeline(retrain=False, quick_odds=False):
+    """Run the ML pipeline."""
     cmd = ["python3", PIPELINE_SCRIPT]
-    if retrain:
+    if quick_odds:
+        cmd.append("--quick-odds")
+    elif retrain:
         cmd.append("--retrain")
 
     print(f"Running pipeline: {' '.join(cmd)}")
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
 
     if result.returncode != 0:
         print(f"Pipeline error: {result.stderr}")
+        print(f"Pipeline stdout: {result.stdout}")
         return False
 
     print(result.stdout)
@@ -359,7 +363,8 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_dir)
 
-    # Check for --retrain flag
+    # Check for flags
+    quick_odds = "--quick-odds" in sys.argv
     retrain = "--retrain" in sys.argv
 
     # Run the pipeline
@@ -367,7 +372,14 @@ def main():
     print("SmartBetCalcs CBB Picks Generator")
     print("=" * 60)
 
-    if not run_pipeline(retrain=retrain):
+    if quick_odds:
+        print("Mode: Quick Odds (API only, no scraping)")
+    elif retrain:
+        print("Mode: Full pipeline with model retraining")
+    else:
+        print("Mode: Full pipeline")
+
+    if not run_pipeline(retrain=retrain, quick_odds=quick_odds):
         print("Pipeline failed, checking for existing predictions...")
 
     # Load predictions

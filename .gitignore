@@ -44,16 +44,19 @@ today_predictions.csv
 today_features_for_prediction.csv
 
 # Pipeline folder intermediate files
-pipeline/V12_*.csv
-pipeline/*.pkl
 pipeline/today_predictions.csv
 pipeline/archived_games/
 pipeline/historical_data/
 
+# Keep required pipeline data files
+!pipeline/V12_training_data.csv
+!pipeline/V12_ncaa_2025_team_stats.csv
+!pipeline/1.31ncaa_2025_team_stats.csv
+!pipeline/random_forest_binary_model.pkl
+
 # Data caches
 *_cache/
 cache/
-*.pkl
 *.joblib
 
 # Logs
