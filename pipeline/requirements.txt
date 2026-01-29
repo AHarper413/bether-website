@@ -1,0 +1,12 @@
+# SmartBetCalcs CBB Pipeline Dependencies
+requests>=2.28.0
+pandas>=1.5.0
+numpy>=1.23.0
+scikit-learn>=1.1.0
+pytz>=2022.1
+beautifulsoup4>=4.11.0
+
+# Selenium for web scraping
+selenium>=4.0.0
+selenium-stealth>=1.0.0
+webdriver-manager>=4.0.0

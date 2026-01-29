@@ -1,0 +1,71 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# V12 Pipeline intermediate files
+V12_*.csv
+!V12_unified_pipeline.py
+random_forest_binary_model.pkl
+today_predictions.csv
+today_features_for_prediction.csv
+
+# Pipeline folder intermediate files
+pipeline/V12_*.csv
+pipeline/*.pkl
+pipeline/today_predictions.csv
+pipeline/archived_games/
+pipeline/historical_data/
+
+# Data caches
+*_cache/
+cache/
+*.pkl
+*.joblib
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Netlify
+.netlify/
+
+# Local testing
+test_*.html
+*.bak

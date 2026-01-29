@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Basketball Betting Guide | CBB Betting Strategy | SmartBetCalcs</title>
+    <meta name="description" content="Learn college basketball betting with our comprehensive CBB guide. Understand spreads, totals, key numbers, conference dynamics, and March Madness betting strategies.">
+    <meta name="keywords" content="college basketball betting guide, CBB betting strategy, ncaa basketball betting, march madness betting, college basketball spread betting, CBB totals">
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ2MWQF940"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HZ2MWQF940');
+    </script>
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
+     crossorigin="anonymous"></script>
+
+    <style>
+        /* Page-specific styles */
+        .guide-hero {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: 4rem 2.5rem;
+            text-align: center;
+        }
+
+        .guide-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .guide-hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.7;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb a {
+            color: var(--cbb-orange);
+            text-decoration: none;
+        }
+
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            padding: 3rem 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-content section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .main-content h2 {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--cbb-orange);
+        }
+
+        .main-content h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .main-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-content ul, .main-content ol {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .main-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid var(--cbb-orange);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--cbb-orange);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .example-box {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-dark);
+            border-left: 4px solid var(--accent-green);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .example-box h4 {
+            color: var(--accent-green);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .bet-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .bet-type-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+        }
+
+        .bet-type-card h4 {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .bet-type-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Sidebar */
+        .sidebar section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color var(--transition-fast);
+        }
+
+        .sidebar a:hover {
+            color: var(--cbb-orange);
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, var(--cbb-orange-dark) 0%, var(--cbb-orange) 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .cta-card h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-card p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            color: white;
+        }
+
+        .cta-card .cta-btn {
+            background: white;
+            color: var(--cbb-orange-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all var(--transition-base);
+        }
+
+        .cta-card .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .content-layout {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+            }
+
+            .guide-hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .guide-hero h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Disclaimer Banner -->
+        <div class="disclaimer-banner">
+            <strong>Disclaimer:</strong> All content is for entertainment and educational purposes only. Sports betting involves risk.
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="brand-section">
+                    <a href="/index.html" style="text-decoration: none;">
+                        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e11d48"/>
+                                    <stop offset="100%" style="stop-color:#f97316"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="#1e293b"/>
+                            <circle cx="100" cy="100" r="70" fill="url(#logoGradient)"/>
+                            <path d="M70 85 L85 100 L130 55" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="100" cy="130" r="15" fill="white"/>
+                            <circle cx="75" cy="130" r="8" fill="white" opacity="0.8"/>
+                            <circle cx="125" cy="130" r="8" fill="white" opacity="0.8"/>
+                        </svg>
+                    </a>
+                    <div class="brand-text">
+                        <h1>SmartBetCalcs</h1>
+                    </div>
+                </div>
+                <a href="/free-cbb-picks.html" class="cta-button" style="background: var(--cbb-orange);">Get CBB Picks</a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav-section">
+            <div class="nav-buttons">
+                <a href="/index.html" class="nav-btn">Home</a>
+                <a href="/sports-betting-guide.html" class="nav-btn">Betting Guides</a>
+                <a href="/free-cbb-picks.html" class="nav-btn cbb-highlight">Free CBB Picks</a>
+                <a href="/free-mlb-picks.html" class="nav-btn">MLB Picks</a>
+                <a href="/calculators.html" class="nav-btn">Calculators</a>
+                <a href="/articles.html" class="nav-btn">Betting News</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="guide-hero">
+            <div class="breadcrumb">
+                <a href="/index.html">Home</a> → <a href="/sports-betting-guide.html">Guides</a> → College Basketball Betting
+            </div>
+            <h1>College Basketball Betting Guide</h1>
+            <p>Master CBB betting with our comprehensive guide covering spreads, totals, key numbers, conference dynamics, and March Madness strategies.</p>
+        </section>
+
+        <!-- Content -->
+        <div class="content-layout">
+            <main class="main-content">
+                <section>
+                    <h2>Why College Basketball Betting is Unique</h2>
+                    <p>College basketball offers some of the most exciting betting opportunities in sports. With 350+ Division I teams across 32 conferences, there's an enormous amount of action - and with it, plenty of inefficiencies for sharp bettors to exploit.</p>
+
+                    <div class="highlight-box">
+                        <h4>Key CBB Betting Advantages</h4>
+                        <p>Unlike the NBA where lines are razor-sharp, college basketball's sheer volume of games means oddsmakers can't dedicate equal attention to every matchup. Mid-major conferences and early-season tournaments often present the best value opportunities.</p>
+                    </div>
+
+                    <h3>What Makes CBB Different from NBA Betting</h3>
+                    <ul>
+                        <li><strong>More variance:</strong> Younger players, less experience, bigger swings</li>
+                        <li><strong>Conference familiarity:</strong> Teams play each other multiple times per season</li>
+                        <li><strong>Travel and scheduling:</strong> More impactful than in the pros</li>
+                        <li><strong>Motivation factors:</strong> Bubble teams, rivalry games, senior nights</li>
+                        <li><strong>Less public attention:</strong> Softer lines on non-marquee games</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Understanding CBB Bet Types</h2>
+
+                    <div class="bet-types-grid">
+                        <div class="bet-type-card">
+                            <h4>Point Spread</h4>
+                            <p>The most popular CBB bet. The favorite must win by more than the spread to cover. College spreads can be larger than NBA due to talent gaps.</p>
+                        </div>
+                        <div class="bet-type-card">
+                            <h4>Totals (Over/Under)</h4>
+                            <p>Bet on combined score. Tempo varies wildly in college - some teams play at 75+ possessions, others under 65.</p>
+                        </div>
+                        <div class="bet-type-card">
+                            <h4>Moneyline</h4>
+                            <p>Simply pick the winner. Underdogs offer value when you believe a team can win outright but may not cover a spread.</p>
+                        </div>
+                        <div class="bet-type-card">
+                            <h4>First Half</h4>
+                            <p>Bet on just the first 20 minutes. Useful for avoiding second-half coaching adjustments or foul trouble situations.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Key Numbers in College Basketball</h2>
+                    <p>Unlike football where 3 and 7 dominate, college basketball doesn't have singular key numbers. However, understanding margins matters:</p>
+
+                    <ul>
+                        <li><strong>3-7 points:</strong> One-possession to two-possession game - common outcomes</li>
+                        <li><strong>8-12 points:</strong> Comfortable win but not a blowout</li>
+                        <li><strong>15+ points:</strong> Dominant performance, often sees late garbage time</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Spread Strategy Example</h4>
+                        <p>If Duke is -14.5 against a mid-major, consider: Does Duke typically run up scores, or does Coach K pull starters early? Historical trends for favorites covering large spreads in similar situations can guide your decision.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Factors That Move CBB Lines</h2>
+
+                    <h3>1. Injuries and Lineup Changes</h3>
+                    <p>In college, losing one star can devastate a team more than in the NBA. Monitor injury reports closely, especially for teams with thin benches.</p>
+
+                    <h3>2. Travel and Rest</h3>
+                    <p>Teams playing their third game in five days, or traveling cross-country for a weeknight game, often underperform. This is especially relevant in non-conference play.</p>
+
+                    <h3>3. Motivation Spots</h3>
+                    <p>Look for:</p>
+                    <ul>
+                        <li>Revenge games against teams that beat them earlier</li>
+                        <li>Senior night emotional letdowns or letups</li>
+                        <li>Bubble teams fighting for NCAA tournament bids</li>
+                        <li>Teams that just clinched and might rest players</li>
+                    </ul>
+
+                    <h3>4. Conference Tournament Dynamics</h3>
+                    <p>Conference tournaments create unique situations. Teams playing for auto-bids vs. teams already locked in have vastly different motivation levels.</p>
+                </section>
+
+                <section>
+                    <h2>March Madness Betting Strategy</h2>
+                    <p>The NCAA Tournament is the most exciting - and most bet on - college basketball event. Here's how to approach it:</p>
+
+                    <div class="highlight-box">
+                        <h4>First Round Tips</h4>
+                        <p>12-seeds over 5-seeds hit about 35% of the time historically. Look for 12-seeds with experienced guards, strong defensive metrics, and a slow tempo that can shorten the game.</p>
+                    </div>
+
+                    <h3>Key Tournament Factors</h3>
+                    <ul>
+                        <li><strong>Experience matters:</strong> Teams with tournament experience handle pressure better</li>
+                        <li><strong>Defense travels:</strong> Great defensive teams tend to perform in neutral-site games</li>
+                        <li><strong>Foul trouble:</strong> With no fouling out replacement depth, teams reliant on one star are vulnerable</li>
+                        <li><strong>Pace of play:</strong> Slower-paced teams create more variance, benefiting underdogs</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Using Statistics for CBB Betting</h2>
+                    <p>Advanced metrics are essential for college basketball analysis. Key stats to track:</p>
+
+                    <h3>Efficiency Metrics</h3>
+                    <ul>
+                        <li><strong>Adjusted Offensive Efficiency (AdjO):</strong> Points scored per 100 possessions, adjusted for opponent</li>
+                        <li><strong>Adjusted Defensive Efficiency (AdjD):</strong> Points allowed per 100 possessions, adjusted for opponent</li>
+                        <li><strong>Tempo:</strong> Possessions per 40 minutes - affects totals significantly</li>
+                    </ul>
+
+                    <h3>The Four Factors</h3>
+                    <p>Dean Oliver's Four Factors predict winning:</p>
+                    <ol>
+                        <li><strong>Effective FG%:</strong> Shooting efficiency (accounts for 3-pointers)</li>
+                        <li><strong>Turnover Rate:</strong> Turnovers per possession</li>
+                        <li><strong>Offensive Rebounding:</strong> Second-chance opportunities</li>
+                        <li><strong>Free Throw Rate:</strong> Getting to the line and making them</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Bankroll Management for CBB</h2>
+                    <p>College basketball's long season (November through March) requires discipline:</p>
+
+                    <ul>
+                        <li>Never bet more than 2-3% of your bankroll on a single game</li>
+                        <li>Be selective - with 150+ games some days, you don't need to bet every game</li>
+                        <li>Track all bets to identify patterns in your winning and losing</li>
+                        <li>Avoid parlays in college sports - variance is already high enough</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>The Discipline Factor</h4>
+                        <p>The best CBB bettors often pass on more games than they bet. Having a clear methodology and sticking to it beats chasing every opportunity.</p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <section>
+                    <h3>Related Guides</h3>
+                    <ul>
+                        <li><a href="/sports-betting-guide.html">Betting Fundamentals</a></li>
+                        <li><a href="/basketball-betting-guide.html">NBA & WNBA Betting</a></li>
+                        <li><a href="/betting-strategies.html">Advanced Strategies</a></li>
+                        <li><a href="/nfl-betting-guide.html">NFL Betting Guide</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Betting Tools</h3>
+                    <ul>
+                        <li><a href="/parlay-calculator.html">Parlay Calculator</a></li>
+                        <li><a href="/teaser-calculator.html">Teaser Calculator</a></li>
+                        <li><a href="/round-robin-calculator.html">Round Robin Calculator</a></li>
+                    </ul>
+                </section>
+
+                <div class="cta-card">
+                    <h3>Get Free CBB Picks</h3>
+                    <p>ML-powered college basketball predictions updated daily with spreads, totals, and moneylines.</p>
+                    <a href="/free-cbb-picks.html" class="cta-btn">View Today's Picks</a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Legal Disclaimer -->
+        <div class="legal-section">
+            <div class="legal-disclaimer">
+                <p><strong>Important Disclaimer:</strong> This guide is for educational and entertainment purposes only. Sports betting involves risk and is not suitable for everyone. Never bet more than you can afford to lose. Please gamble responsibly. If you have a gambling problem, call 1-800-522-4700.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Free Picks & Guides</h3>
+                    <ul>
+                        <li><a href="/free-cbb-picks.html">Free CBB Picks</a></li>
+                        <li><a href="/cbb-betting-guide.html">CBB Betting Guide</a></li>
+                        <li><a href="/free-mlb-picks.html">Free MLB Picks</a></li>
+                        <li><a href="/sports-betting-guide.html">Betting Fundamentals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="/parlay-calculator.html">Parlay Calculator</a></li>
+                        <li><a href="/teaser-calculator.html">Teaser Calculator</a></li>
+                        <li><a href="/calculators.html">All Calculators</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SmartBetCalcs. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

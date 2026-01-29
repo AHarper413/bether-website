@@ -1,0 +1,47 @@
+name: Daily CBB Picks
+
+on:
+  schedule:
+    # Run at 9 AM CST (15:00 UTC) and 1 PM CST (19:00 UTC)
+    - cron: '0 15 * * *'
+    - cron: '0 19 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  generate-picks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Chrome for Selenium
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r pipeline/requirements.txt
+
+      - name: Run CBB picks generator
+        env:
+          ODDS_API_KEY_TODAY: ${{ secrets.ODDS_API_KEY_TODAY }}
+          ODDS_API_KEY_HISTORICAL: ${{ secrets.ODDS_API_KEY_HISTORICAL }}
+        run: |
+          cd pipeline
+          python generate_cbb_picks.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add cbb-picks-today.html cbb_daily_picks.json
+          git diff --staged --quiet || git commit -m "Update CBB picks for $(date +'%Y-%m-%d %H:%M')"
+          git push

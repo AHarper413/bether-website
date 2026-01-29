@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free MLB Picks and Stats | Data-Driven Baseball Analysis | SmartBetCalcs</title>
-    <meta name="description" content="Get free MLB picks and stats from SmartBetCalcs' data-driven analysis. Daily baseball predictions powered by algorithms. For entertainment purposes only.">
-    <meta name="keywords" content="free mlb picks, baseball analysis, data driven baseball predictions, mlb stats, sports betting, algorithm baseball picks, betting education">
+    <title>Free College Basketball Picks | CBB Predictions & Analysis | SmartBetCalcs</title>
+    <meta name="description" content="Get free college basketball picks from SmartBetCalcs. Daily CBB predictions powered by machine learning algorithms. Spread, totals, and moneyline analysis. For entertainment purposes only.">
+    <meta name="keywords" content="free college basketball picks, CBB predictions, ncaa basketball betting, college basketball spread picks, CBB totals, machine learning sports betting, basketball analysis">
 
     <!-- Schema markup for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SportsTeam",
-        "name": "SmartBetCalcs MLB Analysis",
-        "description": "Free MLB analysis and picks using data-driven algorithms",
-        "sport": "Baseball"
+        "name": "SmartBetCalcs CBB Analysis",
+        "description": "Free college basketball analysis and picks using machine learning algorithms",
+        "sport": "Basketball"
     }
     </script>
 
@@ -35,9 +35,9 @@
      crossorigin="anonymous"></script>
 
     <style>
-        /* Page-specific styles */
-        .mlb-hero {
-            background: linear-gradient(135deg, #0d9488 0%, var(--accent-green) 100%);
+        /* Page-specific styles for CBB */
+        .cbb-hero {
+            background: linear-gradient(135deg, var(--cbb-orange-dark) 0%, var(--cbb-orange) 100%);
             color: white;
             text-align: center;
             padding: 4rem 2.5rem;
@@ -45,7 +45,7 @@
             overflow: hidden;
         }
 
-        .mlb-hero::before {
+        .cbb-hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -56,14 +56,14 @@
             opacity: 0.1;
         }
 
-        .mlb-hero-content {
+        .cbb-hero-content {
             position: relative;
             z-index: 1;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .mlb-hero h1 {
+        .cbb-hero h1 {
             font-family: var(--font-serif);
             font-size: 3.5rem;
             font-weight: 700;
@@ -71,17 +71,17 @@
             line-height: 1.2;
         }
 
-        .mlb-hero p {
+        .cbb-hero p {
             font-size: 1.25rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
             line-height: 1.7;
             color: white;
         }
 
         .hero-cta-btn {
             background: white;
-            color: #0d9488;
+            color: var(--cbb-orange-dark);
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-full);
             text-decoration: none;
@@ -96,7 +96,7 @@
         .hero-cta-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-            color: #0d9488;
+            color: var(--cbb-orange-dark);
         }
 
         .hero-cta-btn.secondary {
@@ -107,7 +107,39 @@
 
         .hero-cta-btn.secondary:hover {
             background: white;
-            color: #0d9488;
+            color: var(--cbb-orange-dark);
+        }
+
+        .model-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .model-stat {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        .model-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            display: block;
+        }
+
+        .model-stat-label {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            margin-top: 0.5rem;
         }
 
         .benefits {
@@ -129,21 +161,20 @@
         .benefit:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-xl);
-            border-color: var(--accent-green);
+            border-color: var(--cbb-orange);
         }
 
         .benefit-icon {
             width: 64px;
             height: 64px;
-            background: linear-gradient(135deg, #0d9488, var(--accent-green));
+            background: linear-gradient(135deg, var(--cbb-orange-dark), var(--cbb-orange));
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem auto;
-            font-size: 0.75rem;
+            font-size: 1.5rem;
             color: white;
-            font-weight: 700;
         }
 
         .benefit h3 {
@@ -184,11 +215,11 @@
             background: var(--bg-secondary);
             padding: 1.5rem;
             border-radius: var(--radius-md);
-            border-left: 4px solid var(--accent-green);
+            border-left: 4px solid var(--cbb-orange);
         }
 
         .feature-item strong {
-            color: var(--primary-rose);
+            color: var(--cbb-orange);
             font-weight: 600;
         }
 
@@ -212,7 +243,7 @@
             padding: 1rem 1.5rem;
             margin-bottom: 0.75rem;
             border-radius: var(--radius-md);
-            border-left: 3px solid var(--accent-green);
+            border-left: 3px solid var(--cbb-orange);
             font-size: 1.05rem;
             color: var(--text-secondary);
         }
@@ -238,7 +269,7 @@
         }
 
         .picks-cta-box .cta-button {
-            background: var(--primary-rose);
+            background: var(--cbb-orange);
             color: white;
             padding: 1rem 2rem;
             border-radius: var(--radius-md);
@@ -249,7 +280,7 @@
         }
 
         .picks-cta-box .cta-button:hover {
-            background: var(--primary-rose-dark);
+            background: var(--cbb-orange-light);
             transform: translateY(-2px);
         }
 
@@ -260,11 +291,11 @@
         }
 
         @media (max-width: 768px) {
-            .mlb-hero {
+            .cbb-hero {
                 padding: 3rem 1.5rem;
             }
 
-            .mlb-hero h1 {
+            .cbb-hero h1 {
                 font-size: 2.5rem;
             }
 
@@ -276,6 +307,10 @@
             .hero-cta-btn.secondary {
                 margin-left: 0;
             }
+
+            .model-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -284,6 +319,20 @@
         <!-- Disclaimer Banner -->
         <div class="disclaimer-banner">
             <strong>Disclaimer:</strong> All picks are for entertainment and educational purposes only. Sports betting involves risk. Never bet more than you can afford to lose.
+        </div>
+
+        <!-- CBB Banner -->
+        <div class="cbb-banner">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <span class="banner-icon">🏀</span>
+                    <div>
+                        <div class="banner-title">FREE Daily College Basketball Picks - ML Powered</div>
+                        <div class="banner-subtitle">Algorithm-assisted CBB predictions updated daily</div>
+                    </div>
+                </div>
+                <a href="/cbb-picks-today.html" class="banner-cta">Get Today's Picks</a>
+            </div>
         </div>
 
         <!-- Header -->
@@ -308,7 +357,7 @@
                     </a>
                     <div class="brand-text">
                         <h1>SmartBetCalcs</h1>
-                        <p>Free MLB picks and stats</p>
+                        <p>Free college basketball picks</p>
                     </div>
                 </div>
                 <a href="/index.html" class="cta-button">← Back to Home</a>
@@ -320,48 +369,63 @@
             <div class="nav-buttons">
                 <a href="/index.html" class="nav-btn">Home</a>
                 <a href="/sports-betting-guide.html" class="nav-btn">Betting Guides</a>
-                <a href="/free-cbb-picks.html" class="nav-btn cbb-highlight">Free CBB Picks</a>
-                <a href="/free-mlb-picks.html" class="nav-btn active">MLB Picks</a>
+                <a href="/free-cbb-picks.html" class="nav-btn cbb-highlight active">Free CBB Picks</a>
+                <a href="/free-mlb-picks.html" class="nav-btn">MLB Picks</a>
                 <a href="/calculators.html" class="nav-btn">Calculators</a>
                 <a href="/articles.html" class="nav-btn">Betting News</a>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <section class="mlb-hero">
-            <div class="mlb-hero-content">
-                <h1>Free MLB Picks & Stats</h1>
-                <p>Data-informed baseball analysis powered by algorithms. Get daily insights on moneyline bets, totals, and spread analysis. Trustworthy predictions without the noise.</p>
+        <section class="cbb-hero">
+            <div class="cbb-hero-content">
+                <h1>Free College Basketball Picks</h1>
+                <p>Machine learning-powered CBB analysis. Get daily insights on spreads, totals, and moneylines backed by advanced statistical models trained on thousands of games.</p>
                 <a href="#todays-picks" class="hero-cta-btn">View Today's Analysis</a>
-                <a href="/calculators.html" class="hero-cta-btn secondary">Free Calculators</a>
+                <a href="/cbb-betting-guide.html" class="hero-cta-btn secondary">CBB Betting Guide</a>
+
+                <div class="model-stats">
+                    <div class="model-stat">
+                        <span class="model-stat-number">V12</span>
+                        <span class="model-stat-label">Model Version</span>
+                    </div>
+                    <div class="model-stat">
+                        <span class="model-stat-number">25+</span>
+                        <span class="model-stat-label">Statistical Features</span>
+                    </div>
+                    <div class="model-stat">
+                        <span class="model-stat-number">Daily</span>
+                        <span class="model-stat-label">Updated Predictions</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Why Choose Us -->
         <section class="content-section">
-            <h2 class="section-title">Why Trust Our MLB Analysis</h2>
-            <p class="section-subtitle">Our data-driven approach eliminates the typical sports betting noise, providing transparent insights you can rely on.</p>
+            <h2 class="section-title">Why Trust Our CBB Analysis</h2>
+            <p class="section-subtitle">Our V12 machine learning pipeline processes real-time data to deliver transparent, data-driven college basketball predictions.</p>
 
             <div class="benefits">
                 <div class="benefit">
-                    <div class="benefit-icon">DATA</div>
-                    <h3>Data-Driven Analysis</h3>
-                    <p>Advanced algorithms analyze dozens of factors to provide objective insights without emotional bias or marketing hype.</p>
+                    <div class="benefit-icon">🤖</div>
+                    <h3>Machine Learning Powered</h3>
+                    <p>Our V12 model uses Random Forest algorithms trained on historical CBB data to identify patterns and predict outcomes.</p>
                 </div>
                 <div class="benefit">
-                    <div class="benefit-icon">EDU</div>
-                    <h3>Educational Approach</h3>
-                    <p>Learn the reasoning behind every recommendation. Build understanding, not dependency.</p>
+                    <div class="benefit-icon">📊</div>
+                    <h3>Real-Time Data</h3>
+                    <p>Automated pipeline scrapes current team stats and odds daily, ensuring predictions reflect the latest information.</p>
                 </div>
                 <div class="benefit">
-                    <div class="benefit-icon">DAILY</div>
-                    <h3>Daily Fresh Insights</h3>
-                    <p>Updated every morning with detailed analysis of matchups, trends, and key factors affecting each game.</p>
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Calibrated Confidence</h3>
+                    <p>Each prediction includes a confidence score based on model certainty, helping you understand pick quality.</p>
                 </div>
                 <div class="benefit">
-                    <div class="benefit-icon">FREE</div>
-                    <h3>Completely Free</h3>
-                    <p>No hidden fees, no registration required, no pressure. Professional-grade analysis at no cost to you.</p>
+                    <div class="benefit-icon">💰</div>
+                    <h3>Value Detection</h3>
+                    <p>Compares model predictions against live odds to identify potential value betting opportunities.</p>
                 </div>
             </div>
         </section>
@@ -369,25 +433,25 @@
         <!-- What You Get -->
         <section class="content-section">
             <div class="features-list">
-                <h3>What's Included in Our Daily MLB Analysis</h3>
+                <h3>What's Included in Our Daily CBB Analysis</h3>
                 <div class="features-grid">
                     <div class="feature-item">
-                        <strong>Moneyline Picks</strong> - Straight win predictions with confidence levels
+                        <strong>Spread Predictions</strong> - ML model predictions for point spreads with confidence levels
                     </div>
                     <div class="feature-item">
-                        <strong>Over/Under Totals</strong> - Run total predictions based on offensive and pitching matchups
+                        <strong>Totals Analysis</strong> - Over/under predictions based on offensive and defensive metrics
                     </div>
                     <div class="feature-item">
-                        <strong>First 5 Innings Analysis</strong> - Lower variance options focusing on starting pitchers
+                        <strong>Moneyline Picks</strong> - Straight win predictions when value exists
                     </div>
                     <div class="feature-item">
-                        <strong>Key Factors Breakdown</strong> - Weather, bullpen usage, recent form analysis
+                        <strong>Value Badges</strong> - Visual indicators when model finds edge over market odds
                     </div>
                     <div class="feature-item">
-                        <strong>Educational Insights</strong> - Learn why certain matchups favor specific outcomes
+                        <strong>Team Statistics</strong> - Key metrics driving each prediction explained
                     </div>
                     <div class="feature-item">
-                        <strong>Confidence Ratings</strong> - Understand which games offer the best opportunities
+                        <strong>Confidence Meters</strong> - Visual display of model certainty for each pick
                     </div>
                 </div>
             </div>
@@ -396,47 +460,47 @@
         <!-- Methodology -->
         <section class="methodology-section">
             <div class="methodology-content">
-                <h2 class="section-title">Our Data-Driven Methodology</h2>
-                <p class="section-subtitle">Transparency in every prediction. Here's exactly how our algorithm-assisted analysis works:</p>
+                <h2 class="section-title">V12 Model Methodology</h2>
+                <p class="section-subtitle">Complete transparency in how our predictions are generated:</p>
 
                 <ul>
-                    <li>Advanced team statistics (ERA, OPS, FIP, wOBA, and 20+ sabermetrics)</li>
-                    <li>Recent form analysis and momentum indicators</li>
-                    <li>Detailed pitcher matchup evaluation and historical performance</li>
-                    <li>Bullpen fatigue tracking and usage pattern analysis</li>
-                    <li>Stadium factors, weather conditions, and environmental impacts</li>
-                    <li>Head-to-head historical data and situational trends</li>
-                    <li>Travel schedule analysis and rest day considerations</li>
-                    <li>Line movement tracking and market inefficiency identification</li>
+                    <li>Automated scraping of current team statistics from CBB reference sources</li>
+                    <li>Real-time odds collection from major sportsbooks via API</li>
+                    <li>25+ statistical features including offensive/defensive efficiency, tempo, and recent form</li>
+                    <li>Random Forest classifier trained on historical game outcomes</li>
+                    <li>Calibration analysis to ensure predicted probabilities match actual win rates</li>
+                    <li>Expected Value (EV) calculations comparing model odds to market odds</li>
+                    <li>Daily model retraining to incorporate latest game results</li>
+                    <li>Team name standardization for accurate data matching</li>
                 </ul>
             </div>
         </section>
 
         <!-- Today's Picks Section -->
         <section id="todays-picks" class="content-section">
-            <h2 class="section-title">Today's MLB Analysis</h2>
-            <p class="section-subtitle">Updated daily with fresh insights and recommendations. Check back each morning for the latest analysis.</p>
+            <h2 class="section-title">Today's CBB Analysis</h2>
+            <p class="section-subtitle">Updated daily with fresh predictions. Check back each morning for the latest ML-powered picks.</p>
 
             <div class="picks-cta-box">
-                <h3>Analysis Updates Daily at 9:00 AM EST</h3>
-                <p>Get the latest picks, stats, and insights delivered fresh every morning. Our algorithm processes overnight data to provide you with the most current analysis.</p>
-                <a href="/mlb-picks-today.html" class="cta-button">View Today's Picks & Stats</a>
+                <h3>Picks Updated Daily at 9:00 AM & 1:00 PM CST</h3>
+                <p>Our pipeline runs twice daily to capture the latest odds movements and team data. Get predictions for today's games with full statistical breakdowns.</p>
+                <a href="/cbb-picks-today.html" class="cta-button">View Today's CBB Picks</a>
             </div>
         </section>
 
         <!-- Legal Disclaimer -->
         <div class="legal-section">
             <div class="legal-disclaimer">
-                <p><strong>Important Disclaimer:</strong> All MLB analysis, picks, and predictions on SmartBetCalcs are provided for entertainment and educational purposes only. Sports betting involves substantial risk and is not suitable for everyone. Past performance does not guarantee future results. You should never bet more than you can afford to lose. SmartBetCalcs makes no guarantees about the accuracy of any analysis or predictions and is not responsible for any financial losses incurred from following our content. Please gamble responsibly and seek help if you have a gambling problem. National Problem Gambling Helpline: 1-800-522-4700.</p>
+                <p><strong>Important Disclaimer:</strong> All college basketball analysis, picks, and predictions on SmartBetCalcs are provided for entertainment and educational purposes only. Sports betting involves substantial risk and is not suitable for everyone. Past performance does not guarantee future results. Our machine learning model is not perfect and will have losing picks. You should never bet more than you can afford to lose. SmartBetCalcs makes no guarantees about the accuracy of any analysis or predictions and is not responsible for any financial losses incurred from following our content. Please gamble responsibly. National Problem Gambling Helpline: 1-800-522-4700.</p>
             </div>
         </div>
 
         <!-- Final CTA -->
         <section class="final-cta">
-            <h2 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 2rem;">Ready to Get Started?</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">Join thousands getting trusted baseball analysis designed with your success in mind.</p>
-            <a href="/mlb-picks-today.html" class="cta-button" style="margin-right: 1rem;">Get Today's Analysis</a>
-            <a href="/index.html" class="secondary-cta">Explore All Guides</a>
+            <h2 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 2rem;">Ready to See Today's Picks?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">Get ML-powered college basketball predictions with full transparency on methodology.</p>
+            <a href="/cbb-picks-today.html" class="cta-button" style="background: var(--cbb-orange); margin-right: 1rem;">Get Today's CBB Picks</a>
+            <a href="/cbb-betting-guide.html" class="secondary-cta">Learn CBB Betting</a>
         </section>
 
         <!-- Footer -->
@@ -446,10 +510,10 @@
                     <h3>Free Picks & Guides</h3>
                     <ul>
                         <li><a href="/free-cbb-picks.html">Free CBB Picks</a></li>
+                        <li><a href="/cbb-picks-today.html">Today's CBB Picks</a></li>
+                        <li><a href="/cbb-betting-guide.html">CBB Betting Guide</a></li>
                         <li><a href="/free-mlb-picks.html">Free MLB Picks</a></li>
                         <li><a href="/sports-betting-guide.html">Betting Fundamentals</a></li>
-                        <li><a href="/nfl-betting-guide.html">NFL Betting</a></li>
-                        <li><a href="/basketball-betting-guide.html">NBA & WNBA</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -470,7 +534,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SmartBetCalcs. All rights reserved.</p>
+                <p>&copy; 2025 SmartBetCalcs. All rights reserved. | Machine learning-powered sports betting education.</p>
             </div>
         </footer>
     </div>

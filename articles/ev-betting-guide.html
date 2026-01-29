@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expected Value Betting Explained: Complete Guide to Profitable EV Betting | BetHer</title>
+    <title>Expected Value Betting Explained: Complete Guide to Profitable EV Betting | SmartBetCalcs</title>
     <meta name="description" content="Learn what expected value betting is and how to find profitable EV bets. Complete guide to positive expected value betting strategies, calculations, and tools for sports betting success.">
     <meta name="keywords" content="expected value betting, positive EV betting, what is expected value in betting, EV betting explained, sports betting expected value, how to calculate betting EV, profitable betting strategies, mathematical betting">
     
@@ -26,17 +26,23 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
      crossorigin="anonymous"></script>
     
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
     <style>
         :root {
             --primary-rose: #e11d48;
             --primary-rose-light: #f43f5e;
             --primary-rose-dark: #be123c;
-            --soft-rose: #fdf2f8;
-            --warm-gray: #f8fafc;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --text-muted: #94a3b8;
-            --border-light: #e2e8f0;
+            --soft-rose: rgba(225, 29, 72, 0.1);
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-dark: #334155;
+            --border-light: #475569;
             --white: #ffffff;
             --accent-purple: #8b5cf6;
             --success-green: #10b981;
@@ -53,7 +59,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
-            background: var(--white);
+            background: var(--bg-primary);
         }
 
         .container {
@@ -64,9 +70,9 @@
         
         /* Header */
         .header {
-            background: var(--white);
+            background: var(--bg-secondary);
             padding: 1.5rem 2rem;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-dark);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -123,7 +129,7 @@
         }
 
         .article-content {
-            background: var(--white);
+            background: var(--bg-primary);
         }
 
         .breadcrumb {
@@ -227,7 +233,7 @@
         }
 
         .tip-box {
-            background: var(--warm-gray);
+            background: var(--bg-secondary);
             border-left: 4px solid var(--primary-rose);
             padding: 1.5rem;
             margin: 1.5rem 0;
@@ -264,7 +270,7 @@
         }
 
         .example-box {
-            background: var(--warm-gray);
+            background: var(--bg-secondary);
             border: 1px solid var(--border-light);
             border-radius: 8px;
             padding: 1.5rem;
@@ -278,13 +284,14 @@
         }
 
         .calculation-step {
-            background: var(--white);
+            background: var(--bg-tertiary);
             border: 1px solid var(--border-light);
             border-radius: 4px;
             padding: 0.75rem;
             margin: 0.5rem 0;
             font-family: 'Monaco', 'Menlo', monospace;
             font-size: 0.9rem;
+            color: var(--text-primary);
         }
 
         .positive-ev {
@@ -337,7 +344,7 @@
         }
 
         .strategy-card {
-            background: var(--warm-gray);
+            background: var(--bg-secondary);
             border: 1px solid var(--border-light);
             border-radius: 8px;
             padding: 1.5rem;
@@ -351,7 +358,7 @@
         }
 
         .warning-box {
-            background: #fef3c7;
+            background: rgba(245, 158, 11, 0.1);
             border: 1px solid var(--warning-orange);
             border-radius: 8px;
             padding: 1.5rem;
@@ -380,12 +387,12 @@
 
         /* Sidebar */
         .sidebar {
-            background: var(--white);
+            background: var(--bg-primary);
         }
 
         .sidebar-section {
-            background: var(--white);
-            border: 1px solid var(--border-light);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-dark);
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 2rem;
@@ -494,7 +501,7 @@
                         </svg>
                     </a>
                     <div class="brand-text">
-                        <h1>BetHer</h1>
+                        <h1 style="color: var(--primary-rose);">SmartBetCalcs</h1>
                     </div>
                 </div>
                 <a href="/index.html" class="home-btn">← Back to Home</a>

@@ -3,49 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLB Picks Against the Spread | Free Baseball Betting Predictions</title>
-    <meta name="description" content="Free MLB picks against the spread with expert analysis. Daily baseball predictions, run line picks, and betting strategies that win.">
-    <meta name="keywords" content="mlb picks against the spread, baseball run line picks, mlb spread picks, free baseball betting predictions">
-    <style>
-        /* Same styles as above */
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; background: #f8fafc; }
-        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; }
-        .redirect-message { text-align: center; background: linear-gradient(135deg, #e11d48 0%, #8b5cf6 100%); color: white; padding: 2rem; border-radius: 12px; }
-        .cta-button { background: white; color: #e11d48; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin: 1rem; }
-    </style>
-    <!-- Google Analytics (gtag.js) -->
+    <title>MLB Picks Against the Spread | Free Run Line Predictions | SmartBetCalcs</title>
+    <meta name="description" content="Free MLB picks against the spread from SmartBetCalcs. Daily baseball run line predictions, spread analysis, and data-driven betting insights. Algorithm-powered ATS picks.">
+    <meta name="keywords" content="mlb picks against the spread, baseball run line picks, mlb spread picks, free baseball betting predictions, mlb ats picks, run line betting">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZmF2aWNvbkdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2UxMWQ0OCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmOTczMTYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSIjMGYxNzJhIiBvcGFjaXR5PSIwLjkiLz4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMSIgZmlsbD0idXJsKCNmYXZpY29uR3JhZGllbnQpIi8+CiAgPHBhdGggZD0iTTExLjUgMTQgTDEzLjUgMTYgTDIwLjUgOSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjIxIiByPSIyLjUiIGZpbGw9IndoaXRlIi8+CiAgPGNpcmNsZSBjeD0iMTIiIGN5PSIyMSIgcj0iMS41IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iMjAiIGN5PSIyMSIgcj0iMS41IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ii8+Cjwvc3ZnPgo=">
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ2MWQF940"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){{dataLayer.push(arguments);}}
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-HZ2MWQF940');
     </script>
-    
-    <!-- Google AdSense -->
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/styles.css">
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
      crossorigin="anonymous"></script>
+
+    <style>
+        /* Page-specific styles */
+        .ats-hero {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .ats-hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .ats-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .ats-cta-button {
+            background: white;
+            color: var(--accent-primary);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .ats-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .ats-content-section {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .ats-content-section h2 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ats-content-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .ats-content-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ats-content-section ul li {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .ats-content-section ul li:last-child {
+            border-bottom: none;
+        }
+
+        .ats-content-section ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 50%;
+        }
+
+        .cta-center {
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+
+        .primary-cta-btn {
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .primary-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(225, 29, 72, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .ats-hero {
+                padding: 2rem 1.5rem;
+            }
+
+            .ats-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .ats-hero p {
+                font-size: 1rem;
+            }
+
+            .ats-content-section {
+                padding: 1.5rem;
+            }
+
+            .ats-content-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="redirect-message">
-            <h1>MLB Picks Against the Spread</h1>
-            <p>Looking for MLB run line and spread picks? Our daily picks include moneyline, totals, and spread analysis.</p>
-            <a href="/mlb-picks-today.html" class="cta-button">View Today's MLB Picks</a>
+        <!-- Legal Disclaimer Banner -->
+        <div class="disclaimer-banner">
+            <strong>Disclaimer:</strong> All picks are for entertainment and educational purposes only. Sports betting involves risk. Never bet more than you can afford to lose.
         </div>
-        
-        <h2>What Are MLB Spread Picks?</h2>
-        <p>MLB spread betting (also called run line betting) typically involves a 1.5 run spread. Our free picks analyze which teams can cover the spread based on:</p>
-        <ul>
-            <li>Team offensive power vs opposing pitching</li>
-            <li>Historical performance against the run line</li>
-            <li>Bullpen strength and fatigue factors</li>
-            <li>Stadium factors that favor high or low scoring</li>
-        </ul>
-        
-        <div style="text-align: center; margin: 2rem 0;">
-            <a href="/mlb-picks-today.html" class="cta-button" style="background: #e11d48; color: white;">Get Free MLB Picks</a>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="brand-section">
+                    <a href="/index.html" style="text-decoration: none;">
+                        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e11d48"/>
+                                    <stop offset="100%" style="stop-color:#f97316"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="#1e293b"/>
+                            <circle cx="100" cy="100" r="70" fill="url(#logoGradient)"/>
+                            <path d="M70 85 L85 100 L130 55" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="100" cy="130" r="15" fill="white"/>
+                            <circle cx="75" cy="130" r="8" fill="white" opacity="0.8"/>
+                            <circle cx="125" cy="130" r="8" fill="white" opacity="0.8"/>
+                        </svg>
+                    </a>
+                    <div class="brand-text">
+                        <h1>SmartBetCalcs</h1>
+                        <p>Data-driven sports betting education</p>
+                    </div>
+                </div>
+                <div class="header-cta">
+                    <div class="header-stats">
+                        <h3>Start Your Journey</h3>
+                        <p>Learn from the basics up</p>
+                    </div>
+                    <a href="/sports-betting-guide.html" class="cta-button">Get Started</a>
+                </div>
+            </div>
         </div>
+
+        <!-- Navigation -->
+        <nav class="nav-section">
+            <div class="nav-buttons">
+                <a href="/index.html" class="nav-btn">Home</a>
+                <a href="/sports-betting-guide.html" class="nav-btn">Betting Guides</a>
+                <a href="/free-cbb-picks.html" class="nav-btn cbb-highlight">Free CBB Picks</a>
+                <a href="/free-mlb-picks.html" class="nav-btn active">MLB Picks</a>
+                <a href="/calculators.html" class="nav-btn">Calculators</a>
+                <a href="/articles.html" class="nav-btn">Betting News</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <div class="ats-hero">
+                <h1>MLB Picks Against the Spread</h1>
+                <p>Looking for MLB run line and spread picks? Our daily picks include moneyline, totals, and spread analysis powered by data science.</p>
+                <a href="/free-mlb-picks.html" class="ats-cta-button">View Today's MLB Picks</a>
+            </div>
+
+            <!-- Content Section -->
+            <div class="ats-content-section">
+                <h2>What Are MLB Spread Picks?</h2>
+                <p>MLB spread betting (also called run line betting) typically involves a 1.5 run spread. Our free picks analyze which teams can cover the spread based on:</p>
+                <ul>
+                    <li>Team offensive power vs opposing pitching</li>
+                    <li>Historical performance against the run line</li>
+                    <li>Bullpen strength and fatigue factors</li>
+                    <li>Stadium factors that favor high or low scoring</li>
+                </ul>
+            </div>
+
+            <div class="cta-center">
+                <a href="/free-mlb-picks.html" class="primary-cta-btn">Get Free MLB Picks</a>
+            </div>
+
+            <!-- Responsible Betting Section -->
+            <section id="responsible" class="responsible-section">
+                <div class="responsible-content">
+                    <h3>Bet Responsibly</h3>
+                    <p>Sports betting should be fun and educational. Always bet within your means, set limits, and remember that no bet is guaranteed. We're committed to promoting responsible gambling practices and supporting bettors in making informed decisions.</p>
+                    <div class="helpline-info">
+                        <strong>Need Help?</strong>
+                        <p>National Problem Gambling Helpline: 1-800-522-4700</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Legal Disclaimer Section -->
+        <div class="legal-section">
+            <div class="legal-disclaimer">
+                <p><strong>Important Legal Disclaimer:</strong> All content on SmartBetCalcs, including MLB analysis, picks, and predictions, is provided for entertainment and educational purposes only. Past performance does not guarantee future results. Sports betting involves substantial risk of loss and is not suitable for everyone. You should never bet more than you can afford to lose. SmartBetCalcs makes no guarantees about the accuracy of any analysis or predictions. We are not responsible for any financial losses incurred from following our content. Please gamble responsibly and seek help if you have a gambling problem. Call 1-800-522-4700 for assistance.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Free Picks & Guides</h3>
+                    <ul>
+                        <li><a href="/free-cbb-picks.html">Free CBB Picks</a></li>
+                        <li><a href="/free-mlb-picks.html">Free MLB Picks</a></li>
+                        <li><a href="/sports-betting-guide.html">Betting Fundamentals</a></li>
+                        <li><a href="/nfl-betting-guide.html">NFL Betting</a></li>
+                        <li><a href="/basketball-betting-guide.html">NBA & WNBA</a></li>
+                        <li><a href="/mlb-betting-guide.html">MLB Betting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Tools & Strategy</h3>
+                    <ul>
+                        <li><a href="/parlay-calculator.html">Parlay Calculator</a></li>
+                        <li><a href="/teaser-calculator.html">Teaser Calculator</a></li>
+                        <li><a href="/round-robin-calculator.html">Round Robin Calculator</a></li>
+                        <li><a href="/calculators.html">All Calculators</a></li>
+                        <li><a href="/betting-strategies.html">Advanced Strategies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#responsible">Responsible Gambling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="mailto:support@smartbetcalcs.com">Contact Support</a></li>
+                        <li><a href="mailto:business@smartbetcalcs.com">Business Inquiries</a></li>
+                        <li><a href="/articles.html">Betting News</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SmartBetCalcs. All rights reserved. | Empowering smarter sports betting through education.</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
