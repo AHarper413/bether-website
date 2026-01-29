@@ -1,8 +1,12 @@
-/*
-  Content-Type: text/html; charset=UTF-8
+# Correct MIME types for static assets
+/*.css
+  Content-Type: text/css; charset=utf-8
 
-/*.html
-  Content-Type: text/html; charset=UTF-8
-  
-/*.xml  
-  Content-Type: application/xml; charset=UTF-8
+/*.js
+  Content-Type: application/javascript; charset=utf-8
+
+/*.json
+  Content-Type: application/json; charset=utf-8
+
+/*.svg
+  Content-Type: image/svg+xml

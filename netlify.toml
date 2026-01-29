@@ -4,9 +4,20 @@
 
 [build.environment]
   PYTHON_VERSION = ""
-  
+
 [context.production]
   command = ""
-  
+
 [context.deploy-preview]
   command = ""
+
+# Force correct MIME types for CSS files
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
