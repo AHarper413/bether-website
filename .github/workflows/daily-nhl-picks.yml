@@ -1,0 +1,56 @@
+name: Daily NHL Picks
+
+on:
+  schedule:
+    # Run at 9 AM CST (15:00 UTC) and 1 PM CST (19:00 UTC)
+    - cron: '0 15 * * *'
+    - cron: '0 19 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  generate-picks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Chrome for Selenium
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r pipeline/requirements.txt
+
+      - name: Run NHL picks generator
+        env:
+          ODDS_API_KEY_TODAY: ${{ secrets.ODDS_API_KEY_TODAY }}
+          ODDS_API_KEY_HISTORICAL: ${{ secrets.ODDS_API_KEY_HISTORICAL }}
+        run: |
+          cd pipeline
+          python generate_nhl_picks.py --quick-odds
+        timeout-minutes: 15
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          # Add output files
+          git add nhl-picks-today.html || true
+          git add nhl_daily_picks.json || true
+          # Add pipeline artifacts (model, training data, stats)
+          git add pipeline/nhl_random_forest_model.pkl || true
+          git add pipeline/nhl_training_data.csv || true
+          git add pipeline/nhl_team_stats.csv || true
+          git add pipeline/nhl_historical_odds_raw.csv || true
+          git add pipeline/nhl_game_results_raw.csv || true
+          git diff --staged --quiet || git commit -m "Update NHL picks for $(date +'%Y-%m-%d %H:%M')"
+          git push || true
