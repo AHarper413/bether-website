@@ -265,70 +265,94 @@ def fetch_team_stats(season=Config.SEASON):
 
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        # Find the team stats table
-        # Hockey Reference has multiple tables, we want "stats" or similar
-        tables = soup.find_all('table')
+        # Hockey Reference table IDs:
+        # - standings_EAS, standings_WES: Conference standings with basic stats
+        # - stats: Team statistics table
+        # We'll try to get the standings tables which have GP, W, L, PTS, GF, GA, SRS, SOS
 
-        stats_df = None
+        all_teams_data = []
 
-        # Try to find team statistics table
-        for table in tables:
-            table_id = table.get('id', '')
-            if 'stats' in table_id.lower() or 'team' in table_id.lower():
-                # Parse table
+        # Try to find standings tables (Eastern and Western conference)
+        for table_id in ['standings_EAS', 'standings_WES', 'stats']:
+            table = soup.find('table', {'id': table_id})
+            if table:
                 try:
                     df = pd.read_html(str(table))[0]
-
-                    # Check if it looks like a team stats table
-                    if len(df) >= 30:  # Should have ~32 teams
-                        stats_df = df
-                        print(f"   Found table: {table_id} with {len(df)} rows")
-                        break
-                except:
+                    print(f"   Found table: {table_id} with {len(df)} rows")
+                    all_teams_data.append(df)
+                except Exception as e:
+                    print(f"   ⚠️  Error parsing {table_id}: {e}")
                     continue
 
-        # If no specific table found, try parsing all tables
-        if stats_df is None:
-            all_tables = pd.read_html(str(soup))
-            for df in all_tables:
-                # Look for table with team names
-                if len(df) >= 30 and any(col for col in df.columns if 'team' in str(col).lower() or df.iloc[0].astype(str).str.contains('Bruins|Rangers|Maple Leafs', case=False).any()):
-                    stats_df = df
-                    print(f"   Found stats table with {len(df)} rows")
-                    break
+        # Combine Eastern and Western conference data
+        if all_teams_data:
+            stats_df = pd.concat(all_teams_data, ignore_index=True)
+            print(f"   Combined {len(stats_df)} team rows from {len(all_teams_data)} tables")
+        else:
+            # Fallback: try parsing all tables on the page
+            print("   Trying fallback: parsing all tables...")
+            try:
+                all_tables = pd.read_html(str(soup))
+                for df in all_tables:
+                    # Look for table with team names and key stats columns
+                    cols_str = ' '.join(str(c).lower() for c in df.columns)
+                    if len(df) >= 15 and ('pts' in cols_str or 'gf' in cols_str or 'ga' in cols_str):
+                        stats_df = df
+                        print(f"   Found stats table with {len(df)} rows via fallback")
+                        break
+            except Exception as e:
+                print(f"   ⚠️  Fallback parsing failed: {e}")
+                stats_df = None
 
-        if stats_df is None:
+        if stats_df is None or stats_df.empty:
             print("   ⚠️  Could not find team stats table, using fallback")
             return create_fallback_stats()
 
         # Clean up the dataframe
         # Handle multi-level columns if present
         if isinstance(stats_df.columns, pd.MultiIndex):
-            stats_df.columns = ['_'.join(col).strip() for col in stats_df.columns.values]
+            stats_df.columns = ['_'.join(str(c) for c in col).strip() for col in stats_df.columns.values]
 
-        # Identify team column
+        # Debug: show columns found
+        print(f"   Columns found: {list(stats_df.columns)[:10]}...")
+
+        # Identify team column - Hockey Reference uses various names
         team_col = None
         for col in stats_df.columns:
-            if 'team' in str(col).lower() or stats_df[col].astype(str).str.contains('Bruins|Rangers', case=False).any():
+            col_str = str(col).lower()
+            if col_str in ['team', 'tm', 'team_name'] or 'team' in col_str:
                 team_col = col
                 break
+            # Also check first column content for team names
+            try:
+                if stats_df[col].astype(str).str.contains('Bruins|Rangers|Maple Leafs|Oilers', case=False, na=False).any():
+                    team_col = col
+                    break
+            except:
+                continue
 
         if team_col is None:
             # Use first column as team
             team_col = stats_df.columns[0]
+            print(f"   Using first column as team: {team_col}")
 
         # Rename team column to 'team'
         stats_df = stats_df.rename(columns={team_col: 'team'})
 
-        # Remove any rows that aren't actual teams (headers, totals, etc.)
+        # Remove any rows that aren't actual teams (headers, totals, division names, etc.)
         stats_df = stats_df[stats_df['team'].notna()]
-        stats_df = stats_df[~stats_df['team'].astype(str).str.contains('League|Average|Total', case=False, na=False)]
+        stats_df = stats_df[~stats_df['team'].astype(str).str.contains('League|Average|Total|Division|Atlantic|Metropolitan|Central|Pacific', case=False, na=False)]
 
         # Clean team names
         stats_df['team'] = stats_df['team'].astype(str).str.strip()
         stats_df['team'] = stats_df['team'].str.replace(r'\*', '', regex=True)  # Remove playoff markers
+        stats_df['team'] = stats_df['team'].str.replace(r'\s+', ' ', regex=True)  # Normalize whitespace
+
+        # Remove any duplicate teams (from combining conferences)
+        stats_df = stats_df.drop_duplicates(subset=['team'], keep='first')
 
         print(f"✅ Loaded stats for {len(stats_df)} NHL teams")
+        print(f"   Sample teams: {list(stats_df['team'].head(3))}")
 
         # Save raw data
         stats_df.to_csv(Config.TEAM_STATS_RAW, index=False)
@@ -345,7 +369,7 @@ def fetch_team_stats(season=Config.SEASON):
 def create_fallback_stats():
     """Create fallback stats DataFrame with all 32 NHL teams"""
     teams = [
-        "Anaheim Ducks", "Arizona Coyotes", "Boston Bruins", "Buffalo Sabres",
+        "Anaheim Ducks", "Boston Bruins", "Buffalo Sabres",
         "Calgary Flames", "Carolina Hurricanes", "Chicago Blackhawks", "Colorado Avalanche",
         "Columbus Blue Jackets", "Dallas Stars", "Detroit Red Wings", "Edmonton Oilers",
         "Florida Panthers", "Los Angeles Kings", "Minnesota Wild", "Montreal Canadiens",
