@@ -53,7 +53,7 @@ class Config:
     ODDS_API_BASE_URL = "https://api.the-odds-api.com/v4"
 
     # Sport configuration
-    SPORT = "hockey_nhl"  # Odds API sport key
+    SPORT = "icehockey_nhl"  # Odds API sport key
 
     # Paths
     TEAM_MAPPING_CSV = "nhl_team_name_mapping.csv"
