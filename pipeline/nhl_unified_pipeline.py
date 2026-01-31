@@ -47,9 +47,9 @@ from sklearn.metrics import accuracy_score
 
 class Config:
     """Central configuration for NHL pipeline"""
-    # API Keys (same as CBB)
-    ODDS_API_KEY_TODAY = "704d21dd7f686383fffd15d45a6d05c8"
-    ODDS_API_KEY_HISTORICAL = "89d92a0a17cbbd55aa8fd731388cd1b8"
+    # API Keys - use environment variables with fallback to hardcoded values
+    ODDS_API_KEY_TODAY = os.environ.get("ODDS_API_KEY_TODAY", "704d21dd7f686383fffd15d45a6d05c8")
+    ODDS_API_KEY_HISTORICAL = os.environ.get("ODDS_API_KEY_HISTORICAL", "89d92a0a17cbbd55aa8fd731388cd1b8")
     ODDS_API_BASE_URL = "https://api.the-odds-api.com/v4"
 
     # Sport configuration
@@ -523,7 +523,12 @@ def fetch_historical_odds(days_back=Config.HISTORICAL_DAYS_BACK):
                 response = requests.get(url, params=params, timeout=15)
 
                 if response.status_code == 200:
-                    data = response.json().get('data', [])
+                    json_response = response.json()
+                    data = json_response.get('data', [])
+
+                    # Debug: log first successful response structure
+                    if i == 0 and time_str == "00:00:00Z" and data:
+                        print(f"   DEBUG: Found {len(data)} events for {date_str}")
 
                     for game in data:
                         if "bookmakers" in game:
@@ -561,8 +566,14 @@ def fetch_historical_odds(days_back=Config.HISTORICAL_DAYS_BACK):
                 elif response.status_code == 429:
                     print(f"⏳ Rate limited, waiting...")
                     time.sleep(60)
+                elif response.status_code != 200:
+                    # Log first error of each type
+                    if i == 0 and time_str == "00:00:00Z":
+                        print(f"   ⚠️  Historical API returned {response.status_code}: {response.text[:200]}")
 
             except Exception as e:
+                if i == 0 and time_str == "00:00:00Z":
+                    print(f"   ⚠️  Historical API error: {e}")
                 continue
 
         if (i + 1) % 10 == 0:

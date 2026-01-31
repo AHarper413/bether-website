@@ -5,6 +5,7 @@ numpy>=1.23.0
 scikit-learn>=1.1.0
 pytz>=2022.1
 beautifulsoup4>=4.11.0
+lxml>=4.9.0
 
 # Selenium for web scraping
 selenium>=4.0.0
