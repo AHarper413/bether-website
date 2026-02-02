@@ -1,0 +1,37 @@
+# robots.txt for SmartBetCalcs.com
+# https://smartbetcalcs.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://smartbetcalcs.com/sitemap.xml
+
+# Crawl-delay (optional, be polite to search engines)
+Crawl-delay: 1
+
+# Allow all major search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block common non-useful bots that waste bandwidth
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Disallow pipeline/internal files
+Disallow: /pipeline/
+Disallow: /*.json$
+Disallow: /*.csv$
+Disallow: /*.pkl$

@@ -5,7 +5,7 @@
     <loc>https://smartbetcalcs.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <!-- CBB Picks Pages - HIGH PRIORITY (Featured Sport) -->
@@ -13,21 +13,36 @@
     <loc>https://smartbetcalcs.com/free-cbb-picks.html</loc>
     <priority>0.95</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/cbb-picks-today.html</loc>
     <priority>0.95</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/cbb-betting-guide.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+
+  <!-- NHL Picks Pages - HIGH PRIORITY -->
+  <url>
+    <loc>https://smartbetcalcs.com/free-nhl-picks.html</loc>
+    <priority>0.95</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://smartbetcalcs.com/nhl-picks-today.html</loc>
+    <priority>0.95</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <!-- MLB Picks Pages -->
@@ -35,14 +50,21 @@
     <loc>https://smartbetcalcs.com/free-mlb-picks.html</loc>
     <priority>0.85</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/mlb-picks-today.html</loc>
     <priority>0.85</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://smartbetcalcs.com/mlb-picks-against-the-spread.html</loc>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <!-- Calculator Pages - High Priority -->
@@ -50,35 +72,35 @@
     <loc>https://smartbetcalcs.com/calculators.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/all-calculators.html</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/parlay-calculator.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/round-robin-calculator.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/teaser-calculator.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <!-- Betting Guides -->
@@ -86,63 +108,63 @@
     <loc>https://smartbetcalcs.com/sports-betting-guide.html</loc>
     <priority>0.85</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/nfl-betting-guide.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/basketball-betting-guide.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/mlb-betting-guide.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/mls-betting-guide.html</loc>
     <priority>0.75</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/wnba-betting-guide.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/women-sports-betting-guide.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/caitlin-clark-betting-guide.html</loc>
     <priority>0.75</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/betting-strategies.html</loc>
     <priority>0.75</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <!-- Articles -->
@@ -150,28 +172,28 @@
     <loc>https://smartbetcalcs.com/articles.html</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/articles/ev-betting-guide.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/articles/safe-betting-sites-for-women.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/articles/womens-college-sports-betting-guide.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <!-- Other Pages -->
@@ -179,21 +201,21 @@
     <loc>https://smartbetcalcs.com/live-stats.html</loc>
     <priority>0.6</priority>
     <changefreq>daily</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/about-us.html</loc>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <url>
     <loc>https://smartbetcalcs.com/privacy-policy.html</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
   <!-- Charts -->
@@ -201,6 +223,6 @@
     <loc>https://smartbetcalcs.com/charts/womens-sports-betting-growth-chart.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>2026-02-01</lastmod>
   </url>
 </urlset>
