@@ -216,6 +216,8 @@ def generate_html(data):
       gtag('js', new Date());
       gtag('config', 'G-HZ2MWQF940');
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7676217377122242"
+     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles.css">
     <style>
         .picks-container {{
