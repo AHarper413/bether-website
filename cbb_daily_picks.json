@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-03 09:38:03 CST",
+  "generated_at": "2026-02-03 13:44:19 CST",
   "date": "February 03, 2026",
   "total_games": 31,
   "picks": [
@@ -11,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -833,
-      "moneyline_home": 550
+      "moneyline_away": -909,
+      "moneyline_home": 625
     },
     {
       "away_team": "Miami (OH)",
@@ -22,8 +22,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -227,
-      "moneyline_home": 185
+      "moneyline_away": -204,
+      "moneyline_home": 170
     },
     {
       "away_team": "Canisius",
@@ -33,8 +33,8 @@
       "confidence": "Low",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 124,
-      "moneyline_home": -147
+      "moneyline_away": 120,
+      "moneyline_home": -142
     },
     {
       "away_team": "Ball State",
@@ -66,7 +66,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 440,
+      "moneyline_away": 425,
       "moneyline_home": -588
     },
     {
@@ -86,10 +86,10 @@
       "predicted_winner": "Virginia Commonwealth",
       "win_probability": 77.5,
       "confidence": "High",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -416,
-      "moneyline_home": 320
+      "moneyline_away": -322,
+      "moneyline_home": 260
     },
     {
       "away_team": "Southern Illinois",
@@ -121,8 +121,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 390,
-      "moneyline_home": -526
+      "moneyline_away": 409,
+      "moneyline_home": -555
     },
     {
       "away_team": "Mississippi",
@@ -132,8 +132,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 550,
-      "moneyline_home": -833
+      "moneyline_away": 600,
+      "moneyline_home": -909
     },
     {
       "away_team": "South Carolina",
@@ -154,8 +154,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 1100,
-      "moneyline_home": -1999
+      "moneyline_away": 1000,
+      "moneyline_home": -1666
     },
     {
       "away_team": "Valparaiso",
@@ -187,8 +187,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -135,
-      "moneyline_home": 114
+      "moneyline_away": -142,
+      "moneyline_home": 120
     },
     {
       "away_team": "La Salle",
@@ -220,8 +220,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 229,
-      "moneyline_home": -285
+      "moneyline_away": 250,
+      "moneyline_home": -312
     },
     {
       "away_team": "SIU-Edwardsville",
@@ -231,8 +231,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 140,
-      "moneyline_home": -166
+      "moneyline_away": 160,
+      "moneyline_home": -192
     },
     {
       "away_team": "Air Force",
@@ -264,8 +264,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 185,
-      "moneyline_home": -227
+      "moneyline_away": 220,
+      "moneyline_home": -270
     },
     {
       "away_team": "Saint Louis",
@@ -275,8 +275,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -434,
-      "moneyline_home": 340
+      "moneyline_away": -416,
+      "moneyline_home": 330
     },
     {
       "away_team": "NC State",
@@ -286,8 +286,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -135,
-      "moneyline_home": 114
+      "moneyline_away": -120,
+      "moneyline_home": 100
     },
     {
       "away_team": "Pittsburgh",
@@ -330,8 +330,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -102,
-      "moneyline_home": -117
+      "moneyline_away": 102,
+      "moneyline_home": -121
     },
     {
       "away_team": "Wyoming",
