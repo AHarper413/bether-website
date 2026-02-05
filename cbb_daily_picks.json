@@ -1,8 +1,30 @@
 {
-  "generated_at": "2026-02-05 09:31:09 CST",
+  "generated_at": "2026-02-05 13:36:55 CST",
   "date": "February 05, 2026",
-  "total_games": 35,
+  "total_games": 52,
   "picks": [
+    {
+      "away_team": "Albany (NY)",
+      "home_team": "Bryant",
+      "predicted_winner": "Albany (NY)",
+      "win_probability": 51.8,
+      "confidence": "Low",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": -105,
+      "moneyline_home": -114
+    },
+    {
+      "away_team": "Binghamton",
+      "home_team": "UMBC",
+      "predicted_winner": "UMBC",
+      "win_probability": 63.1,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 600,
+      "moneyline_home": -909
+    },
     {
       "away_team": "Vermont",
       "home_team": "Maine",
@@ -11,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -344,
-      "moneyline_home": 275
+      "moneyline_away": -357,
+      "moneyline_home": 285
     },
     {
       "away_team": "Penn State",
@@ -22,7 +44,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 2000,
+      "moneyline_away": 1800,
       "moneyline_home": -4999
     },
     {
@@ -48,6 +70,17 @@
       "moneyline_home": -196
     },
     {
+      "away_team": "Canisius",
+      "home_team": "Quinnipiac",
+      "predicted_winner": "Quinnipiac",
+      "win_probability": 84.3,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 750,
+      "moneyline_home": -1249
+    },
+    {
       "away_team": "Chicago State",
       "home_team": "Central Connecticut State",
       "predicted_winner": "Central Connecticut State",
@@ -66,8 +99,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 500,
-      "moneyline_home": -714
+      "moneyline_away": 490,
+      "moneyline_home": -666
     },
     {
       "away_team": "Mercer",
@@ -88,8 +121,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 210,
-      "moneyline_home": -256
+      "moneyline_away": 200,
+      "moneyline_home": -243
     },
     {
       "away_team": "Florida Gulf Coast",
@@ -99,8 +132,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -102,
-      "moneyline_home": -117
+      "moneyline_away": 110,
+      "moneyline_home": -129
     },
     {
       "away_team": "Elon",
@@ -125,6 +158,17 @@
       "moneyline_home": -114
     },
     {
+      "away_team": "Stonehill",
+      "home_team": "FDU",
+      "predicted_winner": "FDU",
+      "win_probability": 69.9,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 114,
+      "moneyline_home": -135
+    },
+    {
       "away_team": "Northeastern",
       "home_team": "Hofstra",
       "predicted_winner": "Hofstra",
@@ -132,8 +176,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 409,
-      "moneyline_home": -555
+      "moneyline_away": 380,
+      "moneyline_home": -500
     },
     {
       "away_team": "Iona",
@@ -147,6 +191,28 @@
       "moneyline_home": -357
     },
     {
+      "away_team": "Jacksonville",
+      "home_team": "Queens (NC)",
+      "predicted_winner": "Queens (NC)",
+      "win_probability": 75.4,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 340,
+      "moneyline_home": -434
+    },
+    {
+      "away_team": "New Haven",
+      "home_team": "LIU",
+      "predicted_winner": "LIU",
+      "win_probability": 51.7,
+      "confidence": "Low",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 409,
+      "moneyline_home": -555
+    },
+    {
       "away_team": "Le Moyne",
       "home_team": "Wagner",
       "predicted_winner": "Le Moyne",
@@ -154,8 +220,30 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -125,
-      "moneyline_home": 104
+      "moneyline_away": -129,
+      "moneyline_home": 110
+    },
+    {
+      "away_team": "Saint Peter's",
+      "home_team": "Manhattan",
+      "predicted_winner": "Saint Peter's",
+      "win_probability": 65.3,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -204,
+      "moneyline_home": 170
+    },
+    {
+      "away_team": "Rider",
+      "home_team": "Marist",
+      "predicted_winner": "Marist",
+      "win_probability": 84.7,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 850,
+      "moneyline_home": -1428
     },
     {
       "away_team": "Saint Francis (PA)",
@@ -169,6 +257,39 @@
       "moneyline_home": -476
     },
     {
+      "away_team": "Merrimack",
+      "home_team": "Mount St. Mary's",
+      "predicted_winner": "Merrimack",
+      "win_probability": 66.4,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": -178,
+      "moneyline_home": 150
+    },
+    {
+      "away_team": "Monmouth",
+      "home_team": "Stony Brook",
+      "predicted_winner": "Stony Brook",
+      "win_probability": 53.8,
+      "confidence": "Low",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 145,
+      "moneyline_home": -175
+    },
+    {
+      "away_team": "UMass-Lowell",
+      "home_team": "NJIT",
+      "predicted_winner": "UMass-Lowell",
+      "win_probability": 50.7,
+      "confidence": "Low",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 120,
+      "moneyline_home": -142
+    },
+    {
       "away_team": "North Florida",
       "home_team": "West Georgia",
       "predicted_winner": "West Georgia",
@@ -176,8 +297,19 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 240,
-      "moneyline_home": -294
+      "moneyline_away": 250,
+      "moneyline_home": -312
+    },
+    {
+      "away_team": "William & Mary",
+      "home_team": "UNC Wilmington",
+      "predicted_winner": "William & Mary",
+      "win_probability": 58.0,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 170,
+      "moneyline_home": -204
     },
     {
       "away_team": "Abilene Christian",
@@ -198,8 +330,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -102,
-      "moneyline_home": -117
+      "moneyline_away": -112,
+      "moneyline_home": -107
     },
     {
       "away_team": "Denver",
@@ -231,8 +363,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 700,
-      "moneyline_home": -1111
+      "moneyline_away": 675,
+      "moneyline_home": -999
     },
     {
       "away_team": "Eastern Illinois",
@@ -242,8 +374,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 455,
-      "moneyline_home": -625
+      "moneyline_away": 425,
+      "moneyline_home": -588
     },
     {
       "away_team": "Ohio State",
@@ -266,6 +398,17 @@
       "spread": 0,
       "moneyline_away": 320,
       "moneyline_home": -416
+    },
+    {
+      "away_team": "Southern Indiana",
+      "home_team": "UT-Martin",
+      "predicted_winner": "UT-Martin",
+      "win_probability": 55.9,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 500,
+      "moneyline_home": -714
     },
     {
       "away_team": "Western Illinois",
@@ -308,8 +451,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 140,
-      "moneyline_home": -166
+      "moneyline_away": 129,
+      "moneyline_home": -153
     },
     {
       "away_team": "Jacksonville State",
@@ -330,8 +473,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 110,
-      "moneyline_home": -129
+      "moneyline_away": 104,
+      "moneyline_home": -125
     },
     {
       "away_team": "Northern Colorado",
@@ -367,6 +510,17 @@
       "moneyline_home": -120
     },
     {
+      "away_team": "Cal State Bakersfield",
+      "home_team": "UC Irvine",
+      "predicted_winner": "UC Irvine",
+      "win_probability": 83.0,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 1000,
+      "moneyline_home": -1666
+    },
+    {
       "away_team": "UC Riverside",
       "home_team": "Cal State Fullerton",
       "predicted_winner": "Cal State Fullerton",
@@ -385,8 +539,41 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 425,
-      "moneyline_home": -588
+      "moneyline_away": 390,
+      "moneyline_home": -526
+    },
+    {
+      "away_team": "Cal State Northridge",
+      "home_team": "Cal Poly",
+      "predicted_winner": "Cal State Northridge",
+      "win_probability": 63.9,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": -135,
+      "moneyline_home": 114
+    },
+    {
+      "away_team": "Long Beach State",
+      "home_team": "UC-San Diego",
+      "predicted_winner": "Long Beach State",
+      "win_probability": 64.3,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 370,
+      "moneyline_home": -476
+    },
+    {
+      "away_team": "Connecticut",
+      "home_team": "St. John's (NY)",
+      "predicted_winner": "Connecticut",
+      "win_probability": 54.3,
+      "confidence": "Low",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -125,
+      "moneyline_home": 104
     }
   ]
 }
