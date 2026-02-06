@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-02-06 09:29:17 CST",
+  "generated_at": "2026-02-06 13:37:07 CST",
   "date": "February 06, 2026",
-  "total_games": 13,
+  "total_games": 18,
   "picks": [
     {
       "away_team": "Loyola (IL)",
@@ -11,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 409,
-      "moneyline_home": -555
+      "moneyline_away": 440,
+      "moneyline_home": -588
     },
     {
       "away_team": "Brown",
@@ -24,6 +24,28 @@
       "spread": 0,
       "moneyline_away": 850,
       "moneyline_home": -1428
+    },
+    {
+      "away_team": "Dayton",
+      "home_team": "Virginia Commonwealth",
+      "predicted_winner": "Virginia Commonwealth",
+      "win_probability": 70.1,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 270,
+      "moneyline_home": -344
+    },
+    {
+      "away_team": "Evansville",
+      "home_team": "Valparaiso",
+      "predicted_winner": "Valparaiso",
+      "win_probability": 72.3,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 425,
+      "moneyline_home": -588
     },
     {
       "away_team": "Murray State",
@@ -44,8 +66,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 160,
-      "moneyline_home": -192
+      "moneyline_away": 140,
+      "moneyline_home": -166
     },
     {
       "away_team": "Drake",
@@ -55,8 +77,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 350,
-      "moneyline_home": -454
+      "moneyline_away": 370,
+      "moneyline_home": -476
     },
     {
       "away_team": "Connecticut",
@@ -66,8 +88,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -142,
-      "moneyline_home": 120
+      "moneyline_away": -120,
+      "moneyline_home": 100
     },
     {
       "away_team": "Belmont",
@@ -79,6 +101,39 @@
       "spread": 0,
       "moneyline_away": -169,
       "moneyline_home": 142
+    },
+    {
+      "away_team": "Virginia Tech",
+      "home_team": "NC State",
+      "predicted_winner": "NC State",
+      "win_probability": 75.7,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 440,
+      "moneyline_home": -588
+    },
+    {
+      "away_team": "Oregon",
+      "home_team": "Purdue",
+      "predicted_winner": "Purdue",
+      "win_probability": 85.3,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 3000,
+      "moneyline_home": -9999
+    },
+    {
+      "away_team": "Baylor",
+      "home_team": "Iowa State",
+      "predicted_winner": "Iowa State",
+      "win_probability": 80.7,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 1200,
+      "moneyline_home": -2499
     },
     {
       "away_team": "Alabama",
@@ -143,8 +198,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -161,
-      "moneyline_home": 136
+      "moneyline_away": -142,
+      "moneyline_home": 120
     }
   ]
 }
