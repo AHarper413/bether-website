@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-09 09:43:12 CST",
+  "generated_at": "2026-02-09 14:01:30 CST",
   "date": "February 09, 2026",
   "total_games": 25,
   "picks": [
@@ -22,8 +22,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -303,
-      "moneyline_home": 245
+      "moneyline_away": -344,
+      "moneyline_home": 275
     },
     {
       "away_team": "Jackson State",
@@ -33,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
+      "moneyline_away": 270,
+      "moneyline_home": -344
     },
     {
       "away_team": "Texas Southern",
@@ -44,8 +44,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 320,
-      "moneyline_home": -416
+      "moneyline_away": 340,
+      "moneyline_home": -434
     },
     {
       "away_team": "Central Arkansas",
@@ -53,10 +53,10 @@
       "predicted_winner": "Central Arkansas",
       "win_probability": 75.1,
       "confidence": "High",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -344,
-      "moneyline_home": 270
+      "moneyline_away": -294,
+      "moneyline_home": 240
     },
     {
       "away_team": "Prairie View",
@@ -66,8 +66,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 129,
-      "moneyline_home": -153
+      "moneyline_away": 140,
+      "moneyline_home": -166
     },
     {
       "away_team": "Yale",
@@ -88,8 +88,8 @@
       "confidence": "Low",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -109,
-      "moneyline_home": -109
+      "moneyline_away": -114,
+      "moneyline_home": -105
     },
     {
       "away_team": "Southern Illinois",
@@ -99,8 +99,8 @@
       "confidence": "Low",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 120,
-      "moneyline_home": -142
+      "moneyline_away": 104,
+      "moneyline_home": -125
     },
     {
       "away_team": "Northwestern State",
@@ -110,8 +110,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 295,
-      "moneyline_home": -370
+      "moneyline_away": 285,
+      "moneyline_home": -357
     },
     {
       "away_team": "NC State",
@@ -121,8 +121,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 225,
-      "moneyline_home": -277
+      "moneyline_away": 250,
+      "moneyline_home": -312
     },
     {
       "away_team": "Alabama A&M",
@@ -143,8 +143,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 129,
-      "moneyline_home": -153
+      "moneyline_away": 136,
+      "moneyline_home": -161
     },
     {
       "away_team": "East Texas A&M",
@@ -154,7 +154,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 900,
+      "moneyline_away": 1000,
       "moneyline_home": -1666
     },
     {
@@ -176,8 +176,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -370,
-      "moneyline_home": 295
+      "moneyline_away": -357,
+      "moneyline_home": 280
     },
     {
       "away_team": "Belmont",
@@ -187,8 +187,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -153,
-      "moneyline_home": 129
+      "moneyline_away": -129,
+      "moneyline_home": 110
     },
     {
       "away_team": "UNC Wilmington",
@@ -198,8 +198,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 110,
-      "moneyline_home": -129
+      "moneyline_away": 124,
+      "moneyline_home": -147
     },
     {
       "away_team": "Delaware State",
@@ -218,10 +218,10 @@
       "predicted_winner": "Illinois State",
       "win_probability": 84.9,
       "confidence": "High",
-      "ev_rating": "Positive EV",
+      "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -526,
-      "moneyline_home": 390
+      "moneyline_away": -625,
+      "moneyline_home": 455
     },
     {
       "away_team": "Texas A&M-Corpus Christi",
@@ -231,8 +231,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -114,
-      "moneyline_home": -105
+      "moneyline_away": -107,
+      "moneyline_home": -112
     },
     {
       "away_team": "Oregon",
@@ -242,8 +242,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 490,
-      "moneyline_home": -666
+      "moneyline_away": 500,
+      "moneyline_home": -714
     },
     {
       "away_team": "Alabama State",
@@ -253,8 +253,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 309,
-      "moneyline_home": -400
+      "moneyline_away": 330,
+      "moneyline_home": -416
     },
     {
       "away_team": "Arizona",
@@ -264,8 +264,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -129,
-      "moneyline_home": 110
+      "moneyline_away": -135,
+      "moneyline_home": 114
     },
     {
       "away_team": "Northern Iowa",
@@ -275,8 +275,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 190,
-      "moneyline_home": -232
+      "moneyline_away": 164,
+      "moneyline_home": -196
     }
   ]
 }
