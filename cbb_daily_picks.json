@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-10 09:55:05 CST",
+  "generated_at": "2026-02-10 13:58:53 CST",
   "date": "February 10, 2026",
   "total_games": 21,
   "picks": [
@@ -11,8 +11,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -117,
-      "moneyline_home": -102
+      "moneyline_away": -135,
+      "moneyline_home": 114
     },
     {
       "away_team": "Vanderbilt",
@@ -33,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -169,
-      "moneyline_home": 142
+      "moneyline_away": -175,
+      "moneyline_home": 145
     },
     {
       "away_team": "Virginia",
@@ -55,8 +55,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 164,
-      "moneyline_home": -196
+      "moneyline_away": 150,
+      "moneyline_home": -178
     },
     {
       "away_team": "George Mason",
@@ -75,10 +75,10 @@
       "predicted_winner": "North Carolina",
       "win_probability": 53.8,
       "confidence": "Low",
-      "ev_rating": "Positive EV",
+      "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -114,
-      "moneyline_home": -105
+      "moneyline_away": -120,
+      "moneyline_home": 100
     },
     {
       "away_team": "Purdue",
@@ -88,8 +88,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 110,
-      "moneyline_home": -129
+      "moneyline_away": 104,
+      "moneyline_home": -125
     },
     {
       "away_team": "Notre Dame",
@@ -99,8 +99,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 525,
-      "moneyline_home": -769
+      "moneyline_away": 500,
+      "moneyline_home": -714
     },
     {
       "away_team": "Marquette",
@@ -110,8 +110,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 409,
-      "moneyline_home": -555
+      "moneyline_away": 390,
+      "moneyline_home": -526
     },
     {
       "away_team": "Wisconsin",
@@ -132,8 +132,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -204,
-      "moneyline_home": 170
+      "moneyline_away": -196,
+      "moneyline_home": 164
     },
     {
       "away_team": "Colorado State",
@@ -165,8 +165,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -250,
-      "moneyline_home": 204
+      "moneyline_away": -238,
+      "moneyline_home": 195
     },
     {
       "away_team": "Duke",
@@ -198,8 +198,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -1999,
-      "moneyline_home": 1100
+      "moneyline_away": -1666,
+      "moneyline_home": 1000
     },
     {
       "away_team": "Iowa State",
@@ -209,8 +209,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -303,
-      "moneyline_home": 245
+      "moneyline_away": -322,
+      "moneyline_home": 260
     },
     {
       "away_team": "Washington State",
@@ -231,7 +231,7 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 575,
+      "moneyline_away": 550,
       "moneyline_home": -833
     }
   ]
