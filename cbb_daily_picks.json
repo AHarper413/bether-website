@@ -1,140 +1,8 @@
 {
-  "generated_at": "2026-02-22 13:23:47 CST",
-  "date": "February 22, 2026",
-  "total_games": 14,
+  "generated_at": "2026-02-23 09:35:52 CST",
+  "date": "February 23, 2026",
+  "total_games": 8,
   "picks": [
-    {
-      "away_team": "Ohio State",
-      "home_team": "Michigan State",
-      "predicted_winner": "Michigan State",
-      "win_probability": 72.5,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 309,
-      "moneyline_home": -454
-    },
-    {
-      "away_team": "Green Bay",
-      "home_team": "Detroit Mercy",
-      "predicted_winner": "Green Bay",
-      "win_probability": 57.0,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 220,
-      "moneyline_home": -294
-    },
-    {
-      "away_team": "Purdue Fort Wayne",
-      "home_team": "Cleveland State",
-      "predicted_winner": "Purdue Fort Wayne",
-      "win_probability": 68.5,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": -263,
-      "moneyline_home": 195
-    },
-    {
-      "away_team": "Towson",
-      "home_team": "Drexel",
-      "predicted_winner": "Towson",
-      "win_probability": 51.0,
-      "confidence": "Low",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": -175,
-      "moneyline_home": 135
-    },
-    {
-      "away_team": "Rice",
-      "home_team": "Tulane",
-      "predicted_winner": "Tulane",
-      "win_probability": 57.1,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 185,
-      "moneyline_home": -243
-    },
-    {
-      "away_team": "Robert Morris",
-      "home_team": "Wright State",
-      "predicted_winner": "Wright State",
-      "win_probability": 60.8,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -140,
-      "moneyline_home": 110
-    },
-    {
-      "away_team": "Fairfield",
-      "home_team": "Quinnipiac",
-      "predicted_winner": "Quinnipiac",
-      "win_probability": 62.6,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 210,
-      "moneyline_home": -277
-    },
-    {
-      "away_team": "Northern Kentucky",
-      "home_team": "Youngstown State",
-      "predicted_winner": "Northern Kentucky",
-      "win_probability": 62.6,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 300,
-      "moneyline_home": -416
-    },
-    {
-      "away_team": "Milwaukee",
-      "home_team": "Oakland",
-      "predicted_winner": "Oakland",
-      "win_probability": 75.6,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
-    },
-    {
-      "away_team": "Florida Atlantic",
-      "home_team": "North Texas",
-      "predicted_winner": "Florida Atlantic",
-      "win_probability": 70.8,
-      "confidence": "High",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 124,
-      "moneyline_home": -147
-    },
-    {
-      "away_team": "Iowa",
-      "home_team": "Wisconsin",
-      "predicted_winner": "Wisconsin",
-      "win_probability": 50.5,
-      "confidence": "Low",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 136,
-      "moneyline_home": -161
-    },
-    {
-      "away_team": "UTSA",
-      "home_team": "Tulsa",
-      "predicted_winner": "Tulsa",
-      "win_probability": 85.4,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 2000,
-      "moneyline_home": -4999
-    },
     {
       "away_team": "Louisville",
       "home_team": "North Carolina",
@@ -143,8 +11,74 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -147,
-      "moneyline_home": 124
+      "moneyline_away": -153,
+      "moneyline_home": 129
+    },
+    {
+      "away_team": "Texas A&M-Corpus Christi",
+      "home_team": "Southeastern Louisiana",
+      "predicted_winner": "Texas A&M-Corpus Christi",
+      "win_probability": 57.6,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -142,
+      "moneyline_home": 120
+    },
+    {
+      "away_team": "Houston Christian",
+      "home_team": "East Texas A&M",
+      "predicted_winner": "East Texas A&M",
+      "win_probability": 55.7,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 136,
+      "moneyline_home": -161
+    },
+    {
+      "away_team": "Incarnate Word",
+      "home_team": "Northwestern State",
+      "predicted_winner": "Incarnate Word",
+      "win_probability": 53.7,
+      "confidence": "Low",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 136,
+      "moneyline_home": -161
+    },
+    {
+      "away_team": "Texas-Rio Grande Valley",
+      "home_team": "McNeese State",
+      "predicted_winner": "McNeese State",
+      "win_probability": 80.2,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 440,
+      "moneyline_home": -588
+    },
+    {
+      "away_team": "New Orleans",
+      "home_team": "Stephen F. Austin",
+      "predicted_winner": "Stephen F. Austin",
+      "win_probability": 79.2,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 650,
+      "moneyline_home": -999
+    },
+    {
+      "away_team": "Mississippi Valley State",
+      "home_team": "Grambling",
+      "predicted_winner": "Grambling",
+      "win_probability": 77.6,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 1100,
+      "moneyline_home": -1999
     },
     {
       "away_team": "Houston",
@@ -154,8 +88,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -125,
-      "moneyline_home": 104
+      "moneyline_away": -129,
+      "moneyline_home": 110
     }
   ]
 }
