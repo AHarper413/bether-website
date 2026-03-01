@@ -1,40 +1,18 @@
 {
-  "generated_at": "2026-03-01 09:11:47 CST",
+  "generated_at": "2026-03-01 13:20:52 CST",
   "date": "March 01, 2026",
-  "total_games": 13,
+  "total_games": 15,
   "picks": [
     {
-      "away_team": "La Salle",
-      "home_team": "Davidson",
-      "predicted_winner": "Davidson",
-      "win_probability": 78.2,
-      "confidence": "High",
-      "ev_rating": "Neutral",
+      "away_team": "Rutgers",
+      "home_team": "Maryland",
+      "predicted_winner": "Maryland",
+      "win_probability": 53.3,
+      "confidence": "Low",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 550,
-      "moneyline_home": -833
-    },
-    {
-      "away_team": "North Texas",
-      "home_team": "UAB",
-      "predicted_winner": "UAB",
-      "win_probability": 68.4,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 200,
-      "moneyline_home": -243
-    },
-    {
-      "away_team": "Tulane",
-      "home_team": "South Florida",
-      "predicted_winner": "South Florida",
-      "win_probability": 79.4,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 800,
-      "moneyline_home": -1428
+      "moneyline_away": -110,
+      "moneyline_home": -110
     },
     {
       "away_team": "Illinois-Chicago",
@@ -42,10 +20,10 @@
       "predicted_winner": "Illinois-Chicago",
       "win_probability": 53.9,
       "confidence": "Low",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -192,
-      "moneyline_home": 160
+      "moneyline_away": 300,
+      "moneyline_home": -416
     },
     {
       "away_team": "Purdue",
@@ -53,54 +31,10 @@
       "predicted_winner": "Purdue",
       "win_probability": 74.8,
       "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": -303,
-      "moneyline_home": 245
-    },
-    {
-      "away_team": "Murray State",
-      "home_team": "Bradley",
-      "predicted_winner": "Murray State",
-      "win_probability": 57.3,
-      "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 154,
-      "moneyline_home": -185
-    },
-    {
-      "away_team": "Charlotte",
-      "home_team": "Florida Atlantic",
-      "predicted_winner": "Florida Atlantic",
-      "win_probability": 77.0,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 270,
-      "moneyline_home": -344
-    },
-    {
-      "away_team": "Memphis",
-      "home_team": "East Carolina",
-      "predicted_winner": "Memphis",
-      "win_probability": 55.4,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": -227,
-      "moneyline_home": 185
-    },
-    {
-      "away_team": "Mount St. Mary's",
-      "home_team": "Fairfield",
-      "predicted_winner": "Fairfield",
-      "win_probability": 61.2,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 154,
-      "moneyline_home": -185
+      "moneyline_away": -120,
+      "moneyline_home": -109
     },
     {
       "away_team": "Rice",
@@ -110,8 +44,63 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 229,
-      "moneyline_home": -285
+      "moneyline_away": 240,
+      "moneyline_home": -333
+    },
+    {
+      "away_team": "Charlotte",
+      "home_team": "Florida Atlantic",
+      "predicted_winner": "Florida Atlantic",
+      "win_probability": 77.0,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 124,
+      "moneyline_home": -161
+    },
+    {
+      "away_team": "Mount St. Mary's",
+      "home_team": "Fairfield",
+      "predicted_winner": "Fairfield",
+      "win_probability": 61.2,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": -129,
+      "moneyline_home": 100
+    },
+    {
+      "away_team": "Memphis",
+      "home_team": "East Carolina",
+      "predicted_winner": "Memphis",
+      "win_probability": 55.4,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -166,
+      "moneyline_home": 129
+    },
+    {
+      "away_team": "Murray State",
+      "home_team": "Bradley",
+      "predicted_winner": "Murray State",
+      "win_probability": 57.3,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 114,
+      "moneyline_home": -144
+    },
+    {
+      "away_team": "Northern Iowa",
+      "home_team": "Drake",
+      "predicted_winner": "Northern Iowa",
+      "win_probability": 59.2,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -192,
+      "moneyline_home": 160
     },
     {
       "away_team": "Michigan State",
@@ -121,8 +110,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -147,
-      "moneyline_home": 124
+      "moneyline_away": -166,
+      "moneyline_home": 140
     },
     {
       "away_team": "DePaul",
@@ -132,8 +121,41 @@
       "confidence": "Low",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 160,
-      "moneyline_home": -192
+      "moneyline_away": 154,
+      "moneyline_home": -185
+    },
+    {
+      "away_team": "Southern Illinois",
+      "home_team": "Evansville",
+      "predicted_winner": "Southern Illinois",
+      "win_probability": 73.1,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -416,
+      "moneyline_home": 320
+    },
+    {
+      "away_team": "Belmont",
+      "home_team": "Illinois State",
+      "predicted_winner": "Illinois State",
+      "win_probability": 50.7,
+      "confidence": "Low",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -102,
+      "moneyline_home": -117
+    },
+    {
+      "away_team": "College of Charleston",
+      "home_team": "UNC Wilmington",
+      "predicted_winner": "UNC Wilmington",
+      "win_probability": 61.2,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 185,
+      "moneyline_home": -227
     },
     {
       "away_team": "Wichita State",
