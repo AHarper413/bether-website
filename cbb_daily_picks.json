@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02 09:30:43 CST",
+  "generated_at": "2026-03-02 13:36:29 CST",
   "date": "March 02, 2026",
   "total_games": 18,
   "picks": [
@@ -22,8 +22,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 104,
-      "moneyline_home": -125
+      "moneyline_away": 110,
+      "moneyline_home": -129
     },
     {
       "away_team": "Coppin State",
@@ -33,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 1400,
-      "moneyline_home": -3333
+      "moneyline_away": 1600,
+      "moneyline_home": -4999
     },
     {
       "away_team": "South Carolina State",
@@ -43,6 +43,17 @@
       "win_probability": 57.6,
       "confidence": "Medium",
       "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 114,
+      "moneyline_home": -135
+    },
+    {
+      "away_team": "North Carolina Central",
+      "home_team": "Maryland-Eastern Shore",
+      "predicted_winner": "Maryland-Eastern Shore",
+      "win_probability": 56.6,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
       "spread": 0,
       "moneyline_away": 114,
       "moneyline_home": -135
@@ -57,17 +68,6 @@
       "spread": 0,
       "moneyline_away": -500,
       "moneyline_home": 380
-    },
-    {
-      "away_team": "North Carolina Central",
-      "home_team": "Maryland-Eastern Shore",
-      "predicted_winner": "Maryland-Eastern Shore",
-      "win_probability": 56.6,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 114,
-      "moneyline_home": -135
     },
     {
       "away_team": "Stephen F. Austin",
@@ -88,8 +88,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -714,
-      "moneyline_home": 500
+      "moneyline_away": -666,
+      "moneyline_home": 470
     },
     {
       "away_team": "Northwestern State",
@@ -99,7 +99,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 425,
+      "moneyline_away": 440,
       "moneyline_home": -588
     },
     {
@@ -110,8 +110,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 295,
-      "moneyline_home": -370
+      "moneyline_away": 320,
+      "moneyline_home": -416
     },
     {
       "away_team": "Montana",
@@ -143,8 +143,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
+      "moneyline_away": 280,
+      "moneyline_home": -357
     },
     {
       "away_team": "Lamar",
@@ -154,8 +154,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -117,
-      "moneyline_home": -102
+      "moneyline_away": -120,
+      "moneyline_home": 100
     },
     {
       "away_team": "Iowa State",
@@ -165,8 +165,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 300,
-      "moneyline_home": -384
+      "moneyline_away": 270,
+      "moneyline_home": -344
     },
     {
       "away_team": "Idaho",
@@ -176,8 +176,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 136,
-      "moneyline_home": -161
+      "moneyline_away": 150,
+      "moneyline_home": -178
     },
     {
       "away_team": "Idaho State",
