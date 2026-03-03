@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03 09:36:41 CST",
+  "generated_at": "2026-03-03 13:39:50 CST",
   "date": "March 03, 2026",
   "total_games": 46,
   "picks": [
@@ -55,8 +55,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -476,
-      "moneyline_home": 359
+      "moneyline_away": -526,
+      "moneyline_home": 400
     },
     {
       "away_team": "Alabama",
@@ -88,8 +88,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 145,
-      "moneyline_home": -175
+      "moneyline_away": 136,
+      "moneyline_home": -161
     },
     {
       "away_team": "North Carolina A&T",
@@ -121,8 +121,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -238,
-      "moneyline_home": 195
+      "moneyline_away": -232,
+      "moneyline_home": 190
     },
     {
       "away_team": "UNC Wilmington",
@@ -143,8 +143,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 500,
-      "moneyline_home": -714
+      "moneyline_away": 455,
+      "moneyline_home": -625
     },
     {
       "away_team": "Hampton",
@@ -165,8 +165,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 179,
-      "moneyline_home": -217
+      "moneyline_away": 185,
+      "moneyline_home": -227
     },
     {
       "away_team": "Kentucky",
@@ -209,8 +209,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 110,
-      "moneyline_home": -129
+      "moneyline_away": 114,
+      "moneyline_home": -135
     },
     {
       "away_team": "Monmouth",
@@ -253,8 +253,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 330,
-      "moneyline_home": -416
+      "moneyline_away": 309,
+      "moneyline_home": -400
     },
     {
       "away_team": "Wake Forest",
@@ -275,8 +275,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 104,
-      "moneyline_home": -125
+      "moneyline_away": 110,
+      "moneyline_home": -129
     },
     {
       "away_team": "Arkansas-Pine Bluff",
@@ -286,8 +286,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -105,
-      "moneyline_home": -114
+      "moneyline_away": -112,
+      "moneyline_home": -107
     },
     {
       "away_team": "Mississippi State",
@@ -308,8 +308,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -142,
-      "moneyline_home": 120
+      "moneyline_away": -153,
+      "moneyline_home": 129
     },
     {
       "away_team": "Kent State",
@@ -320,7 +320,7 @@
       "ev_rating": "Neutral",
       "spread": 0,
       "moneyline_away": -588,
-      "moneyline_home": 440
+      "moneyline_home": 425
     },
     {
       "away_team": "Purdue Fort Wayne",
@@ -341,8 +341,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 120,
-      "moneyline_home": -142
+      "moneyline_away": 136,
+      "moneyline_home": -161
     },
     {
       "away_team": "Louisiana-Monroe",
@@ -374,8 +374,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 400,
-      "moneyline_home": -526
+      "moneyline_away": 409,
+      "moneyline_home": -555
     },
     {
       "away_team": "Kansas",
@@ -396,8 +396,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 120,
-      "moneyline_home": -142
+      "moneyline_away": 124,
+      "moneyline_home": -147
     },
     {
       "away_team": "San Diego State",
@@ -495,8 +495,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -105,
-      "moneyline_home": -114
+      "moneyline_away": 100,
+      "moneyline_home": -120
     },
     {
       "away_team": "Utah State",
