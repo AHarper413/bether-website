@@ -1,19 +1,8 @@
 {
-  "generated_at": "2026-03-04 09:28:30 CST",
+  "generated_at": "2026-03-04 13:37:33 CST",
   "date": "March 04, 2026",
-  "total_games": 35,
+  "total_games": 36,
   "picks": [
-    {
-      "away_team": "Jacksonville",
-      "home_team": "Bellarmine",
-      "predicted_winner": "Bellarmine",
-      "win_probability": 54.6,
-      "confidence": "Low",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 100,
-      "moneyline_home": -120
-    },
     {
       "away_team": "North Alabama",
       "home_team": "Florida Gulf Coast",
@@ -22,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 285,
-      "moneyline_home": -357
+      "moneyline_away": 320,
+      "moneyline_home": -416
     },
     {
       "away_team": "Stetson",
@@ -66,8 +55,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 229,
-      "moneyline_home": -285
+      "moneyline_away": 245,
+      "moneyline_home": -303
     },
     {
       "away_team": "California",
@@ -77,8 +66,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -153,
-      "moneyline_home": 129
+      "moneyline_away": -147,
+      "moneyline_home": 124
     },
     {
       "away_team": "UAB",
@@ -110,8 +99,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 154,
-      "moneyline_home": -185
+      "moneyline_away": 142,
+      "moneyline_home": -169
     },
     {
       "away_team": "Milwaukee",
@@ -165,8 +154,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 179,
-      "moneyline_home": -217
+      "moneyline_away": 195,
+      "moneyline_home": -238
     },
     {
       "away_team": "Northern Kentucky",
@@ -176,8 +165,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 120,
-      "moneyline_home": -142
+      "moneyline_away": 124,
+      "moneyline_home": -147
     },
     {
       "away_team": "Youngstown State",
@@ -231,8 +220,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 136,
-      "moneyline_home": -161
+      "moneyline_away": 154,
+      "moneyline_home": -185
     },
     {
       "away_team": "Ohio State",
@@ -242,8 +231,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -344,
-      "moneyline_home": 275
+      "moneyline_away": -294,
+      "moneyline_home": 240
     },
     {
       "away_team": "Villanova",
@@ -286,8 +275,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 285,
-      "moneyline_home": -357
+      "moneyline_away": 270,
+      "moneyline_home": -344
     },
     {
       "away_team": "Kansas City",
@@ -297,8 +286,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 330,
-      "moneyline_home": -416
+      "moneyline_away": 309,
+      "moneyline_home": -400
     },
     {
       "away_team": "Old Dominion",
@@ -308,8 +297,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 114,
-      "moneyline_home": -135
+      "moneyline_away": 120,
+      "moneyline_home": -142
     },
     {
       "away_team": "Purdue",
@@ -319,8 +308,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -555,
-      "moneyline_home": 409
+      "moneyline_away": -476,
+      "moneyline_home": 370
     },
     {
       "away_team": "Baylor",
@@ -352,8 +341,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -112,
-      "moneyline_home": -107
+      "moneyline_away": -117,
+      "moneyline_home": -102
     },
     {
       "away_team": "Little Rock",
@@ -363,8 +352,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 120,
-      "moneyline_home": -142
+      "moneyline_away": 142,
+      "moneyline_home": -169
     },
     {
       "away_team": "Colorado State",
@@ -374,8 +363,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 359,
-      "moneyline_home": -476
+      "moneyline_away": 320,
+      "moneyline_home": -416
     },
     {
       "away_team": "Southern California",
@@ -387,6 +376,28 @@
       "spread": 0,
       "moneyline_away": 215,
       "moneyline_home": -263
+    },
+    {
+      "away_team": "Michigan",
+      "home_team": "Iowa",
+      "predicted_winner": "Michigan",
+      "win_probability": 75.1,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": -500,
+      "moneyline_home": 380
+    },
+    {
+      "away_team": "Rutgers",
+      "home_team": "Michigan State",
+      "predicted_winner": "Michigan State",
+      "win_probability": 80.2,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 3000,
+      "moneyline_home": -9999
     }
   ]
 }
