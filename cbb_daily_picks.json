@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09 10:45:05 CST",
+  "generated_at": "2026-03-09 14:40:06 CST",
   "date": "March 09, 2026",
   "total_games": 13,
   "picks": [
@@ -9,10 +9,10 @@
       "predicted_winner": "Alabama State",
       "win_probability": 71.9,
       "confidence": "High",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
+      "moneyline_away": -263,
+      "moneyline_home": 195
     },
     {
       "away_team": "Campbell",
@@ -22,8 +22,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 114,
-      "moneyline_home": -135
+      "moneyline_away": 104,
+      "moneyline_home": -125
     },
     {
       "away_team": "New Orleans",
@@ -33,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 114,
-      "moneyline_home": -135
+      "moneyline_away": 110,
+      "moneyline_home": -129
     },
     {
       "away_team": "Furman",
@@ -53,10 +53,10 @@
       "predicted_winner": "Troy",
       "win_probability": 72.9,
       "confidence": "High",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 220,
-      "moneyline_home": -270
+      "moneyline_away": 195,
+      "moneyline_home": -238
     },
     {
       "away_team": "Northern Kentucky",
@@ -66,8 +66,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 104,
-      "moneyline_home": -125
+      "moneyline_away": -107,
+      "moneyline_home": -112
     },
     {
       "away_team": "Northern Colorado",
@@ -77,8 +77,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -175,
-      "moneyline_home": 145
+      "moneyline_away": -185,
+      "moneyline_home": 154
     },
     {
       "away_team": "Mississippi Valley State",
@@ -88,8 +88,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 700,
-      "moneyline_home": -1111
+      "moneyline_away": 800,
+      "moneyline_home": -1428
     },
     {
       "away_team": "Nicholls State",
@@ -99,8 +99,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 260,
-      "moneyline_home": -322
+      "moneyline_away": 225,
+      "moneyline_home": -277
     },
     {
       "away_team": "Oregon State",
@@ -110,8 +110,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 1400,
-      "moneyline_home": -3333
+      "moneyline_away": 1600,
+      "moneyline_home": -4999
     },
     {
       "away_team": "Detroit Mercy",
@@ -121,8 +121,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 190,
-      "moneyline_home": -232
+      "moneyline_away": 170,
+      "moneyline_home": -204
     },
     {
       "away_team": "Weber State",
@@ -143,8 +143,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 170,
-      "moneyline_home": -204
+      "moneyline_away": 164,
+      "moneyline_home": -196
     }
   ]
 }
