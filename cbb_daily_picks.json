@@ -1,41 +1,8 @@
 {
-  "generated_at": "2026-03-15 10:18:01 CST",
+  "generated_at": "2026-03-15 14:27:19 CST",
   "date": "March 15, 2026",
-  "total_games": 5,
+  "total_games": 2,
   "picks": [
-    {
-      "away_team": "Penn",
-      "home_team": "Yale",
-      "predicted_winner": "Yale",
-      "win_probability": 82.7,
-      "confidence": "High",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 370,
-      "moneyline_home": -476
-    },
-    {
-      "away_team": "Vanderbilt",
-      "home_team": "Arkansas",
-      "predicted_winner": "Vanderbilt",
-      "win_probability": 53.1,
-      "confidence": "Low",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": -135,
-      "moneyline_home": 114
-    },
-    {
-      "away_team": "Dayton",
-      "home_team": "Virginia Commonwealth",
-      "predicted_winner": "Virginia Commonwealth",
-      "win_probability": 70.1,
-      "confidence": "High",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 142,
-      "moneyline_home": -169
-    },
     {
       "away_team": "Wichita State",
       "home_team": "South Florida",
@@ -44,8 +11,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 204,
-      "moneyline_home": -250
+      "moneyline_away": 179,
+      "moneyline_home": -238
     },
     {
       "away_team": "Purdue",
@@ -55,8 +22,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 220,
-      "moneyline_home": -270
+      "moneyline_away": 200,
+      "moneyline_home": -243
     }
   ]
 }
