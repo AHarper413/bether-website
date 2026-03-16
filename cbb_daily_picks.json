@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-03-15 14:27:19 CST",
-  "date": "March 15, 2026",
+  "generated_at": "2026-03-16 10:53:22 CST",
+  "date": "March 16, 2026",
   "total_games": 2,
   "picks": [
     {
-      "away_team": "Wichita State",
-      "home_team": "South Florida",
-      "predicted_winner": "South Florida",
-      "win_probability": 64.7,
+      "away_team": "UMBC",
+      "home_team": "Howard",
+      "predicted_winner": "Howard",
+      "win_probability": 61.0,
       "confidence": "Medium",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 179,
-      "moneyline_home": -238
+      "moneyline_away": -120,
+      "moneyline_home": 100
     },
     {
-      "away_team": "Purdue",
-      "home_team": "Michigan",
-      "predicted_winner": "Michigan",
-      "win_probability": 61.5,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
+      "away_team": "NC State",
+      "home_team": "Texas",
+      "predicted_winner": "NC State",
+      "win_probability": 65.7,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 200,
-      "moneyline_home": -243
+      "moneyline_away": -114,
+      "moneyline_home": -105
     }
   ]
 }
