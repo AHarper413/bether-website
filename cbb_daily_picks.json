@@ -1,8 +1,19 @@
 {
-  "generated_at": "2026-03-16 14:52:22 CST",
-  "date": "March 16, 2026",
-  "total_games": 2,
+  "generated_at": "2026-03-17 10:52:18 CST",
+  "date": "March 17, 2026",
+  "total_games": 12,
   "picks": [
+    {
+      "away_team": "Liberty",
+      "home_team": "George Mason",
+      "predicted_winner": "Liberty",
+      "win_probability": 54.8,
+      "confidence": "Low",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 164,
+      "moneyline_home": -196
+    },
     {
       "away_team": "UMBC",
       "home_team": "Howard",
@@ -11,8 +22,52 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -120,
-      "moneyline_home": 100
+      "moneyline_away": -109,
+      "moneyline_home": -109
+    },
+    {
+      "away_team": "UNC Wilmington",
+      "home_team": "Yale",
+      "predicted_winner": "Yale",
+      "win_probability": 71.9,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 195,
+      "moneyline_home": -238
+    },
+    {
+      "away_team": "Wyoming",
+      "home_team": "Wichita State",
+      "predicted_winner": "Wichita State",
+      "win_probability": 52.9,
+      "confidence": "Low",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 229,
+      "moneyline_home": -285
+    },
+    {
+      "away_team": "Davidson",
+      "home_team": "Oklahoma State",
+      "predicted_winner": "Oklahoma State",
+      "win_probability": 77.6,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 285,
+      "moneyline_home": -357
+    },
+    {
+      "away_team": "Stephen F. Austin",
+      "home_team": "Tulsa",
+      "predicted_winner": "Tulsa",
+      "win_probability": 75.5,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 260,
+      "moneyline_home": -322
     },
     {
       "away_team": "NC State",
@@ -22,8 +77,63 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -114,
-      "moneyline_home": -105
+      "moneyline_away": -120,
+      "moneyline_home": 100
+    },
+    {
+      "away_team": "South Alabama",
+      "home_team": "Auburn",
+      "predicted_winner": "Auburn",
+      "win_probability": 77.1,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 1000,
+      "moneyline_home": -1666
+    },
+    {
+      "away_team": "St. Thomas",
+      "home_team": "Seattle",
+      "predicted_winner": "St. Thomas",
+      "win_probability": 52.0,
+      "confidence": "Low",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 114,
+      "moneyline_home": -135
+    },
+    {
+      "away_team": "UNLV",
+      "home_team": "UC Irvine",
+      "predicted_winner": "UC Irvine",
+      "win_probability": 75.0,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 124,
+      "moneyline_home": -147
+    },
+    {
+      "away_team": "Prairie View",
+      "home_team": "Lehigh",
+      "predicted_winner": "Lehigh",
+      "win_probability": 69.6,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 140,
+      "moneyline_home": -166
+    },
+    {
+      "away_team": "Miami (OH)",
+      "home_team": "Southern Methodist",
+      "predicted_winner": "Southern Methodist",
+      "win_probability": 62.8,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 250,
+      "moneyline_home": -312
     }
   ]
 }
