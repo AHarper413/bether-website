@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18 10:58:45 CST",
+  "generated_at": "2026-03-18 14:47:32 CST",
   "date": "March 18, 2026",
   "total_games": 26,
   "picks": [
@@ -22,8 +22,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 550,
-      "moneyline_home": -833
+      "moneyline_away": 455,
+      "moneyline_home": -625
     },
     {
       "away_team": "George Washington",
@@ -33,8 +33,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 110,
-      "moneyline_home": -129
+      "moneyline_away": 100,
+      "moneyline_home": -120
     },
     {
       "away_team": "Kent State",
@@ -44,8 +44,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 210,
-      "moneyline_home": -256
+      "moneyline_away": 185,
+      "moneyline_home": -227
     },
     {
       "away_team": "Dayton",
@@ -53,10 +53,10 @@
       "predicted_winner": "Dayton",
       "win_probability": 55.7,
       "confidence": "Medium",
-      "ev_rating": "Positive EV",
+      "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -125,
-      "moneyline_home": 104
+      "moneyline_away": -147,
+      "moneyline_home": 124
     },
     {
       "away_team": "Sam Houston",
@@ -66,7 +66,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 550,
+      "moneyline_away": 575,
       "moneyline_home": -833
     },
     {
@@ -77,8 +77,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
+      "moneyline_away": 260,
+      "moneyline_home": -322
     },
     {
       "away_team": "Murray State",
@@ -88,8 +88,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 330,
-      "moneyline_home": -416
+      "moneyline_away": 295,
+      "moneyline_home": -370
     },
     {
       "away_team": "Illinois-Chicago",
@@ -99,8 +99,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 225,
-      "moneyline_home": -277
+      "moneyline_away": 204,
+      "moneyline_home": -250
     },
     {
       "away_team": "Saint Joseph's",
@@ -110,8 +110,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 229,
-      "moneyline_home": -285
+      "moneyline_away": 220,
+      "moneyline_home": -270
     },
     {
       "away_team": "TCU",
@@ -143,8 +143,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 170,
-      "moneyline_home": -204
+      "moneyline_away": 164,
+      "moneyline_home": -196
     },
     {
       "away_team": "High Point",
@@ -231,8 +231,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 124,
-      "moneyline_home": -147
+      "moneyline_away": 114,
+      "moneyline_home": -135
     },
     {
       "away_team": "Texas A&M",
