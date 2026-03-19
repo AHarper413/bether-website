@@ -1,40 +1,18 @@
 {
-  "generated_at": "2026-03-19 10:40:52 CST",
+  "generated_at": "2026-03-19 14:45:47 CST",
   "date": "March 19, 2026",
-  "total_games": 32,
+  "total_games": 30,
   "picks": [
-    {
-      "away_team": "TCU",
-      "home_team": "Ohio State",
-      "predicted_winner": "Ohio State",
-      "win_probability": 59.4,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 114,
-      "moneyline_home": -135
-    },
-    {
-      "away_team": "Troy",
-      "home_team": "Nebraska",
-      "predicted_winner": "Nebraska",
-      "win_probability": 81.0,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 675,
-      "moneyline_home": -999
-    },
     {
       "away_team": "South Florida",
       "home_team": "Louisville",
       "predicted_winner": "Louisville",
       "win_probability": 76.1,
       "confidence": "High",
-      "ev_rating": "Positive EV",
+      "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 154,
-      "moneyline_home": -185
+      "moneyline_away": 2000,
+      "moneyline_home": -9999
     },
     {
       "away_team": "High Point",
@@ -44,8 +22,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 380,
-      "moneyline_home": -500
+      "moneyline_away": 290,
+      "moneyline_home": -416
     },
     {
       "away_team": "Siena",
@@ -53,10 +31,10 @@
       "predicted_winner": "Duke",
       "win_probability": 81.7,
       "confidence": "High",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -110,
-      "moneyline_home": -110
+      "moneyline_away": 300,
+      "moneyline_home": -416
     },
     {
       "away_team": "McNeese State",
@@ -64,10 +42,10 @@
       "predicted_winner": "Vanderbilt",
       "win_probability": 76.7,
       "confidence": "High",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 525,
-      "moneyline_home": -769
+      "moneyline_away": 175,
+      "moneyline_home": -232
     },
     {
       "away_team": "North Dakota State",
@@ -88,7 +66,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 850,
+      "moneyline_away": 800,
       "moneyline_home": -1428
     },
     {
@@ -132,8 +110,8 @@
       "confidence": "Low",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 136,
-      "moneyline_home": -161
+      "moneyline_away": 129,
+      "moneyline_home": -153
     },
     {
       "away_team": "Penn",
@@ -165,7 +143,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 1700,
+      "moneyline_away": 1600,
       "moneyline_home": -4999
     },
     {
@@ -264,8 +242,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 440,
-      "moneyline_home": -588
+      "moneyline_away": 409,
+      "moneyline_home": -555
     },
     {
       "away_team": "Iowa",
