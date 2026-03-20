@@ -1,30 +1,8 @@
 {
-  "generated_at": "2026-03-20 10:32:24 CST",
+  "generated_at": "2026-03-20 14:36:38 CST",
   "date": "March 20, 2026",
-  "total_games": 25,
+  "total_games": 22,
   "picks": [
-    {
-      "away_team": "Santa Clara",
-      "home_team": "Kentucky",
-      "predicted_winner": "Kentucky",
-      "win_probability": 68.8,
-      "confidence": "High",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 129,
-      "moneyline_home": -153
-    },
-    {
-      "away_team": "Akron",
-      "home_team": "Texas Tech",
-      "predicted_winner": "Texas Tech",
-      "win_probability": 59.8,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
-    },
     {
       "away_team": "Wright State",
       "home_team": "Virginia",
@@ -33,19 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 1200,
-      "moneyline_home": -2499
-    },
-    {
-      "away_team": "Tennessee State",
-      "home_team": "Iowa State",
-      "predicted_winner": "Iowa State",
-      "win_probability": 85.0,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 2200,
-      "moneyline_home": -9999
+      "moneyline_away": 900,
+      "moneyline_home": -1999
     },
     {
       "away_team": "Hofstra",
@@ -55,8 +22,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 525,
-      "moneyline_home": -769
+      "moneyline_away": 550,
+      "moneyline_home": -909
     },
     {
       "away_team": "Utah State",
@@ -88,8 +55,8 @@
       "confidence": "Low",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -125,
-      "moneyline_home": 104
+      "moneyline_away": -121,
+      "moneyline_home": 102
     },
     {
       "away_team": "Northern Iowa",
@@ -99,7 +66,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 425,
+      "moneyline_away": 440,
       "moneyline_home": -588
     },
     {
@@ -154,7 +121,7 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 1700,
+      "moneyline_away": 1600,
       "moneyline_home": -4999
     },
     {
@@ -165,8 +132,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 110,
-      "moneyline_home": -129
+      "moneyline_away": 102,
+      "moneyline_home": -121
     },
     {
       "away_team": "Saint Louis",
@@ -242,8 +209,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 440,
-      "moneyline_home": -588
+      "moneyline_away": 409,
+      "moneyline_home": -555
     },
     {
       "away_team": "Vanderbilt",
