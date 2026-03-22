@@ -1,19 +1,8 @@
 {
-  "generated_at": "2026-03-22 10:15:05 CST",
+  "generated_at": "2026-03-22 14:24:47 CST",
   "date": "March 22, 2026",
-  "total_games": 14,
+  "total_games": 13,
   "picks": [
-    {
-      "away_team": "Miami (FL)",
-      "home_team": "Purdue",
-      "predicted_winner": "Purdue",
-      "win_probability": 70.3,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 280,
-      "moneyline_home": -357
-    },
     {
       "away_team": "Kentucky",
       "home_team": "Iowa State",
@@ -22,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 195,
-      "moneyline_home": -238
+      "moneyline_away": 165,
+      "moneyline_home": -212
     },
     {
       "away_team": "Illinois State",
@@ -66,8 +55,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 675,
-      "moneyline_home": -999
+      "moneyline_away": 800,
+      "moneyline_home": -1428
     },
     {
       "away_team": "UNLV",
@@ -77,8 +66,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 170,
-      "moneyline_home": -204
+      "moneyline_away": 185,
+      "moneyline_home": -227
     },
     {
       "away_team": "Iowa",
@@ -88,8 +77,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 455,
-      "moneyline_home": -625
+      "moneyline_away": 425,
+      "moneyline_home": -588
     },
     {
       "away_team": "Utah State",
@@ -110,8 +99,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 260,
-      "moneyline_home": -322
+      "moneyline_away": 245,
+      "moneyline_home": -303
     },
     {
       "away_team": "Wichita State",
@@ -143,8 +132,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 200,
-      "moneyline_home": -243
+      "moneyline_away": 204,
+      "moneyline_home": -250
     },
     {
       "away_team": "Texas Tech",
@@ -154,8 +143,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -120,
-      "moneyline_home": 100
+      "moneyline_away": -112,
+      "moneyline_home": -107
     }
   ]
 }
