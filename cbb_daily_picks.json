@@ -1,150 +1,29 @@
 {
-  "generated_at": "2026-03-22 14:24:47 CST",
-  "date": "March 22, 2026",
-  "total_games": 13,
+  "generated_at": "2026-03-23 14:47:58 CST",
+  "date": "March 23, 2026",
+  "total_games": 2,
   "picks": [
     {
-      "away_team": "Kentucky",
-      "home_team": "Iowa State",
-      "predicted_winner": "Iowa State",
-      "win_probability": 71.3,
-      "confidence": "High",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 165,
-      "moneyline_home": -212
-    },
-    {
-      "away_team": "Illinois State",
-      "home_team": "Wake Forest",
-      "predicted_winner": "Wake Forest",
-      "win_probability": 50.3,
-      "confidence": "Low",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 280,
-      "moneyline_home": -357
-    },
-    {
-      "away_team": "St. John's (NY)",
-      "home_team": "Kansas",
-      "predicted_winner": "Kansas",
-      "win_probability": 58.2,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -175,
-      "moneyline_home": 145
-    },
-    {
-      "away_team": "Tennessee",
-      "home_team": "Virginia",
-      "predicted_winner": "Virginia",
-      "win_probability": 55.6,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -114,
-      "moneyline_home": -105
-    },
-    {
-      "away_team": "Seattle",
-      "home_team": "Auburn",
-      "predicted_winner": "Auburn",
-      "win_probability": 80.3,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 800,
-      "moneyline_home": -1428
-    },
-    {
-      "away_team": "UNLV",
+      "away_team": "Wichita State",
       "home_team": "Tulsa",
       "predicted_winner": "Tulsa",
-      "win_probability": 72.3,
+      "win_probability": 65.9,
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 185,
-      "moneyline_home": -227
-    },
-    {
-      "away_team": "Iowa",
-      "home_team": "Florida",
-      "predicted_winner": "Florida",
-      "win_probability": 58.5,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 425,
-      "moneyline_home": -588
-    },
-    {
-      "away_team": "Utah State",
-      "home_team": "Arizona",
-      "predicted_winner": "Arizona",
-      "win_probability": 68.0,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 550,
-      "moneyline_home": -833
-    },
-    {
-      "away_team": "George Washington",
-      "home_team": "New Mexico",
-      "predicted_winner": "New Mexico",
-      "win_probability": 59.5,
-      "confidence": "Medium",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 245,
-      "moneyline_home": -303
-    },
-    {
-      "away_team": "Wichita State",
-      "home_team": "Oklahoma State",
-      "predicted_winner": "Oklahoma State",
-      "win_probability": 59.6,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 120,
-      "moneyline_home": -142
-    },
-    {
-      "away_team": "UCLA",
-      "home_team": "Connecticut",
-      "predicted_winner": "Connecticut",
-      "win_probability": 70.2,
-      "confidence": "High",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": 164,
-      "moneyline_home": -196
+      "moneyline_away": 154,
+      "moneyline_home": -185
     },
     {
       "away_team": "Saint Joseph's",
-      "home_team": "California",
-      "predicted_winner": "California",
-      "win_probability": 80.6,
+      "home_team": "New Mexico",
+      "predicted_winner": "New Mexico",
+      "win_probability": 82.9,
       "confidence": "High",
-      "ev_rating": "Positive EV",
+      "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 204,
-      "moneyline_home": -250
-    },
-    {
-      "away_team": "Texas Tech",
-      "home_team": "Alabama",
-      "predicted_winner": "Alabama",
-      "win_probability": 59.4,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -112,
-      "moneyline_home": -107
+      "moneyline_away": 455,
+      "moneyline_home": -625
     }
   ]
 }
