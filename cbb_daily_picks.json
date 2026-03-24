@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24 10:53:50 CST",
+  "generated_at": "2026-03-24 14:52:38 CST",
   "date": "March 24, 2026",
   "total_games": 4,
   "picks": [
@@ -11,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 150,
-      "moneyline_home": -178
+      "moneyline_away": 154,
+      "moneyline_home": -185
     },
     {
       "away_team": "Saint Joseph's",
@@ -22,8 +22,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 440,
-      "moneyline_home": -588
+      "moneyline_away": 455,
+      "moneyline_home": -625
     },
     {
       "away_team": "Illinois State",
