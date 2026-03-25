@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25 10:57:16 CST",
+  "generated_at": "2026-03-25 14:45:53 CST",
   "date": "March 25, 2026",
   "total_games": 6,
   "picks": [
@@ -22,8 +22,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 370,
-      "moneyline_home": -476
+      "moneyline_away": 330,
+      "moneyline_home": -416
     },
     {
       "away_team": "Texas",
