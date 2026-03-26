@@ -1,30 +1,8 @@
 {
-  "generated_at": "2026-03-25 14:45:53 CST",
-  "date": "March 25, 2026",
-  "total_games": 6,
+  "generated_at": "2026-03-26 11:00:29 CST",
+  "date": "March 26, 2026",
+  "total_games": 8,
   "picks": [
-    {
-      "away_team": "Illinois State",
-      "home_team": "Dayton",
-      "predicted_winner": "Dayton",
-      "win_probability": 53.4,
-      "confidence": "Low",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 270,
-      "moneyline_home": -344
-    },
-    {
-      "away_team": "Nevada",
-      "home_team": "Auburn",
-      "predicted_winner": "Auburn",
-      "win_probability": 65.6,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 330,
-      "moneyline_home": -416
-    },
     {
       "away_team": "Texas",
       "home_team": "Purdue",
@@ -33,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 285,
-      "moneyline_home": -357
+      "moneyline_away": 295,
+      "moneyline_home": -370
     },
     {
       "away_team": "Iowa",
@@ -55,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 285,
-      "moneyline_home": -357
+      "moneyline_away": 295,
+      "moneyline_home": -370
     },
     {
       "away_team": "Illinois",
@@ -66,8 +44,52 @@
       "confidence": "Low",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 136,
-      "moneyline_home": -161
+      "moneyline_away": 129,
+      "moneyline_home": -153
+    },
+    {
+      "away_team": "St. John's (NY)",
+      "home_team": "Duke",
+      "predicted_winner": "Duke",
+      "win_probability": 71.0,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 229,
+      "moneyline_home": -285
+    },
+    {
+      "away_team": "Alabama",
+      "home_team": "Michigan",
+      "predicted_winner": "Michigan",
+      "win_probability": 67.8,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 370,
+      "moneyline_home": -476
+    },
+    {
+      "away_team": "Michigan State",
+      "home_team": "Connecticut",
+      "predicted_winner": "Michigan State",
+      "win_probability": 57.9,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 110,
+      "moneyline_home": -129
+    },
+    {
+      "away_team": "Tennessee",
+      "home_team": "Iowa State",
+      "predicted_winner": "Iowa State",
+      "win_probability": 69.3,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 154,
+      "moneyline_home": -185
     }
   ]
 }
