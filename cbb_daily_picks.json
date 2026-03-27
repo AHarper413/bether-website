@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27 10:39:47 CST",
+  "generated_at": "2026-03-27 14:40:11 CST",
   "date": "March 27, 2026",
   "total_games": 6,
   "picks": [
@@ -55,8 +55,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 235,
-      "moneyline_home": -294
+      "moneyline_away": 245,
+      "moneyline_home": -303
     },
     {
       "away_team": "Purdue",
