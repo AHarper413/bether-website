@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28 10:19:27 CST",
+  "generated_at": "2026-03-28 14:28:40 CST",
   "date": "March 28, 2026",
   "total_games": 4,
   "picks": [
@@ -11,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
+      "moneyline_away": 270,
+      "moneyline_home": -344
     },
     {
       "away_team": "Purdue",
@@ -22,8 +22,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 210,
-      "moneyline_home": -256
+      "moneyline_away": 204,
+      "moneyline_home": -250
     },
     {
       "away_team": "Tennessee",
@@ -33,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 250,
-      "moneyline_home": -312
+      "moneyline_away": 270,
+      "moneyline_home": -344
     },
     {
       "away_team": "Connecticut",
