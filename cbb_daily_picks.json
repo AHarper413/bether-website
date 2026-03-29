@@ -1,19 +1,8 @@
 {
-  "generated_at": "2026-03-29 10:20:00 CST",
+  "generated_at": "2026-03-29 14:31:19 CST",
   "date": "March 29, 2026",
-  "total_games": 2,
+  "total_games": 1,
   "picks": [
-    {
-      "away_team": "Tennessee",
-      "home_team": "Michigan",
-      "predicted_winner": "Michigan",
-      "win_probability": 75.3,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 300,
-      "moneyline_home": -384
-    },
     {
       "away_team": "Connecticut",
       "home_team": "Duke",
@@ -22,8 +11,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 179,
-      "moneyline_home": -217
+      "moneyline_away": 190,
+      "moneyline_home": -232
     }
   ]
 }
