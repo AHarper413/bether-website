@@ -1,18 +1,29 @@
 {
-  "generated_at": "2026-03-29 14:31:19 CST",
-  "date": "March 29, 2026",
-  "total_games": 1,
+  "generated_at": "2026-04-01 11:00:00 CST",
+  "date": "April 01, 2026",
+  "total_games": 2,
   "picks": [
     {
-      "away_team": "Connecticut",
-      "home_team": "Duke",
-      "predicted_winner": "Duke",
-      "win_probability": 64.5,
+      "away_team": "New Mexico",
+      "home_team": "Tulsa",
+      "predicted_winner": "New Mexico",
+      "win_probability": 56.9,
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 190,
-      "moneyline_home": -232
+      "moneyline_away": -185,
+      "moneyline_home": 154
+    },
+    {
+      "away_team": "Illinois State",
+      "home_team": "Auburn",
+      "predicted_winner": "Auburn",
+      "win_probability": 74.9,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 240,
+      "moneyline_home": -294
     }
   ]
 }
