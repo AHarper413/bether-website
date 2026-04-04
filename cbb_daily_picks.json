@@ -1,8 +1,30 @@
 {
-  "generated_at": "2026-04-04 10:19:24 CST",
+  "generated_at": "2026-04-04 14:29:52 CST",
   "date": "April 04, 2026",
-  "total_games": 3,
+  "total_games": 5,
   "picks": [
+    {
+      "away_team": "Oklahoma",
+      "home_team": "Baylor",
+      "predicted_winner": "Baylor",
+      "win_probability": 60.3,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": -9999,
+      "moneyline_home": 2500
+    },
+    {
+      "away_team": "West Virginia",
+      "home_team": "Creighton",
+      "predicted_winner": "Creighton",
+      "win_probability": 53.5,
+      "confidence": "Low",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": -120,
+      "moneyline_home": 100
+    },
     {
       "away_team": "Illinois",
       "home_team": "Connecticut",
@@ -22,8 +44,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -121,
-      "moneyline_home": 102
+      "moneyline_away": -112,
+      "moneyline_home": -107
     },
     {
       "away_team": "Tulsa",
