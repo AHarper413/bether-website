@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-03 14:37:30 CST",
-  "date": "April 03, 2026",
-  "total_games": 2,
+  "generated_at": "2026-04-04 10:19:24 CST",
+  "date": "April 04, 2026",
+  "total_games": 3,
   "picks": [
     {
       "away_team": "Illinois",
@@ -11,8 +11,8 @@
       "confidence": "Medium",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -129,
-      "moneyline_home": 110
+      "moneyline_away": -125,
+      "moneyline_home": 104
     },
     {
       "away_team": "Michigan",
@@ -24,6 +24,17 @@
       "spread": 0,
       "moneyline_away": -121,
       "moneyline_home": 102
+    },
+    {
+      "away_team": "Tulsa",
+      "home_team": "Auburn",
+      "predicted_winner": "Auburn",
+      "win_probability": 68.0,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 185,
+      "moneyline_home": -227
     }
   ]
 }
