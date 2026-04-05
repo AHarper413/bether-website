@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05 10:20:33 CST",
+  "generated_at": "2026-04-05 14:33:04 CST",
   "date": "April 05, 2026",
   "total_games": 3,
   "picks": [
@@ -11,8 +11,8 @@
       "confidence": "Medium",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -169,
-      "moneyline_home": 142
+      "moneyline_away": -161,
+      "moneyline_home": 136
     },
     {
       "away_team": "Tulsa",
@@ -22,8 +22,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 179,
-      "moneyline_home": -217
+      "moneyline_away": 204,
+      "moneyline_home": -250
     },
     {
       "away_team": "Connecticut",
@@ -33,8 +33,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 245,
-      "moneyline_home": -303
+      "moneyline_away": 240,
+      "moneyline_home": -294
     }
   ]
 }
