@@ -1,51 +1,18 @@
 {
-  "generated_at": "2026-04-04 14:29:52 CST",
-  "date": "April 04, 2026",
-  "total_games": 5,
+  "generated_at": "2026-04-05 10:20:33 CST",
+  "date": "April 05, 2026",
+  "total_games": 3,
   "picks": [
     {
       "away_team": "Oklahoma",
-      "home_team": "Baylor",
-      "predicted_winner": "Baylor",
-      "win_probability": 60.3,
+      "home_team": "West Virginia",
+      "predicted_winner": "Oklahoma",
+      "win_probability": 58.0,
       "confidence": "Medium",
-      "ev_rating": "Positive EV",
+      "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": -9999,
-      "moneyline_home": 2500
-    },
-    {
-      "away_team": "West Virginia",
-      "home_team": "Creighton",
-      "predicted_winner": "Creighton",
-      "win_probability": 53.5,
-      "confidence": "Low",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -120,
-      "moneyline_home": 100
-    },
-    {
-      "away_team": "Illinois",
-      "home_team": "Connecticut",
-      "predicted_winner": "Illinois",
-      "win_probability": 59.4,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -125,
-      "moneyline_home": 104
-    },
-    {
-      "away_team": "Michigan",
-      "home_team": "Arizona",
-      "predicted_winner": "Michigan",
-      "win_probability": 61.9,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -112,
-      "moneyline_home": -107
+      "moneyline_away": -169,
+      "moneyline_home": 142
     },
     {
       "away_team": "Tulsa",
@@ -55,8 +22,19 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 185,
-      "moneyline_home": -227
+      "moneyline_away": 179,
+      "moneyline_home": -217
+    },
+    {
+      "away_team": "Connecticut",
+      "home_team": "Michigan",
+      "predicted_winner": "Michigan",
+      "win_probability": 65.3,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 245,
+      "moneyline_home": -303
     }
   ]
 }
