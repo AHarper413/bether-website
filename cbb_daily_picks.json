@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06 10:35:43 CST",
+  "generated_at": "2026-04-06 14:52:10 CST",
   "date": "April 06, 2026",
   "total_games": 1,
   "picks": [
@@ -11,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 240,
-      "moneyline_home": -294
+      "moneyline_away": 229,
+      "moneyline_home": -285
     }
   ]
 }
