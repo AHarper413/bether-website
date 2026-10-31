@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-04-06 14:52:10 CST",
-  "date": "April 06, 2026",
+  "generated_at": "2026-10-31 13:53:29 CST",
+  "date": "October 31, 2026",
   "total_games": 1,
   "picks": [
     {
-      "away_team": "Connecticut",
-      "home_team": "Michigan",
-      "predicted_winner": "Michigan",
-      "win_probability": 65.3,
+      "away_team": "Villanova",
+      "home_team": "Notre Dame",
+      "predicted_winner": "Villanova",
+      "win_probability": 75.3,
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 229,
-      "moneyline_home": -285
+      "moneyline_away": -322,
+      "moneyline_home": 260
     }
   ]
 }
