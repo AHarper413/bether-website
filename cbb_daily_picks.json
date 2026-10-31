@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31 13:53:29 CST",
+  "generated_at": "2026-10-31 17:10:35 CST",
   "date": "October 31, 2026",
   "total_games": 1,
   "picks": [
@@ -9,10 +9,10 @@
       "predicted_winner": "Villanova",
       "win_probability": 75.3,
       "confidence": "High",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -322,
-      "moneyline_home": 260
+      "moneyline_away": -303,
+      "moneyline_home": 245
     }
   ]
 }
