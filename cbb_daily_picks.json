@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-03 14:41:09 CST",
+  "generated_at": "2026-11-03 17:51:40 CST",
   "date": "November 03, 2026",
-  "total_games": 18,
+  "total_games": 23,
   "picks": [
     {
       "away_team": "Wofford",
@@ -11,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 2500,
-      "moneyline_home": -9999
+      "moneyline_away": 1200,
+      "moneyline_home": -2499
     },
     {
       "away_team": "Wagner",
@@ -66,8 +66,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 1500,
-      "moneyline_home": -3333
+      "moneyline_away": 1600,
+      "moneyline_home": -4999
     },
     {
       "away_team": "Sam Houston",
@@ -110,8 +110,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 500,
-      "moneyline_home": -714
+      "moneyline_away": 490,
+      "moneyline_home": -666
     },
     {
       "away_team": "New Orleans",
@@ -132,8 +132,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 950,
-      "moneyline_home": -1666
+      "moneyline_away": 800,
+      "moneyline_home": -1428
     },
     {
       "away_team": "North Florida",
@@ -143,8 +143,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 500,
-      "moneyline_home": -714
+      "moneyline_away": 470,
+      "moneyline_home": -666
     },
     {
       "away_team": "Northern Arizona",
@@ -158,6 +158,28 @@
       "moneyline_home": -4999
     },
     {
+      "away_team": "FDU",
+      "home_team": "Butler",
+      "predicted_winner": "Butler",
+      "win_probability": 85.4,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 2200,
+      "moneyline_home": -9999
+    },
+    {
+      "away_team": "Longwood",
+      "home_team": "Saint Joseph's",
+      "predicted_winner": "Saint Joseph's",
+      "win_probability": 68.7,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 370,
+      "moneyline_home": -476
+    },
+    {
       "away_team": "Cal State Northridge",
       "home_team": "Wichita State",
       "predicted_winner": "Wichita State",
@@ -169,6 +191,17 @@
       "moneyline_home": -1111
     },
     {
+      "away_team": "Southeastern Louisiana",
+      "home_team": "Auburn",
+      "predicted_winner": "Auburn",
+      "win_probability": 83.8,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 3000,
+      "moneyline_home": -9999
+    },
+    {
       "away_team": "Northern Kentucky",
       "home_team": "South Dakota",
       "predicted_winner": "Northern Kentucky",
@@ -176,8 +209,30 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -135,
-      "moneyline_home": 114
+      "moneyline_away": -125,
+      "moneyline_home": 104
+    },
+    {
+      "away_team": "Radford",
+      "home_team": "California",
+      "predicted_winner": "California",
+      "win_probability": 83.6,
+      "confidence": "High",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 900,
+      "moneyline_home": -1666
+    },
+    {
+      "away_team": "Queens (NC)",
+      "home_team": "Loyola Marymount",
+      "predicted_winner": "Loyola Marymount",
+      "win_probability": 63.8,
+      "confidence": "Medium",
+      "ev_rating": "Neutral",
+      "spread": 0,
+      "moneyline_away": 200,
+      "moneyline_home": -243
     },
     {
       "away_team": "Milwaukee",
