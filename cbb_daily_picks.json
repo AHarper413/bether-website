@@ -1,85 +1,8 @@
 {
-  "generated_at": "2026-11-16 17:33:30 CST",
+  "generated_at": "2026-11-16 20:18:17 CST",
   "date": "November 16, 2026",
-  "total_games": 31,
+  "total_games": 25,
   "picks": [
-    {
-      "away_team": "Iona",
-      "home_team": "UMBC",
-      "predicted_winner": "Iona",
-      "win_probability": 63.7,
-      "confidence": "Medium",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -105,
-      "moneyline_home": -125
-    },
-    {
-      "away_team": "The Citadel",
-      "home_team": "Clemson",
-      "predicted_winner": "Clemson",
-      "win_probability": 86.5,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 2000,
-      "moneyline_home": -4999
-    },
-    {
-      "away_team": "Eastern Kentucky",
-      "home_team": "Kent State",
-      "predicted_winner": "Kent State",
-      "win_probability": 75.6,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 380,
-      "moneyline_home": -500
-    },
-    {
-      "away_team": "Jacksonville",
-      "home_team": "Georgia",
-      "predicted_winner": "Georgia",
-      "win_probability": 85.6,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 1800,
-      "moneyline_home": -4999
-    },
-    {
-      "away_team": "Grambling",
-      "home_team": "Kentucky",
-      "predicted_winner": "Kentucky",
-      "win_probability": 83.6,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": -110,
-      "moneyline_home": -110
-    },
-    {
-      "away_team": "St. Thomas",
-      "home_team": "LIU",
-      "predicted_winner": "St. Thomas",
-      "win_probability": 77.7,
-      "confidence": "High",
-      "ev_rating": "Positive EV",
-      "spread": 0,
-      "moneyline_away": -112,
-      "moneyline_home": -107
-    },
-    {
-      "away_team": "Richmond",
-      "home_team": "Virginia Tech",
-      "predicted_winner": "Virginia Tech",
-      "win_probability": 74.3,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 675,
-      "moneyline_home": -999
-    },
     {
       "away_team": "Western Kentucky",
       "home_team": "Tulsa",
@@ -88,8 +11,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 225,
-      "moneyline_home": -277
+      "moneyline_away": 150,
+      "moneyline_home": -196
     },
     {
       "away_team": "Tarleton State",
@@ -97,10 +20,10 @@
       "predicted_winner": "Drake",
       "win_probability": 64.5,
       "confidence": "Medium",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 350,
-      "moneyline_home": -454
+      "moneyline_away": -294,
+      "moneyline_home": 220
     },
     {
       "away_team": "Abilene Christian",
@@ -110,19 +33,8 @@
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 195,
-      "moneyline_home": -238
-    },
-    {
-      "away_team": "Central Arkansas",
-      "home_team": "Oklahoma State",
-      "predicted_winner": "Oklahoma State",
-      "win_probability": 74.4,
-      "confidence": "High",
-      "ev_rating": "Neutral",
-      "spread": 0,
-      "moneyline_away": 1500,
-      "moneyline_home": -3333
+      "moneyline_away": 750,
+      "moneyline_home": -1428
     },
     {
       "away_team": "Columbia",
@@ -130,21 +42,21 @@
       "predicted_winner": "Northwestern",
       "win_probability": 64.6,
       "confidence": "Medium",
-      "ev_rating": "Neutral",
+      "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 575,
-      "moneyline_home": -833
+      "moneyline_away": -416,
+      "moneyline_home": 290
     },
     {
-      "away_team": "Montana",
-      "home_team": "Kansas State",
-      "predicted_winner": "Kansas State",
-      "win_probability": 66.3,
+      "away_team": "Southeastern Louisiana",
+      "home_team": "Texas A&M",
+      "predicted_winner": "Texas A&M",
+      "win_probability": 86.8,
       "confidence": "High",
       "ev_rating": "Neutral",
       "spread": 0,
-      "moneyline_away": 950,
-      "moneyline_home": -1666
+      "moneyline_away": -110,
+      "moneyline_home": -110
     },
     {
       "away_team": "East Texas A&M",
@@ -188,7 +100,7 @@
       "ev_rating": "Neutral",
       "spread": 0,
       "moneyline_away": -1666,
-      "moneyline_home": 1000
+      "moneyline_home": 950
     },
     {
       "away_team": "Notre Dame",
@@ -275,8 +187,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 110,
-      "moneyline_home": -129
+      "moneyline_away": -107,
+      "moneyline_home": -112
     },
     {
       "away_team": "Sacred Heart",
@@ -312,6 +224,28 @@
       "moneyline_home": -147
     },
     {
+      "away_team": "Middle Tennessee",
+      "home_team": "Georgia Southern",
+      "predicted_winner": "Middle Tennessee",
+      "win_probability": 64.6,
+      "confidence": "Medium",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": -142,
+      "moneyline_home": 120
+    },
+    {
+      "away_team": "UT Arlington",
+      "home_team": "Southern Miss",
+      "predicted_winner": "UT Arlington",
+      "win_probability": 69.9,
+      "confidence": "High",
+      "ev_rating": "Positive EV",
+      "spread": 0,
+      "moneyline_away": 150,
+      "moneyline_home": -178
+    },
+    {
       "away_team": "Michigan State",
       "home_team": "Tennessee",
       "predicted_winner": "Michigan State",
@@ -319,8 +253,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": -175,
-      "moneyline_home": 145
+      "moneyline_away": -166,
+      "moneyline_home": 140
     },
     {
       "away_team": "UNLV",
@@ -341,8 +275,8 @@
       "confidence": "High",
       "ev_rating": "Positive EV",
       "spread": 0,
-      "moneyline_away": 100,
-      "moneyline_home": -120
+      "moneyline_away": -105,
+      "moneyline_home": -114
     }
   ]
 }
